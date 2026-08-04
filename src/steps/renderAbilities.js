@@ -13,7 +13,8 @@ export function renderAbilities() {
     const v = globals.state.assign[a];
     const mod = abilityMod(scores[a]);
     const bonus = bgb[a];
-    html += `<div class="ab-card ${isDup(a) ? 'invalid' : ''}">
+    const needsPick = v === null;
+    html += `<div class="ab-card ${needsPick ? 'needs-choice' : ''} ${isDup(a) ? 'invalid' : ''}">
       <h4>${abilName(a)}</h4>
       <select id="ab-${a}" onchange="API.assign('${a}', this.value)">
         <option value="">—</option>

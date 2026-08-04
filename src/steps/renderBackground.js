@@ -27,7 +27,8 @@ export function renderBackground() {
     if (bg) {
       detail += `<h3>${esc(bg.name)}</h3>`;
       detail += `<div class="card"><div class="entry">${bg.feature}</div></div>`;
-      detail += renderAbilityBonusPicker(bg);
+      const needBonus = bg.ability.length >= 2 && !(globals.state.bgPlus2 && globals.state.bgPlus1);
+      detail += `<div ${needBonus ? 'data-need="1"' : ''}>${renderAbilityBonusPicker(bg)}</div>`;
       detail += `<h3>Background Feat</h3>${featPicker('bgFeat', globals.state.bgFeat, 1, 'This background grants the following feat.', 'locked', true)}`;
       if (bg && bg.feats) for (const ref of bg.feats) detail += renderFeatSpellChoices(ref);
       detail += renderSkilledPicker();

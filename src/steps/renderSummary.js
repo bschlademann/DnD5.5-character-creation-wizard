@@ -64,7 +64,7 @@ export function renderSummary() {
     <div class="item">${globals.state.bgMode === 'bg' && globals.state.bg ? esc(findBackground(globals.state.bg).name) : 'Custom background'}</div>
 
     <h4>Feats</h4>
-    ${feats.length ? feats.map(f => `<div class="item" title="${esc(f.source || 'Origin feat')}"><b>${esc(f.name || f.label)}</b> <span style="color:var(--muted);font-size:11px">(${esc(f.source || 'Origin feat')})</span></div>`).join('') : '<div class="item">—</div>'}
+    ${feats.length ? feats.map(f => `<div class="item" title="${esc(f.source || 'Origin feat')}">${esc(f.name || f.label)} <span style="color:var(--muted);font-size:11px">(${esc(f.source || 'Origin feat')})</span></div>`).join('') : '<div class="item">—</div>'}
 
     <h4>Equipment</h4>
     <div class="eq-list">${equipmentItems().map(it => it.value !== undefined ? `<span class="eq-item">${it.value / 100} gp</span>` : `<span class="eq-item">${esc(it.name)}${it.quantity > 1 ? ' ×' + it.quantity : ''}</span>`).join('')}</div>

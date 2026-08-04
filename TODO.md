@@ -1,22 +1,16 @@
-finalized character sheet:
-visual bug:
-Feats
-Tough (XPHB)
-tough is the same big font as feats
+- when creating a level 1 character, you don't need to select a subclass. that happens when a character is leveled to lv3 dunring the levelup process.
+- leveling up should be a button on the last page, not always visible, as leveling up an unfinished lv1 character makes no sense
+- 3. class and 5. equipment can be merged.
+    - there is no need to show equipment on 2 seperate tabs. the equipment selection can happen in the class tab
+- when choosing erapon masteries: right now all are just ordered alphabetically in a box
+    - i want a list with simple and a list with martial weapons
+    - each list is devided vertivally in melee and ranged
+    - each weapon has a tooltop with info on the weapon like the info from 5e.tools (damage, other things like weapon mastery, thrown and so on)
+- layout:
+    - the continue button should not be on the bottom right but a > button along the right side of the screen
 
-leveling up process is incomplete, for example the user cannot select a fighting style with ranger
-or are fightings style feats and weapon masteries not implemented at all?
+    - each time a user selects from a list there has to be the display on top of the list "(X out of Y selected)"
 
-Step 3: Class
-- Skill Proficiencies (choose from class)
-    - there should be the number of skills that need to be selectet (ideally "x out of Y selected")
-    - when a skill is selected the tooltip comes up but is empty
+    - the details tab can go, it is not needed
 
-
-Step 4: Background & Feat:
-custom background:
-- visual bug: selecting an ability for the +1 blocks the ability from getting the +2 but does not gray it out in the +2 field
-
-general UI:
-if continue button on the lower right corner is blocked there should be a tooltip what is still missing and a red border arond the area where the user needs to make a choice before they can continue
-
+    - the whole app is for players that have never played D&D or maybe any TTRPG. make the UX as pleasent as possible for those newbies

@@ -25,7 +25,10 @@ export function renderSpells() {
     html += '</div>';
   }
 
-  html += `<div class="side-picker"><div class="pick-list">`;
+  const spellsOk = globals.state.spells.cantrips.length === cantripCount()
+    && globals.state.spells.prepared.length === preparedCount()
+    && (cls.spellcasting.type !== 'pact' || arcanumReached().every(L => arcanumPicks()[L]));
+  html += `<div class="side-picker"><div class="pick-list" ${spellsOk ? '' : 'data-need="1"'}>`;
 
   html += `<h3>Cantrips (choose ${cantripCount()})</h3>`;
   html += `<div class="counter"><b>${globals.state.spells.cantrips.length}</b> / ${cantripCount()} selected</div>`;

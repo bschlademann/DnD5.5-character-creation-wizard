@@ -94,7 +94,7 @@ export function renderFooter() {
     next.textContent = key === 'details' ? 'Show Character Sheet' : 'Continue';
     const res = validateStep(globals.currentStep);
     const banner = $('validation-banner');
-    next.disabled = !res.ok;
+    next.disabled = false;
     if (res.ok) {
       next.classList.remove('blocked');
       next.removeAttribute('title');
@@ -105,11 +105,8 @@ export function renderFooter() {
       if (banner) banner.textContent = res.message;
     }
     next.onclick = () => {
+      if (!res.ok) return;
       const banner = $('validation-banner');
-      if (!res.ok) {
-        if (banner) banner.textContent = res.message;
-        return;
-      }
       if (banner) banner.textContent = '';
       goTo(globals.currentStep + 1);
     };

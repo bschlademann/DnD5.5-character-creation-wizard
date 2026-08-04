@@ -7,7 +7,8 @@ export function renderEquipment() {
   const cls = charClass();
   if (!cls) return `<div class="info">Choose a class first.</div>`;
   let html = `<p class="step-sub">Pick the standard equipment layouts. Equipment value is included in your money.</p>`;
-  html += `<h3>${esc(cls.name)} Starting Equipment</h3><div class="grid grid-3">`;
+  const eqOk = !!globals.state.equipment.class;
+  html += `<div ${eqOk ? '' : 'data-need="1"'}><h3>${esc(cls.name)} Starting Equipment</h3><div class="grid grid-3">`;
   if (cls.equipment && cls.equipment[0]) {
     for (const k of ['A', 'B', 'C']) {
       const items = cls.equipment[0][k];
@@ -19,7 +20,7 @@ export function renderEquipment() {
       </div>`;
     }
   }
-  html += '</div>';
+  html += '</div></div>';
   const bg = globals.state.bgMode === 'bg' && globals.state.bg ? findBackground(globals.state.bg) : null;
   if (bg && bg.equipment && bg.equipment[0]) {
     html += `<h3>${esc(bg.name)} Background Equipment</h3><div class="grid grid-3">`;

@@ -1,0 +1,718 @@
+  [
+    {
+      "id": "aberrant-heir",
+      "name": "Aberrant Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["str", "con", "cha"], "weighted": [2, 1] },
+        { "from": ["str", "con", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["aberrant dragonmark|efa"],
+      "skills": ["history", "intimidation"],
+      "tools": ["disguise kit"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Constitution, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Aberrant Dragonmark}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">History</span> and <span class=\"term\">Intimidation</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Disguise Kit</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Dagger</span>, <span class=\"term\">Disguise Kit</span>, <span class=\"term\">Costume</span>, <span class=\"term\">Traveler's Clothes</span>, 16 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "acolyte",
+      "name": "Acolyte",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["int", "wis", "cha"], "weighted": [2, 1] },
+        { "from": ["int", "wis", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["magic initiate; cleric|xphb"],
+      "skills": ["insight", "religion"],
+      "tools": ["calligrapher's supplies"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Intelligence, Wisdom, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Magic Initiate} (Cleric)</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Insight</span>, <span class=\"term\">Religion</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Calligrapher's Supplies</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Calligrapher's Supplies</span>, <span class=\"term\">Book (prayers)</span>, <span class=\"term\">Holy Symbol</span>, <span class=\"term\">Parchment</span> (10 sheets), <span class=\"term\">Robe</span>, 8 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "book", "quantity": 1, "displayName": "Book (Prayers)" },
+            {
+              "name": "calligrapher's supplies",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "name": "holy symbol", "quantity": 1, "displayName": null },
+            { "name": "parchment", "quantity": 10, "displayName": null },
+            { "name": "robe", "quantity": 1, "displayName": null },
+            { "value": 800 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "archaeologist",
+      "name": "Archaeologist",
+      "source": "EFA",
+      "ability": [
+        { "from": ["dex", "int", "wis"], "weighted": [2, 1] },
+        { "from": ["dex", "int", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["skilled|xphb"],
+      "skills": ["history", "survival"],
+      "tools": ["cartographer's tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Intelligence, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Skilled}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">History</span> and <span class=\"term\">Survival</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Cartographer's Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Cartographer's Tools</span>, <span class=\"term\">Bullseye Lantern</span>, <span class=\"term\">Map</span>, <span class=\"term\">Map or Scroll Case</span>, <span class=\"term\">Shovel</span>, <span class=\"term\">Tent</span>, <span class=\"term\">Traveler's Clothes</span>, 17 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "artisan",
+      "name": "Artisan",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["str", "dex", "int"], "weighted": [2, 1] },
+        { "from": ["str", "dex", "int"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["crafter|xphb"],
+      "skills": ["investigation", "persuasion"],
+      "tools": ["anyArtisansTool"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Dexterity, Intelligence</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Crafter}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Investigation</span>, <span class=\"term\">Persuasion</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span>Choose one kind of <span class=\"term\">Artisan's Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Artisan's Tools</span> (same as above), 2 <span class=\"term\">Pouches</span>, <span class=\"term\">Traveler's Clothes</span>, 32 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "[object Object]", "quantity": 1, "displayName": null },
+            { "name": "pouch", "quantity": 2, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 3200 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "charlatan",
+      "name": "Charlatan",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["dex", "con", "cha"], "weighted": [2, 1] },
+        { "from": ["dex", "con", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["skilled|xphb"],
+      "skills": ["deception", "sleight of hand"],
+      "tools": ["forgery kit"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Constitution, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Skilled}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Deception</span>, <span class=\"term\">Sleight Of Hand</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Forgery Kit</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Forgery Kit</span>, <span class=\"term\">Costume</span>, <span class=\"term\">Fine Clothes</span>, 15 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "forgery kit", "quantity": 1, "displayName": null },
+            { "name": "costume", "quantity": 1, "displayName": null },
+            { "name": "fine clothes", "quantity": 1, "displayName": null },
+            { "value": 1500 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "criminal",
+      "name": "Criminal",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["dex", "con", "int"], "weighted": [2, 1] },
+        { "from": ["dex", "con", "int"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["alert|xphb"],
+      "skills": ["sleight of hand", "stealth"],
+      "tools": ["thieves' tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Constitution, Intelligence</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Alert}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Sleight Of Hand</span>, <span class=\"term\">Stealth</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Thieves' Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">2 Daggers</span>, <span class=\"term\">Thieves' Tools</span>, <span class=\"term\">Crowbar</span>, <span class=\"term\">2 Pouches</span>, <span class=\"term\">Traveler's Clothes</span>, 16 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "dagger", "quantity": 2, "displayName": null },
+            { "name": "thieves' tools", "quantity": 1, "displayName": null },
+            { "name": "crowbar", "quantity": 1, "displayName": null },
+            { "name": "pouch", "quantity": 2, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 1600 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "entertainer",
+      "name": "Entertainer",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["str", "dex", "cha"], "weighted": [2, 1] },
+        { "from": ["str", "dex", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["musician|xphb"],
+      "skills": ["acrobatics", "performance"],
+      "tools": ["anyMusicalInstrument"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Dexterity, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Musician}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Acrobatics</span>, <span class=\"term\">Performance</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span>Choose one kind of <span class=\"term\">Musical Instrument</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Musical Instrument</span> (same as above), <span class=\"term\">2 Costumes</span>, <span class=\"term\">Mirror</span>, <span class=\"term\">Perfume</span>, <span class=\"term\">Traveler's Clothes</span>, 11 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "[object Object]", "quantity": 1, "displayName": null },
+            { "name": "costume", "quantity": 2, "displayName": null },
+            { "name": "mirror", "quantity": 1, "displayName": null },
+            { "name": "perfume", "quantity": 1, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 1100 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "farmer",
+      "name": "Farmer",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["str", "con", "wis"], "weighted": [2, 1] },
+        { "from": ["str", "con", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["tough|xphb"],
+      "skills": ["animal handling", "nature"],
+      "tools": ["carpenter's tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Constitution, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Tough}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Animal Handling</span>, <span class=\"term\">Nature</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Carpenter's Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Sickle</span>, <span class=\"term\">Carpenter's Tools</span>, <span class=\"term\">Healer's Kit</span>, <span class=\"term\">Iron Pot</span>, <span class=\"term\">Shovel</span>, <span class=\"term\">Traveler's Clothes</span>, 30 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "sickle", "quantity": 1, "displayName": null },
+            { "name": "carpenter's tools", "quantity": 1, "displayName": null },
+            { "name": "healer's kit", "quantity": 1, "displayName": null },
+            { "name": "iron pot", "quantity": 1, "displayName": null },
+            { "name": "shovel", "quantity": 1, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 3000 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "guard",
+      "name": "Guard",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["str", "int", "wis"], "weighted": [2, 1] },
+        { "from": ["str", "int", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["alert|xphb"],
+      "skills": ["athletics", "perception"],
+      "tools": ["anyGamingSet"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Intelligence, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Alert}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Athletics</span>, <span class=\"term\">Perception</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span>Choose one kind of <span class=\"term\">Gaming Set</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Spear</span>, <span class=\"term\">Light Crossbow</span>, 20 <span class=\"term\">Bolts</span>, <span class=\"term\">Gaming Set</span> (same as above), <span class=\"term\">Hooded Lantern</span>, <span class=\"term\">Manacles</span>, <span class=\"term\">Quiver</span>, <span class=\"term\">Traveler's Clothes</span>, 12 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "spear", "quantity": 1, "displayName": null },
+            { "name": "light crossbow", "quantity": 1, "displayName": null },
+            { "name": "bolts (20)", "quantity": 1, "displayName": null },
+            { "name": "[object Object]", "quantity": 1, "displayName": null },
+            { "name": "hooded lantern", "quantity": 1, "displayName": null },
+            { "name": "manacles", "quantity": 1, "displayName": null },
+            { "name": "quiver", "quantity": 1, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 1200 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "guide",
+      "name": "Guide",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["dex", "con", "wis"], "weighted": [2, 1] },
+        { "from": ["dex", "con", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["magic initiate; druid|xphb"],
+      "skills": ["stealth", "survival"],
+      "tools": ["cartographer's tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Constitution, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Magic Initiate} (Druid)</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Stealth</span>, <span class=\"term\">Survival</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Cartographer's Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Shortbow</span>, <span class=\"term\">20 Arrows</span>, <span class=\"term\">Cartographer's Tools</span>, <span class=\"term\">Bedroll</span>, <span class=\"term\">Quiver</span>, <span class=\"term\">Tent</span>, <span class=\"term\">Traveler's Clothes</span>, 3 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "shortbow", "quantity": 1, "displayName": null },
+            { "name": "arrows (20)", "quantity": 1, "displayName": null },
+            {
+              "name": "cartographer's tools",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "name": "bedroll", "quantity": 1, "displayName": null },
+            { "name": "quiver", "quantity": 1, "displayName": null },
+            { "name": "tent", "quantity": 1, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 300 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "hermit",
+      "name": "Hermit",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["con", "wis", "cha"], "weighted": [2, 1] },
+        { "from": ["con", "wis", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["healer|xphb"],
+      "skills": ["medicine", "religion"],
+      "tools": ["herbalism kit"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Constitution, Wisdom, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Healer}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Medicine</span>, <span class=\"term\">Religion</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Herbalism Kit</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Quarterstaff</span>, <span class=\"term\">Herbalism Kit</span>, <span class=\"term\">Bedroll</span>, <span class=\"term\">Book</span> (philosophy), <span class=\"term\">Lamp</span>, <span class=\"term\">Oil</span> (3 flasks), <span class=\"term\">Traveler's Clothes</span>, 16 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "quarterstaff", "quantity": 1, "displayName": null },
+            { "name": "herbalism kit", "quantity": 1, "displayName": null },
+            { "name": "bedroll", "quantity": 1, "displayName": null },
+            { "name": "book", "quantity": 1, "displayName": null },
+            { "name": "lamp", "quantity": 1, "displayName": null },
+            { "name": "oil", "quantity": 3, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 1600 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "house-agent",
+      "name": "House Agent",
+      "source": "EFA",
+      "ability": [
+        { "from": ["str", "int", "cha"], "weighted": [2, 1] },
+        { "from": ["str", "int", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["lucky|xphb"],
+      "skills": ["investigation", "persuasion"],
+      "tools": ["anyArtisansTool"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Intelligence, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Lucky}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Investigation</span> and <span class=\"term\">Persuasion</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span>Choose one kind of <span class=\"term\">Artisan's Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Artisan's Tools</span> (same as above), <span class=\"term\">Fine Clothes</span>, 20 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-cannith-heir",
+      "name": "House Cannith Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["str", "dex", "int"], "weighted": [2, 1] },
+        { "from": ["str", "dex", "int"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of making|efa"],
+      "skills": ["investigation", "sleight of hand"],
+      "tools": ["anyArtisansTool"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Dexterity, Intelligence</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Making}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Investigation</span> and <span class=\"term\">Sleight Of Hand</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span>Choose one kind of <span class=\"term\">Artisan's Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Artisan's Tools</span> (same as above), <span class=\"term\">Crowbar</span>, <span class=\"term\">Fine Clothes</span>, 2 <span class=\"term\">Pouches</span>, 17 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-deneith-heir",
+      "name": "House Deneith Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["str", "con", "wis"], "weighted": [2, 1] },
+        { "from": ["str", "con", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of sentinel|efa"],
+      "skills": ["insight", "perception"],
+      "tools": ["anyGamingSet"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Constitution, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Sentinel}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Insight</span> and <span class=\"term\">Perception</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span>Choose one kind of <span class=\"term\">Gaming Set</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Spear</span>, <span class=\"term\">Shortbow</span>, <span class=\"term\">20 Arrows</span>, <span class=\"term\">Gaming Set</span> (same as above), <span class=\"term\">Fine Clothes</span>, <span class=\"term\">Healer's Kit</span>, <span class=\"term\">Quiver</span>, 1 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-ghallanda-heir",
+      "name": "House Ghallanda Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["dex", "wis", "cha"], "weighted": [2, 1] },
+        { "from": ["dex", "wis", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of hospitality|efa"],
+      "skills": ["insight", "persuasion"],
+      "tools": ["cook's utensils"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Wisdom, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Hospitality}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Insight</span> and <span class=\"term\">Persuasion</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Cook's Utensils</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Cook's Utensils</span>, <span class=\"term\">Fine Clothes</span>, <span class=\"term\">Iron Pot</span>, <span class=\"term\">Lamp</span>, <span class=\"term\">Oil</span> (5 flasks), <span class=\"term\">Perfume</span>, 26 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-jorasco-heir",
+      "name": "House Jorasco Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["dex", "con", "wis"], "weighted": [2, 1] },
+        { "from": ["dex", "con", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of healing|efa"],
+      "skills": ["medicine", "stealth"],
+      "tools": ["herbalism kit"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Constitution, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Healing}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Medicine</span> and <span class=\"term\">Stealth</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Herbalism Kit</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Herbalism Kit</span>, <span class=\"term\">Fine Clothes</span>, <span class=\"term\">Healer's Kit</span>, 25 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-kundarak-heir",
+      "name": "House Kundarak Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["str", "con", "int"], "weighted": [2, 1] },
+        { "from": ["str", "con", "int"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of warding|efa"],
+      "skills": ["arcana", "investigation"],
+      "tools": ["thieves' tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Constitution, Intelligence</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Warding}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Arcana</span> and <span class=\"term\">Investigation</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Thieves' Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Thieves' Tools</span>, <span class=\"term\">Fine Clothes</span>, 10 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-lyrandar-heir",
+      "name": "House Lyrandar Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["str", "dex", "cha"], "weighted": [2, 1] },
+        { "from": ["str", "dex", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of storm|efa"],
+      "skills": ["acrobatics", "nature"],
+      "tools": ["navigator's tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Dexterity, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Storm}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Acrobatics</span> and <span class=\"term\">Nature</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Navigator's Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Navigator's Tools</span>, <span class=\"term\">Fine Clothes</span>, 10 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-medani-heir",
+      "name": "House Medani Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["dex", "int", "wis"], "weighted": [2, 1] },
+        { "from": ["dex", "int", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of detection|efa"],
+      "skills": ["insight", "investigation"],
+      "tools": ["disguise kit"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Intelligence, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Detection}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Insight</span> and <span class=\"term\">Investigation</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Disguise Kit</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Disguise Kit</span>, <span class=\"term\">Fine Clothes</span>, 10 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-orien-heir",
+      "name": "House Orien Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["dex", "con", "int"], "weighted": [2, 1] },
+        { "from": ["dex", "con", "int"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of passage|efa"],
+      "skills": ["acrobatics", "athletics"],
+      "tools": ["cartographer's tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Constitution, Intelligence</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Passage}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Acrobatics</span> and <span class=\"term\">Athletics</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Cartographer's Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Cartographer's Tools</span>, <span class=\"term\">Fine Clothes</span>, <span class=\"term\">Map</span>, <span class=\"term\">Map or Scroll Case</span>, 18 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-phiarlan-heir",
+      "name": "House Phiarlan Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["dex", "wis", "cha"], "weighted": [2, 1] },
+        { "from": ["dex", "wis", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of shadow|efa"],
+      "skills": ["deception", "stealth"],
+      "tools": ["disguise kit"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Wisdom, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Shadow}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Deception</span> and <span class=\"term\">Stealth</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Disguise Kit</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Disguise Kit</span>, <span class=\"term\">Fine Clothes</span>, 10 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-sivis-heir",
+      "name": "House Sivis Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["int", "wis", "cha"], "weighted": [2, 1] },
+        { "from": ["int", "wis", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of scribing|efa"],
+      "skills": ["history", "perception"],
+      "tools": ["calligrapher's supplies"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Intelligence, Wisdom, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Scribing}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">History</span> and <span class=\"term\">Perception</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Calligrapher's Supplies</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Calligrapher's Supplies</span>, <span class=\"term\">Fine Clothes</span>, <span class=\"term\">Ink</span>, 5 <span class=\"term\">Ink Pens</span>, <span class=\"term\">Paper</span> (30 sheets), <span class=\"term\">Parchment</span> (9 sheets), 8 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-tharashk-heir",
+      "name": "House Tharashk Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["con", "int", "wis"], "weighted": [2, 1] },
+        { "from": ["con", "int", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of finding|efa"],
+      "skills": ["perception", "survival"],
+      "tools": ["anyGamingSet"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Constitution, Intelligence, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Finding}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Perception</span> and <span class=\"term\">Survival</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span>Choose one kind of <span class=\"term\">Gaming Set</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Gaming Set</span> (same as above), <span class=\"term\">Climber's Kit</span>, <span class=\"term\">Fine Clothes</span>, <span class=\"term\">Hunting Trap</span>, <span class=\"term\">Manacles</span>, 2 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-thuranni-heir",
+      "name": "House Thuranni Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["dex", "int", "cha"], "weighted": [2, 1] },
+        { "from": ["dex", "int", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of shadow|efa"],
+      "skills": ["performance", "stealth"],
+      "tools": ["anyMusicalInstrument"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Intelligence, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Shadow}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Performance</span> and <span class=\"term\">Stealth</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span>Choose one kind of <span class=\"term\">Musical Instrument</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Musical Instrument</span> (same as above), <span class=\"term\">Costume</span>, <span class=\"term\">Fine Clothes</span>, 13 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "house-vadalis-heir",
+      "name": "House Vadalis Heir",
+      "source": "EFA",
+      "ability": [
+        { "from": ["con", "wis", "cha"], "weighted": [2, 1] },
+        { "from": ["con", "wis", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["mark of handling|efa"],
+      "skills": ["animal handling", "nature"],
+      "tools": ["herbalism kit"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Constitution, Wisdom, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Mark of Handling}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Animal Handling</span> and <span class=\"term\">Nature</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Herbalism Kit</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Herbalism Kit</span>, <span class=\"term\">Fine Clothes</span>, <span class=\"term\">Net</span>, 29 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "inquisitive",
+      "name": "Inquisitive",
+      "source": "EFA",
+      "ability": [
+        { "from": ["con", "int", "cha"], "weighted": [2, 1] },
+        { "from": ["con", "int", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["alert|xphb"],
+      "skills": ["insight", "investigation"],
+      "tools": ["thieves' tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Constitution, Intelligence, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Alert}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Insight</span> and <span class=\"term\">Investigation</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiencies:</strong> </span><span class=\"term\">Thieves' Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Thieves' Tools</span>, <span class=\"term\">Bullseye Lantern</span>, <span class=\"term\">Crowbar</span>, <span class=\"term\">Oil</span> (10 flasks), <span class=\"term\">Traveler's Clothes</span>, 10 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [{}]
+    },
+    {
+      "id": "merchant",
+      "name": "Merchant",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["con", "int", "cha"], "weighted": [2, 1] },
+        { "from": ["con", "int", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["lucky|xphb"],
+      "skills": ["animal handling", "persuasion"],
+      "tools": ["navigator's tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Constitution, Intelligence, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Lucky}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Animal Handling</span>, <span class=\"term\">Persuasion</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Navigator's Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Navigator's Tools</span>, <span class=\"term\">2 Pouches</span>, <span class=\"term\">Traveler's Clothes</span>, 22 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "navigator's tools", "quantity": 1, "displayName": null },
+            { "name": "pouch", "quantity": 2, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 2200 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "noble",
+      "name": "Noble",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["str", "int", "cha"], "weighted": [2, 1] },
+        { "from": ["str", "int", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["Skilled|xphb"],
+      "skills": ["history", "persuasion"],
+      "tools": ["anyGamingSet"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Intelligence, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Skilled}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">History</span>, <span class=\"term\">Persuasion</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span>Choose one kind of <span class=\"term\">Gaming Set</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Gaming Set</span> (same as above), <span class=\"term\">Fine Clothes</span>, <span class=\"term\">Perfume</span>, 29 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "[object Object]", "quantity": 1, "displayName": null },
+            { "name": "fine clothes", "quantity": 1, "displayName": null },
+            { "name": "perfume", "quantity": 1, "displayName": null },
+            { "value": 2900 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "sage",
+      "name": "Sage",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["con", "int", "wis"], "weighted": [2, 1] },
+        { "from": ["con", "int", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["magic initiate; wizard|xphb"],
+      "skills": ["arcana", "history"],
+      "tools": ["calligrapher's supplies"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Constitution, Intelligence, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Magic Initiate} (Wizard)</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Arcana</span>, <span class=\"term\">History</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Calligrapher's Supplies</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Quarterstaff</span>, <span class=\"term\">Calligrapher's Supplies</span>, <span class=\"term\">Book</span> (history), <span class=\"term\">Parchment</span> (8 sheets), <span class=\"term\">Robe</span>, 8 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "quarterstaff", "quantity": 1, "displayName": null },
+            {
+              "name": "calligrapher's supplies",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "name": "book", "quantity": 1, "displayName": null },
+            { "name": "parchment", "quantity": 8, "displayName": null },
+            { "name": "robe", "quantity": 1, "displayName": null },
+            { "value": 800 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "sailor",
+      "name": "Sailor",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["str", "dex", "wis"], "weighted": [2, 1] },
+        { "from": ["str", "dex", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["tavern brawler|xphb"],
+      "skills": ["acrobatics", "perception"],
+      "tools": ["navigator's tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Dexterity, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Tavern Brawler}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Acrobatics</span>, <span class=\"term\">Perception</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Navigator's Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Dagger</span>, <span class=\"term\">Navigator's Tools</span>, <span class=\"term\">Rope</span>, <span class=\"term\">Traveler's Clothes</span>, 20 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "dagger", "quantity": 1, "displayName": null },
+            { "name": "navigator's tools", "quantity": 1, "displayName": null },
+            { "name": "rope", "quantity": 1, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 2000 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "scribe",
+      "name": "Scribe",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["dex", "int", "wis"], "weighted": [2, 1] },
+        { "from": ["dex", "int", "wis"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["skilled|xphb"],
+      "skills": ["investigation", "perception"],
+      "tools": ["calligrapher's supplies"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Intelligence, Wisdom</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Skilled}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Investigation</span>, <span class=\"term\">Perception</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Calligrapher's Supplies</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Calligrapher's Supplies</span>, <span class=\"term\">Fine Clothes</span>, <span class=\"term\">Lamp</span>, <span class=\"term\">Oil</span> (3 flasks), <span class=\"term\">Parchment</span> (12 sheets), 23 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            {
+              "name": "calligrapher's supplies",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "name": "fine clothes", "quantity": 1, "displayName": null },
+            { "name": "lamp", "quantity": 1, "displayName": null },
+            { "name": "oil", "quantity": 1, "displayName": null },
+            { "name": "parchment", "quantity": 1, "displayName": null },
+            { "value": 2300 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "soldier",
+      "name": "Soldier",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["str", "dex", "con"], "weighted": [2, 1] },
+        { "from": ["str", "dex", "con"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["savage attacker|xphb"],
+      "skills": ["athletics", "intimidation"],
+      "tools": ["anyGamingSet"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Strength, Dexterity, Constitution</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Savage Attacker}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Athletics</span>, <span class=\"term\">Intimidation</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span>Choose one kind of <span class=\"term\">Gaming Set</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">Spear</span>, <span class=\"term\">Shortbow</span>, <span class=\"term\">20 Arrows</span>, <span class=\"term\">Gaming Set</span> (same as above), <span class=\"term\">Healer's Kit</span>, <span class=\"term\">Quiver</span>, <span class=\"term\">Traveler's Clothes</span>, 14 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "spear", "quantity": 1, "displayName": null },
+            { "name": "shortbow", "quantity": 1, "displayName": null },
+            { "name": "arrows (20)", "quantity": 1, "displayName": null },
+            { "name": "[object Object]", "quantity": 1, "displayName": null },
+            { "name": "healer's kit", "quantity": 1, "displayName": null },
+            { "name": "quiver", "quantity": 1, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 1400 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    },
+    {
+      "id": "wayfarer",
+      "name": "Wayfarer",
+      "source": "XPHB",
+      "ability": [
+        { "from": ["dex", "wis", "cha"], "weighted": [2, 1] },
+        { "from": ["dex", "wis", "cha"], "weighted": [1, 1, 1] }
+      ],
+      "feats": ["lucky|xphb"],
+      "skills": ["insight", "stealth"],
+      "tools": ["thieves' tools"],
+      "feature": "<ul class=\"l0\"><li><p class=\"l1\"><span class=\"item-name\"><strong>Ability Scores:</strong> </span>Dexterity, Wisdom, Charisma</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Feat:</strong> </span>{feat Lucky}</p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Skill Proficiencies:</strong> </span><span class=\"term\">Insight</span>, <span class=\"term\">Stealth</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Tool Proficiency:</strong> </span><span class=\"term\">Thieves' Tools</span></p></li><li><p class=\"l1\"><span class=\"item-name\"><strong>Equipment:</strong> </span>Choose A or B: (A) <span class=\"term\">2 Daggers</span>, <span class=\"term\">Thieves' Tools</span>, <span class=\"term\">Gaming Set</span> (any), <span class=\"term\">Bedroll</span>, <span class=\"term\">2 Pouches</span>, <span class=\"term\">Traveler's Clothes</span>, 16 GP; or (B) 50 GP</p></li></ul>",
+      "equipment": [
+        {
+          "A": [
+            { "name": "dagger", "quantity": 2, "displayName": null },
+            { "name": "thieves' tools", "quantity": 1, "displayName": null },
+            { "name": "[object Object]", "quantity": 1, "displayName": null },
+            { "name": "bedroll", "quantity": 1, "displayName": null },
+            { "name": "pouch", "quantity": 2, "displayName": null },
+            {
+              "name": "traveler's clothes",
+              "quantity": 1,
+              "displayName": null
+            },
+            { "value": 1600 }
+          ],
+          "B": [{ "value": 5000 }]
+        }
+      ]
+    }
+  ]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D&amp;D 2024 Character Builder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div class="brand">
+      <h1>D&amp;D 2024 Character Builder</h1>
+      <div class="books">Player's Handbook 2024 &middot; Eberron: Forge of the Artificer</div>
+    </div>
+    <div id="level-picker" class="level-picker">
+      <label for="char-level">Character Level</label>
+      <select id="char-level"></select>
+    </div>
+  </header>
+
+  <nav id="steps"></nav>
+
+  <div id="layout">
+    <main id="main"></main>
+    <aside id="preview">
+      <div class="preview-head">Character Sheet</div>
+      <div id="preview-content"></div>
+    </aside>
+  </div>
+
+  <footer id="footer">
+    <button id="btn-back" class="btn ghost">Back</button>
+    <div id="step-actions"></div>
+    <button id="btn-next" class="btn primary">Continue</button>
+  </footer>
+</div>
+
+<script type="module" src="src/init.js"></script>
+</body>
+</html>

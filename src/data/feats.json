@@ -1,0 +1,1466 @@
+  [
+    {
+      "id": "aberrantdragonmark-efa",
+      "name": "Aberrant Dragonmark",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Aberrant Fortitude</h4><div class=\"l0\">When you fail a Constitution saving throw, you can take a <span class=\"term\">Reaction</span> to roll <span class=\"dice\">1d4</span> and add the number rolled to the save, potentially turning the failure into a success. Once you've used this benefit, you can't use it again until you finish a <span class=\"term\">Long Rest</span>.</div><h4 class=\"l0-h\">Aberrant Magic</h4><div class=\"l0\">You know one cantrip of your choice from the Sorcerer spell list. Also, choose a level 1 spell from that spell list. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Short</span> or <span class=\"term\">Long Rest</span>. You can also cast this spell using any spell slots you have. Constitution is your spellcasting ability for this spell.</div><h4 class=\"l0-h\">Aberrant Surge</h4><div class=\"l0\">When you cast the level 1 spell from this feat, you can expend one of your <span class=\"term\">Hit Point Dice</span> and roll it. If you roll an even number, you gain a number of <span class=\"term\">Temporary Hit Points</span> equal to the number rolled. If you roll an odd number, one creature within 30 feet of you (not including you) takes Force damage equal to the number rolled. If no other creatures are in range, you take the damage.</div>",
+      "bonus": [
+        { "kind": "known", "choose": "level=0|class=Sorcerer", "count": 1 }
+      ]
+    },
+    {
+      "id": "abilityscoreimprovement-xphb",
+      "name": "Ability Score Improvement",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": true,
+      "prerequisite": "level",
+      "text": "Increase one ability score of your choice by 2, or increase two ability scores of your choice by 1. This feat can't increase an ability score above 20.<h4 class=\"l0-h\">Repeatable</h4><div class=\"l0\">You can take this feat more than once.</div>",
+      "bonus": []
+    },
+    {
+      "id": "actor-xphb",
+      "name": "Actor",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Impersonation</h4><div class=\"l0\">While you're disguised as a real or fictional person, you have <span class=\"term\">Advantage</span> on Charisma (<span class=\"term\">Deception</span> or <span class=\"term\">Performance</span>) checks to convince others that you are that person.</div><h4 class=\"l0-h\">Mimicry</h4><div class=\"l0\">You can mimic the sounds of other creatures, including speech. A creature that hears the mimicry must succeed on a Wisdom (<span class=\"term\">Insight</span>) check to determine the effect is faked (DC 8 plus your Charisma modifier and <span class=\"term\">Proficiency Bonus</span>).</div>",
+      "bonus": []
+    },
+    {
+      "id": "alert-xphb",
+      "name": "Alert",
+      "source": "XPHB",
+      "category": "O",
+      "repeatable": false,
+      "prerequisite": "",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Initiative Proficiency</h4><div class=\"l0\">When you roll <span class=\"term\">Initiative</span>, you can add your <span class=\"term\">Proficiency Bonus</span> to the roll.</div><h4 class=\"l0-h\">Initiative Swap</h4><div class=\"l0\">Immediately after you roll <span class=\"term\">Initiative</span>, you can swap your <span class=\"term\">Initiative</span> with the <span class=\"term\">Initiative</span> of one willing ally in the same combat. You can't make this swap if you or the ally has the <span class=\"term\">Incapacitated</span> condition.</div>",
+      "bonus": []
+    },
+    {
+      "id": "archery-xphb",
+      "name": "Archery",
+      "source": "XPHB",
+      "category": "FS",
+      "repeatable": false,
+      "prerequisite": "feature",
+      "text": "You gain a +2 bonus to attack rolls you make with Ranged weapons.",
+      "bonus": []
+    },
+    {
+      "id": "athlete-xphb",
+      "name": "Athlete",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability; level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Climb Speed</h4><div class=\"l0\">You gain a <span class=\"term\">Climb Speed</span> equal to your <span class=\"term\">Speed</span>.</div><h4 class=\"l0-h\">Hop Up</h4><div class=\"l0\">When you have the <span class=\"term\">Prone</span> condition, you can right yourself with only 5 feet of movement.</div><h4 class=\"l0-h\">Jumping</h4><div class=\"l0\">You can make a running <span class=\"term\">Long</span> or <span class=\"term\">High Jump</span> after moving only 5 feet.</div>",
+      "bonus": []
+    },
+    {
+      "id": "blessedwarrior-xphb",
+      "name": "Blessed Warrior",
+      "source": "XPHB",
+      "category": "FS:P",
+      "repeatable": false,
+      "prerequisite": "otherSummary",
+      "text": "You learn two Cleric cantrips of your choice. <span class=\"term\">Guidance</span> and <span class=\"term\">Sacred Flame</span> are recommended. The chosen cantrips count as Paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a Paladin level, you can replace one of these cantrips with another Cleric cantrip.",
+      "bonus": [
+        { "kind": "known", "choose": "level=0|class=cleric", "count": 2 }
+      ]
+    },
+    {
+      "id": "blindfighting-xphb",
+      "name": "Blind Fighting",
+      "source": "XPHB",
+      "category": "FS",
+      "repeatable": false,
+      "prerequisite": "feature",
+      "text": "You have <span class=\"term\">Blindsight</span> with a range of 10 feet.",
+      "bonus": []
+    },
+    {
+      "id": "boonofcombatprowess-xphb",
+      "name": "Boon of Combat Prowess",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Peerless Aim</h4><div class=\"l0\">When you miss with an attack roll, you can hit instead. Once you use this benefit, you can't use it again until the start of your next turn.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonofdimensionaltravel-xphb",
+      "name": "Boon of Dimensional Travel",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Blink Steps</h4><div class=\"l0\">Immediately after you take the <span class=\"term\">Attack</span> action or the <span class=\"term\">Magic</span> action, you can teleport up to 30 feet to an unoccupied space you can see.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonofenergyresistance-xphb",
+      "name": "Boon of Energy Resistance",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Energy Resistances</h4><div class=\"l0\">You gain <span class=\"term\">Resistance</span> to two of the following damage types of your choice: Acid, Cold, Fire, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder. Whenever you finish a <span class=\"term\">Long Rest</span>, you can change your choices.</div><h4 class=\"l0-h\">Energy Redirection</h4><div class=\"l0\">When you take damage of one of the types chosen for the Energy Resistances benefit, you can take a <span class=\"term\">Reaction</span> to direct damage of the same type toward another creature you can see within 60 feet of yourself that isn't behind <span class=\"term\">Total Cover</span>. If you do so, that creature must succeed on a Dexterity saving throw (DC 8 plus your Constitution modifier and <span class=\"term\">Proficiency Bonus</span>) or take damage equal to <span class=\"dice\">2d12</span> plus your Constitution modifier.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonoffate-xphb",
+      "name": "Boon of Fate",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improve Fate</h4><div class=\"l0\">When you or another creature within 60 feet of you succeeds on or fails a <span class=\"term\">D20 Test</span>, you can roll <span class=\"dice\">2d4</span> and apply the total rolled as a bonus or penalty to the <span class=\"dice\">d20</span> roll. Once you use this benefit, you can't use it again until you roll <span class=\"term\">Initiative</span> or finish a <span class=\"term\">Short</span> or <span class=\"term\">Long Rest</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonoffortitude-xphb",
+      "name": "Boon of Fortitude",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Fortified Health</h4><div class=\"l0\">Your <span class=\"term\">Hit Point</span> maximum increases by 40. In addition, whenever you regain <span class=\"term\">Hit Points</span>, you can regain additional <span class=\"term\">Hit Points</span> equal to your Constitution modifier. Once you've regained these additional <span class=\"term\">Hit Points</span>, you can't do so again until the start of your next turn.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonofirresistibleoffense-xphb",
+      "name": "Boon of Irresistible Offense",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Overcome Defenses</h4><div class=\"l0\">The Bludgeoning, Piercing, and Slashing damage you deal always ignores <span class=\"term\">Resistance</span>.</div><h4 class=\"l0-h\">Overwhelming Strike</h4><div class=\"l0\">When you roll a 20 on the <span class=\"dice\">d20</span> for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat. The extra damage's type is the same as the attack's type.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonofrecovery-xphb",
+      "name": "Boon of Recovery",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Last Stand</h4><div class=\"l0\">When you would be reduced to 0 <span class=\"term\">Hit Points</span>, you can drop to 1 <span class=\"term\">Hit Point</span> instead and regain a number of <span class=\"term\">Hit Points</span> equal to half your <span class=\"term\">Hit Point</span> maximum. Once you use this benefit, you can't use it again until you finish a <span class=\"term\">Long Rest</span>.</div><h4 class=\"l0-h\">Recover Vitality</h4><div class=\"l0\">You have a pool of ten d10s. As a <span class=\"term\">Bonus Action</span>, you can expend dice from the pool, roll those dice, and regain a number of <span class=\"term\">Hit Points</span> equal to the roll's total. You regain all the expended dice when you finish a <span class=\"term\">Long Rest</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonofsiberys-efa",
+      "name": "Boon of Siberys",
+      "source": "EFA",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level, campaign",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Aberrant Magic</h4><div class=\"l0\">Choose a level 8 or lower spell from the Sorcerer spell list or a spell from the Siberys Dragonmark Spells table (the table includes dragonmark suggestions if you'd like to associate a spell with one of the marks). You always have that spell prepared. You can cast it once without a spell slot or spell components, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Short</span> or <span class=\"term\">Long Rest</span>. You can also cast this spell using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you gain this feat).<div class=\"table-cap\">Siberys Dragonmark Spells</div><table class=\"entry-table\"><thead><tr><th>Spell</th><th>Suggested Dragonmark</th></tr></thead><tbody><tr><td><span class=\"term\">Animal Shapes</span></td><td>Handling</td></tr><tr><td><span class=\"term\">Control Weather</span></td><td>Storm</td></tr><tr><td><span class=\"term\">Demiplane</span></td><td>Making</td></tr><tr><td><span class=\"term\">Heroes' Feast</span></td><td>Hospitality</td></tr><tr><td><span class=\"term\">Maze</span></td><td>Warding</td></tr><tr><td><span class=\"term\">Mind Blank</span></td><td>Sentinel</td></tr><tr><td><span class=\"term\">Plane Shift</span></td><td>Passage</td></tr><tr><td><span class=\"term\">Project Image</span></td><td>Shadow</td></tr><tr><td><span class=\"term\">Regenerate</span></td><td>Healing</td></tr><tr><td><span class=\"term\">Symbol</span></td><td>Scribing</td></tr><tr><td><span class=\"term\">Teleport</span></td><td>Finding</td></tr><tr><td><span class=\"term\">True Seeing</span></td><td>Detection</td></tr></tbody></table></div>",
+      "bonus": [
+        {
+          "kind": "prepared",
+          "name": "animal shapes",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "prepared",
+          "name": "control weather",
+          "ability": "int/wis/cha"
+        },
+        { "kind": "prepared", "name": "demiplane", "ability": "int/wis/cha" },
+        {
+          "kind": "prepared",
+          "name": "heroes' feast",
+          "ability": "int/wis/cha"
+        },
+        { "kind": "prepared", "name": "maze", "ability": "int/wis/cha" },
+        { "kind": "prepared", "name": "mind blank", "ability": "int/wis/cha" },
+        { "kind": "prepared", "name": "plane shift", "ability": "int/wis/cha" },
+        {
+          "kind": "prepared",
+          "name": "project image",
+          "ability": "int/wis/cha"
+        },
+        { "kind": "prepared", "name": "regenerate", "ability": "int/wis/cha" },
+        { "kind": "prepared", "name": "symbol", "ability": "int/wis/cha" },
+        { "kind": "prepared", "name": "teleport", "ability": "int/wis/cha" },
+        { "kind": "prepared", "name": "true seeing", "ability": "int/wis/cha" },
+        {
+          "kind": "prepared",
+          "choose": "level=1;2;3;4;5;6;7;8|class=Sorcerer",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "boonofskill-xphb",
+      "name": "Boon of Skill",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">All-Around Adept</h4><div class=\"l0\">You gain proficiency in all skills.</div><h4 class=\"l0-h\">Expertise</h4><div class=\"l0\">Choose one skill in which you lack <span class=\"term\">Expertise</span>. You gain <span class=\"term\">Expertise</span> in that skill.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonofspeed-xphb",
+      "name": "Boon of Speed",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Escape Artist</h4><div class=\"l0\">As a <span class=\"term\">Bonus Action</span>, you can take the <span class=\"term\">Disengage</span> action, which also ends the <span class=\"term\">Grappled</span> condition on you.</div><h4 class=\"l0-h\">Quickness</h4><div class=\"l0\">Your <span class=\"term\">Speed</span> increases by 30 feet.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonofspellrecall-xphb",
+      "name": "Boon of Spell Recall",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level, spellcasting2020",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Free Casting</h4><div class=\"l0\">Whenever you cast a spell with a level 1-4 spell slot, roll <span class=\"dice\">1d4</span>. If the number you roll is the same as the slot's level, the slot isn't expended.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonofthenightspirit-xphb",
+      "name": "Boon of the Night Spirit",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Merge with Shadows</h4><div class=\"l0\">While within <span class=\"term\">Dim Light</span> or <span class=\"term\">Darkness</span>, you can give yourself the <span class=\"term\">Invisible</span> condition as a <span class=\"term\">Bonus Action</span>. The condition ends on you immediately after you take an action, a <span class=\"term\">Bonus Action</span>, or a <span class=\"term\">Reaction</span>.</div><h4 class=\"l0-h\">Shadowy Form</h4><div class=\"l0\">While within <span class=\"term\">Dim Light</span> or <span class=\"term\">Darkness</span>, you have <span class=\"term\">Resistance</span> to all damage except Psychic and Radiant.</div>",
+      "bonus": []
+    },
+    {
+      "id": "boonoftruesight-xphb",
+      "name": "Boon of Truesight",
+      "source": "XPHB",
+      "category": "EB",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Truesight</h4><div class=\"l0\">You have <span class=\"term\">Truesight</span> with a range of 60 feet.</div>",
+      "bonus": []
+    },
+    {
+      "id": "charger-xphb",
+      "name": "Charger",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability; level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Dash</h4><div class=\"l0\">When you take the <span class=\"term\">Dash</span> action, your <span class=\"term\">Speed</span> increases by 10 feet for that action.</div><h4 class=\"l0-h\">Charge Attack</h4><div class=\"l0\">If you move at least 10 feet in a straight line toward a target immediately before hitting it with a melee attack roll as part of the <span class=\"term\">Attack</span> action, choose one of the following effects: gain a <span class=\"dice\">1d8</span> bonus to the attack's damage roll, or push the target up to 10 feet away if it is no more than one size larger than you. You can use this benefit only once on each of your turns.</div>",
+      "bonus": []
+    },
+    {
+      "id": "chef-xphb",
+      "name": "Chef",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Cook's Utensils</h4><div class=\"l0\">You gain proficiency with <span class=\"term\">Cook's Utensils</span> if you don't already have it.</div><h4 class=\"l0-h\">Replenishing Meal</h4><div class=\"l0\">As part of a <span class=\"term\">Short Rest</span>, you can cook special food if you have ingredients and <span class=\"term\">Cook's Utensils</span> on hand. You can prepare enough of this food for a number of creatures equal to 4 plus your <span class=\"term\">Proficiency Bonus</span>. At the end of the <span class=\"term\">Short Rest</span>, any creature who eats the food and spends one or more Hit Dice to regain <span class=\"term\">Hit Points</span> regains an extra <span class=\"dice\">1d8</span> <span class=\"term\">Hit Points</span>.</div><h4 class=\"l0-h\">Bolstering Treats</h4><div class=\"l0\">With 1 hour of work or when you finish a <span class=\"term\">Long Rest</span>, you can cook a number of treats equal to your <span class=\"term\">Proficiency Bonus</span> if you have ingredients and <span class=\"term\">Cook's Utensils</span> on hand. These special treats last 8 hours after being made. A creature can use a <span class=\"term\">Bonus Action</span> to eat one of those treats to gain a number of <span class=\"term\">Temporary Hit Points</span> equal to your <span class=\"term\">Proficiency Bonus</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "crafter-xphb",
+      "name": "Crafter",
+      "source": "XPHB",
+      "category": "O",
+      "repeatable": false,
+      "prerequisite": "",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Tool Proficiency</h4><div class=\"l0\">You gain proficiency with three different <span class=\"term\">Artisan's Tools</span> of your choice from the Fast Crafting table.</div><h4 class=\"l0-h\">Discount</h4><div class=\"l0\">Whenever you buy a nonmagical item, you receive a 20 percent discount on it.</div><h4 class=\"l0-h\">Fast Crafting</h4><div class=\"l0\">When you finish a <span class=\"term\">Long Rest</span>, you can craft one piece of gear from the Fast Crafting table, provided you have the <span class=\"term\">Artisan's Tools</span> associated with that item and have proficiency with those tools. The item lasts until you finish another <span class=\"term\">Long Rest</span>, at which point the item falls apart.<div class=\"table-cap\">Fast Crafting</div><table class=\"entry-table\"><thead><tr><th>Artisan's Tools</th><th>Crafted Gear</th></tr></thead><tbody><tr><td><span class=\"term\">Carpenter's Tools</span></td><td><span class=\"term\">Ladder</span>, <span class=\"term\">Torch</span></td></tr><tr><td><span class=\"term\">Leatherworker's Tools</span></td><td><span class=\"term\">Crossbow Bolt Case</span>, <span class=\"term\">Map or Scroll Case</span>, <span class=\"term\">Pouch</span></td></tr><tr><td><span class=\"term\">Mason's Tools</span></td><td><span class=\"term\">Block and Tackle</span></td></tr><tr><td><span class=\"term\">Potter's Tools</span></td><td><span class=\"term\">Jug</span>, <span class=\"term\">Lamp</span></td></tr><tr><td><span class=\"term\">Smith's Tools</span></td><td><span class=\"term\">Ball Bearings</span>, <span class=\"term\">Bucket</span>, <span class=\"term\">Caltrops</span>, <span class=\"term\">Grappling Hook</span>, <span class=\"term\">Iron Pot</span></td></tr><tr><td><span class=\"term\">Tinker's Tools</span></td><td><span class=\"term\">Bell</span>, <span class=\"term\">Shovel</span>, <span class=\"term\">Tinderbox</span></td></tr><tr><td><span class=\"term\">Weaver's Tools</span></td><td><span class=\"term\">Basket</span>, <span class=\"term\">Rope</span>, <span class=\"term\">Net</span>, <span class=\"term\">Tent</span></td></tr><tr><td><span class=\"term\">Woodcarver's Tools</span></td><td><span class=\"term\">Club</span>, <span class=\"term\">Greatclub</span>, <span class=\"term\">Quarterstaff</span></td></tr></tbody></table></div>",
+      "bonus": []
+    },
+    {
+      "id": "crossbowexpert-xphb",
+      "name": "Crossbow Expert",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Ignore Loading</h4><div class=\"l0\">You ignore the {itemProperty LD} property of the <span class=\"term\">Hand Crossbow</span>, <span class=\"term\">Heavy Crossbow</span>, and <span class=\"term\">Light Crossbow</span> (all called crossbows elsewhere in this feat). If you're holding one of them, you can load a piece of ammunition into it even if you lack a free hand.</div><h4 class=\"l0-h\">Firing in Melee</h4><div class=\"l0\">Being within 5 feet of an enemy doesn't impose <span class=\"term\">Disadvantage</span> on your attack rolls with crossbows.</div><h4 class=\"l0-h\">Dual Wielding</h4><div class=\"l0\">When you make the extra attack of the {itemProperty L} property, you can add your ability modifier to the damage of the extra attack if that attack is with a crossbow that has the {itemProperty L} property and you aren't already adding that modifier to the damage.</div>",
+      "bonus": []
+    },
+    {
+      "id": "crusher-xphb",
+      "name": "Crusher",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Push</h4><div class=\"l0\">Once per turn, when you hit a creature with an attack that deals Bludgeoning damage, you can move it 5 feet to an unoccupied space if the target is no more than one size larger than you.</div><h4 class=\"l0-h\">Enhanced Critical</h4><div class=\"l0\">When you score a <span class=\"term\">Critical Hit</span> that deals Bludgeoning damage to a creature, attack rolls against that creature have <span class=\"term\">Advantage</span> until the start of your next turn.</div>",
+      "bonus": []
+    },
+    {
+      "id": "defense-xphb",
+      "name": "Defense",
+      "source": "XPHB",
+      "category": "FS",
+      "repeatable": false,
+      "prerequisite": "feature",
+      "text": "While you're wearing Light, Medium, or Heavy armor, you gain a +1 bonus to <span class=\"term\">Armor Class</span>.",
+      "bonus": []
+    },
+    {
+      "id": "defensiveduelist-xphb",
+      "name": "Defensive Duelist",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Parry</h4><div class=\"l0\">If you're holding a Finesse weapon and another creature hits you with a melee attack, you can take a <span class=\"term\">Reaction</span> to add your <span class=\"term\">Proficiency Bonus</span> to your <span class=\"term\">Armor Class</span>, potentially causing the attack to miss you. You gain this bonus to your AC against melee attacks until the start of your next turn.</div>",
+      "bonus": []
+    },
+    {
+      "id": "druidicwarrior-xphb",
+      "name": "Druidic Warrior",
+      "source": "XPHB",
+      "category": "FS:R",
+      "repeatable": false,
+      "prerequisite": "otherSummary",
+      "text": "You learn two Druid cantrips of your choice. <span class=\"term\">Guidance</span> and <span class=\"term\">Starry Wisp</span> are recommended. The chosen cantrips count as Ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip.",
+      "bonus": [
+        { "kind": "known", "choose": "level=0|class=druid", "count": 2 }
+      ]
+    },
+    {
+      "id": "dualwielder-xphb",
+      "name": "Dual Wielder",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability; level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Enhanced Dual Wielding</h4><div class=\"l0\">When you take the <span class=\"term\">Attack</span> action on your turn and attack with a weapon that has the {itemProperty L} property, you can make one extra attack as a <span class=\"term\">Bonus Action</span> later on the same turn with a different weapon, which must be a Melee weapon that lacks the {itemProperty 2H} property. You don't add your ability modifier to the extra attack's damage unless that modifier is negative.</div><h4 class=\"l0-h\">Quick Draw</h4><div class=\"l0\">You can draw or stow two weapons that lack the {itemProperty 2H} property when you would normally be able to draw or stow only one.</div>",
+      "bonus": []
+    },
+    {
+      "id": "dueling-xphb",
+      "name": "Dueling",
+      "source": "XPHB",
+      "category": "FS",
+      "repeatable": false,
+      "prerequisite": "feature",
+      "text": "When you're holding a Melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.",
+      "bonus": []
+    },
+    {
+      "id": "durable-xphb",
+      "name": "Durable",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Defy Death</h4><div class=\"l0\">You have <span class=\"term\">Advantage</span> on <span class=\"term\">Death Saving Throws</span>.</div><h4 class=\"l0-h\">Speedy Recovery</h4><div class=\"l0\">As a <span class=\"term\">Bonus Action</span>, you can expend one of your <span class=\"term\">Hit Point Dice</span>, roll the die, and regain a number of <span class=\"term\">Hit Points</span> equal to the roll.</div>",
+      "bonus": []
+    },
+    {
+      "id": "elementaladept-xphb",
+      "name": "Elemental Adept",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": true,
+      "prerequisite": "level, spellcasting2020",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Energy Mastery</h4><div class=\"l0\">Choose one of the following damage types: Acid, Cold, Fire, Lightning, or Thunder. Spells you cast ignore <span class=\"term\">Resistance</span> to damage of the chosen type. In addition, when you roll damage for a spell you cast that deals damage of that type, you can treat any 1 on a damage die as a 2.</div><h4 class=\"l0-h\">Repeatable</h4><div class=\"l0\">You can take this feat more than once, but you must choose a different damage type each time for Energy Mastery.</div>",
+      "bonus": []
+    },
+    {
+      "id": "feytouched-xphb",
+      "name": "Fey-Touched",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "Your exposure to the Feywild's magic grants you the following benefits.<h4 class=\"l0-h\">Fey Magic</h4><div class=\"l0\">Choose one level 1 spell from the Divination or Enchantment school of magic. You always have that spell and the <span class=\"term\">Misty Step</span> spell prepared. You can cast each of these spells without expending a spell slot. Once you cast either spell in this way, you can't cast that spell in this way again until you finish a <span class=\"term\">Long Rest</span>. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.</div>",
+      "bonus": [
+        { "kind": "innate", "name": "misty step", "ability": "inherit" },
+        { "kind": "innate", "choose": "level=1|school=E;D", "count": 1 }
+      ]
+    },
+    {
+      "id": "grappler-xphb",
+      "name": "Grappler",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability; level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Punch and Grab</h4><div class=\"l0\">When you hit a creature with an <span class=\"term\">Unarmed Strike</span> as part of the <span class=\"term\">Attack</span> action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.</div><h4 class=\"l0-h\">Attack Advantage</h4><div class=\"l0\">You have <span class=\"term\">Advantage</span> on attack rolls against a creature <span class=\"term\">Grappled</span> by you.</div><h4 class=\"l0-h\">Fast Wrestler</h4><div class=\"l0\">You don't have to spend extra movement to move a creature <span class=\"term\">Grappled</span> by you if the creature is your size or smaller.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatweaponfighting-xphb",
+      "name": "Great Weapon Fighting",
+      "source": "XPHB",
+      "category": "FS",
+      "repeatable": false,
+      "prerequisite": "feature",
+      "text": "When you roll damage for an attack you make with a Melee weapon that you are holding with two hands, you can treat any 1 or 2 on a damage die as a 3. The weapon must have the {itemProperty 2h} or {itemProperty V} property to gain this benefit.",
+      "bonus": []
+    },
+    {
+      "id": "greatweaponmaster-xphb",
+      "name": "Great Weapon Master",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Heavy Weapon Mastery</h4><div class=\"l0\">When you hit a creature with a weapon that has the {itemProperty H} property as part of the <span class=\"term\">Attack</span> action on your turn, you can cause the weapon to deal extra damage to the target. The extra damage equals your <span class=\"term\">Proficiency Bonus</span>.</div><h4 class=\"l0-h\">Hew</h4><div class=\"l0\">Immediately after you score a <span class=\"term\">Critical Hit</span> with a Melee weapon or reduce a creature to 0 <span class=\"term\">Hit Points</span> with one, you can make one attack with the same weapon as a <span class=\"term\">Bonus Action</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greateraberrantmark-efa",
+      "name": "Greater Aberrant Mark",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Fortitude</h4><div class=\"l0\">When you use the Aberrant Fortitude benefit of your Aberrant Dragonmark feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>. You also now regain your use of Aberrant Fortitude whenever you finish a <span class=\"term\">Short</span> or <span class=\"term\">Long Rest</span>.</div><h4 class=\"l0-h\">Mark of Inspiration</h4><div class=\"l0\">When you cast a cantrip, you can roll one or two of your unexpended <span class=\"term\">Hit Point Dice</span>. You gain a number of <span class=\"term\">Temporary Hit Points</span> equal to the number rolled plus your Constitution modifier, and one creature of your choice within 30 feet of you (not including you) takes Force damage equal to the number rolled. Those dice are then expended.You can use this benefit a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofdetection-efa",
+      "name": "Greater Mark of Detection",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Deductive Intuition benefit of your {feat Mark of Detection} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Shared Detection</h4><div class=\"l0\">When you use the Magical Detection benefit of your {feat Mark of Detection} feat to cast <span class=\"term\">See Invisibility</span> without a spell slot, you can choose one creature you can see within 30 feet of yourself. That creature also gains the benefits of the spell for its duration.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkoffinding-efa",
+      "name": "Greater Mark of Finding",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Hunter's Intuition benefit of your {feat Mark of Finding} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Improved Finding</h4><div class=\"l0\">When you use the Finder's Magic benefit of your {feat Mark of Finding} to cast <span class=\"term\">Hunter's Mark</span> without a spell slot, the range of the spell is doubled, and you can modify the spell so that the target can't benefit from the <span class=\"term\">Invisible</span> condition for the duration.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofhandling-efa",
+      "name": "Greater Mark of Handling",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Wild Intuition benefit of your {feat Mark of Handling} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Improved Handling</h4><div class=\"l0\">While you are mounted, immediately after you hit a target within 5 feet of your mount with a melee attack roll, your mount can take a <span class=\"term\">Reaction</span> to move up to its <span class=\"term\">Speed</span> or take the <span class=\"term\">Attack</span> action to make one attack only (your choice).</div><h4 class=\"l0-h\">Subdue Animal</h4><div class=\"l0\">As a <span class=\"term\">Magic</span> action, you exert command over one Beast or Monstrosity you can see within 30 feet of yourself. The target must succeed on a Wisdom saving throw (DC 8 plus your Wisdom modifier and <span class=\"term\">Proficiency Bonus</span>) or have the <span class=\"term\">Frightened</span> condition until the start of your next turn. You can use this benefit a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofhealing-efa",
+      "name": "Greater Mark of Healing",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Medical Intuition benefit of your {feat Mark of Healing} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Improved Healing</h4><div class=\"l0\">You can now use the Healing Touch benefit of your {feat Mark of Healing} feat to cast <span class=\"term\">Cure Wounds</span> without using a spell slot a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>. Additionally, when you cast <span class=\"term\">Cure Wounds</span> and roll dice to determine the number of <span class=\"term\">Hit Points</span> restored, you can treat any 1 or 2 on a roll as a 3.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofhospitality-efa",
+      "name": "Greater Mark of Hospitality",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Ever Hospitable benefit of your {feat Mark of Hospitality} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Improved Hospitality</h4><div class=\"l0\">When you cast <span class=\"term\">Purify Food and Drink</span>, you can modify the spell so that instead of its normal effect, each creature of your choice within 30 feet of you is refreshed. Each affected creature's <span class=\"term\">Exhaustion</span> level is reduced by 1, and the creature gains <span class=\"term\">Temporary Hit Points</span> equal to your <span class=\"term\">Proficiency Bonus</span> plus your Intelligence, Wisdom, or Charisma modifier (choose when you select this feat). Once you modify the spell with this benefit, you can't do so again until you finish a <span class=\"term\">Long Rest</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofmaking-efa",
+      "name": "Greater Mark of Making",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Artisan's Intuition benefit of your {feat Mark of Making} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Improved Making</h4><div class=\"l0\">When you use the Spellsmith benefit of your {feat Mark of Making} feat to cast <span class=\"term\">Magic Weapon</span> without a spell slot, you cast the spell as its level 3 version.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofpassage-efa",
+      "name": "Greater Mark of Passage",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Intuitive Motion benefit of your {feat Mark of Passage} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Improved Passage</h4><div class=\"l0\">When you use the Magical Passage benefit of your {feat Mark of Passage} feat to cast <span class=\"term\">Misty Step</span> without a spell slot, you can also choose up to two willing creatures you can see within 30 feet of yourself before you teleport. Each target can then take a <span class=\"term\">Reaction</span> to also teleport up to 30 feet to an unoccupied space it can see.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofscribing-efa",
+      "name": "Greater Mark of Scribing",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Gifted Scribe benefit of your {feat Mark of Scribing} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Inspired Scribing</h4><div class=\"l0\">When you cast <span class=\"term\">Comprehend Languages</span>, you can modify the spell to encompass up to three willing creatures you can see within 30 feet of yourself. Each chosen creature also gains the benefits of the spell for the duration. In addition, for the duration of the spell, you and the chosen creatures can communicate telepathically with each other while within 1 mile of each other. Once you modify the spell with this benefit, you can't do so again until you finish a <span class=\"term\">Long Rest</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofsentinel-efa",
+      "name": "Greater Mark of Sentinel",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Sentinel's Intuition benefit of your {feat Mark of Sentinel} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Improved Sentinel</h4><div class=\"l0\">When you use the Vigilant Guardian benefit of your {feat Mark of Sentinel} feat, you can also make one attack with a weapon or an <span class=\"term\">Unarmed Strike</span> as part of that same <span class=\"term\">Reaction</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofshadow-efa",
+      "name": "Greater Mark of Shadow",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Cunning Intuition benefit of your {feat Mark of Shadow} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Improved Shadow</h4><div class=\"l0\">When you use the Shape Shadows benefit of your {feat Mark of Shadow} feat to cast <span class=\"term\">Invisibility</span> without a spell slot, you cast the spell as its level 3 version.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofstorm-efa",
+      "name": "Greater Mark of Storm",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Windwright's Intuition benefit of your {feat Mark of Storm} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Improved Storm</h4><div class=\"l0\">When you use the Storm Magic benefit of your {feat Mark of Storm} feat to cast <span class=\"term\">Gust of Wind</span> without a spell slot, you also gain a <span class=\"term\">Fly Speed</span> of 60 feet for the duration of the spell.</div>",
+      "bonus": []
+    },
+    {
+      "id": "greatermarkofwarding-efa",
+      "name": "Greater Mark of Warding",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, feat",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Improved Intuition</h4><div class=\"l0\">When you use the Warder's Intuition benefit of your {feat Mark of Warding} feat, you can roll <span class=\"dice\">1d6</span> instead of <span class=\"dice\">1d4</span>.</div><h4 class=\"l0-h\">Improved Warding</h4><div class=\"l0\">When a creature makes an attack roll against you or a creature you can see within 30 feet of yourself, you can take a <span class=\"term\">Reaction</span> to impose <span class=\"term\">Disadvantage</span> on that roll. You can use this benefit a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "healer-xphb",
+      "name": "Healer",
+      "source": "XPHB",
+      "category": "O",
+      "repeatable": false,
+      "prerequisite": "",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Battle Medic</h4><div class=\"l0\">If you have a <span class=\"term\">Healer's Kit</span>, you can expend one use of it and tend to a creature within 5 feet of yourself as a <span class=\"term\">Utilize</span> action. That creature can expend one of its <span class=\"term\">Hit Point Dice</span>, and you then roll that die. The creature regains a number of <span class=\"term\">Hit Points</span> equal to the roll plus your <span class=\"term\">Proficiency Bonus</span>.</div><h4 class=\"l0-h\">Healing Rerolls</h4><div class=\"l0\">Whenever you roll a die to determine the number of <span class=\"term\">Hit Points</span> you restore with a spell or with this feat's Battle Medic benefit, you can reroll the die if it rolls a 1, and you must use the new roll.</div>",
+      "bonus": []
+    },
+    {
+      "id": "heavilyarmored-xphb",
+      "name": "Heavily Armored",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, proficiency",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Armor Training</h4><div class=\"l0\">You gain training with Heavy armor.</div>",
+      "bonus": []
+    },
+    {
+      "id": "heavyarmormaster-xphb",
+      "name": "Heavy Armor Master",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, proficiency",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Damage Reduction</h4><div class=\"l0\">When you're hit by an attack while you're wearing Heavy armor, any Bludgeoning, Piercing, and Slashing damage dealt to you by that attack is reduced by an amount equal to your <span class=\"term\">Proficiency Bonus</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "inspiringleader-xphb",
+      "name": "Inspiring Leader",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability; level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Bolstering Performance</h4><div class=\"l0\">When you finish a <span class=\"term\">Short</span> or <span class=\"term\">Long Rest</span>, you can give an inspiring performance: a speech, song, or dance. When you do so, choose up to six allies (which can include yourself) within 30 feet of yourself who witness the performance. The chosen creatures each gain <span class=\"term\">Temporary Hit Points</span> equal to your character level plus the modifier of the ability you increased with this feat.</div>",
+      "bonus": []
+    },
+    {
+      "id": "interception-xphb",
+      "name": "Interception",
+      "source": "XPHB",
+      "category": "FS",
+      "repeatable": false,
+      "prerequisite": "feature",
+      "text": "When a creature you can see hits another creature within 5 feet of you with an attack roll, you can take a <span class=\"term\">Reaction</span> to reduce the damage dealt to the target by <span class=\"dice\">1d10</span> plus your <span class=\"term\">Proficiency Bonus</span>. You must be holding a <span class=\"term\">Shield</span> or a Simple or Martial weapon to use this <span class=\"term\">Reaction</span>.",
+      "bonus": []
+    },
+    {
+      "id": "keenmind-xphb",
+      "name": "Keen Mind",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Lore Knowledge</h4><div class=\"l0\">Choose one of the following skills: <span class=\"term\">Arcana</span>, <span class=\"term\">History</span>, <span class=\"term\">Investigation</span>, <span class=\"term\">Nature</span>, or <span class=\"term\">Religion</span>. If you lack proficiency in the chosen skill, you gain proficiency in it, and if you already have proficiency in it, you gain <span class=\"term\">Expertise</span> in it.</div><h4 class=\"l0-h\">Quick Study</h4><div class=\"l0\">You can take the <span class=\"term\">Study</span> action as a <span class=\"term\">Bonus Action</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "lightlyarmored-xphb",
+      "name": "Lightly Armored",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Armor Training</h4><div class=\"l0\">You gain training with Light armor and Shields.</div>",
+      "bonus": []
+    },
+    {
+      "id": "lucky-xphb",
+      "name": "Lucky",
+      "source": "XPHB",
+      "category": "O",
+      "repeatable": false,
+      "prerequisite": "",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Luck Points</h4><div class=\"l0\">You have a number of Luck Points equal to your <span class=\"term\">Proficiency Bonus</span> and can spend the points on the benefits below. You regain your expended Luck Points when you finish a <span class=\"term\">Long Rest</span>.</div><h4 class=\"l0-h\">Advantage</h4><div class=\"l0\">When you roll a <span class=\"dice\">d20</span> for a <span class=\"term\">D20 Test</span>, you can spend 1 Luck Point to give yourself <span class=\"term\">Advantage</span> on the roll.</div><h4 class=\"l0-h\">Disadvantage</h4><div class=\"l0\">When a creature rolls a <span class=\"dice\">d20</span> for an attack roll against you, you can spend 1 Luck Point to impose <span class=\"term\">Disadvantage</span> on that roll.</div>",
+      "bonus": []
+    },
+    {
+      "id": "mageslayer-xphb",
+      "name": "Mage Slayer",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Concentration Breaker</h4><div class=\"l0\">When you damage a creature that is <span class=\"term\">Concentrating</span>, it has <span class=\"term\">Disadvantage</span> on the saving throw it makes to maintain <span class=\"term\">Concentration</span>.</div><h4 class=\"l0-h\">Guarded Mind</h4><div class=\"l0\">If you fail an Intelligence, a Wisdom, or a Charisma saving throw, you can cause yourself to succeed instead. Once you use this benefit, you can't use it again until you finish a <span class=\"term\">Short</span> or <span class=\"term\">Long Rest</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "magicinitiate-xphb",
+      "name": "Magic Initiate",
+      "source": "XPHB",
+      "category": "O",
+      "repeatable": true,
+      "prerequisite": "",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Two Cantrips</h4><div class=\"l0\">You learn two cantrips of your choice from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat's spells (choose when you select this feat).</div><h4 class=\"l0-h\">Level 1 Spell</h4><div class=\"l0\">Choose a level 1 spell from the same list you selected for this feat's cantrips. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast the spell using any spell slots you have.</div><h4 class=\"l0-h\">Spell Change</h4><div class=\"l0\">Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the chosen spell list.</div><h4 class=\"l0-h\">Repeatable</h4><div class=\"l0\">You can take this feat more than once, but you must choose a different spell list each time.</div>",
+      "bonus": [
+        { "kind": "known", "choose": "level=0|class=Cleric", "count": 2 },
+        { "kind": "innate", "choose": "level=1|class=Cleric", "count": 1 },
+        { "kind": "known", "choose": "level=0|class=Druid", "count": 2 },
+        { "kind": "innate", "choose": "level=1|class=Druid", "count": 1 },
+        { "kind": "known", "choose": "level=0|class=Wizard", "count": 2 },
+        { "kind": "innate", "choose": "level=1|class=Wizard", "count": 1 }
+      ]
+    },
+    {
+      "id": "markofdetection-efa",
+      "name": "Mark of Detection",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Deductive Intuition</h4><div class=\"l0\">When you make an Intelligence (<span class=\"term\">Investigation</span>) or Wisdom (<span class=\"term\">Insight</span>) check, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Magical Detection</h4><div class=\"l0\">You always have the <span class=\"term\">Detect Magic</span> and <span class=\"term\">Detect Poison and Disease</span> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast these spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).When you reach character level 3, you also always have the <span class=\"term\">See Invisibility</span> spell prepared and can cast it the same way.</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Detection Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Detection Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Detect Evil and Good</span>, <span class=\"term\">Identify</span></td></tr><tr><td>2</td><td><span class=\"term\">Detect Thoughts</span>, <span class=\"term\">Find Traps</span></td></tr><tr><td>3</td><td><span class=\"term\">Clairvoyance</span>, <span class=\"term\">Nondetection</span></td></tr><tr><td>4</td><td><span class=\"term\">Arcane Eye</span>, <span class=\"term\">Divination</span></td></tr><tr><td>5</td><td><span class=\"term\">Legend Lore</span></td></tr></tbody></table></div>",
+      "bonus": [
+        {
+          "kind": "prepared",
+          "name": "see invisibility",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "prepared",
+          "name": "detect magic",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["detect evil and good", "identify"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["detect thoughts", "find traps"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["clairvoyance", "nondetection"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["arcane eye", "divination"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["legend lore"] }
+      ]
+    },
+    {
+      "id": "markoffinding-efa",
+      "name": "Mark of Finding",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Hunter's Intuition</h4><div class=\"l0\">When you make a Wisdom (<span class=\"term\">Perception</span> or <span class=\"term\">Survival</span>) check, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Finder's Magic</h4><div class=\"l0\">You always have the <span class=\"term\">Hunter's Mark</span> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast it using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).When you reach character level 3, you also always have the <span class=\"term\">Locate Object</span> spell prepared and can cast it the same way.</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Finding Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Finding Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Faerie Fire</span>, <span class=\"term\">Longstrider</span></td></tr><tr><td>2</td><td><span class=\"term\">Locate Animals or Plants</span>, <span class=\"term\">Mind Spike</span></td></tr><tr><td>3</td><td><span class=\"term\">Clairvoyance</span>, <span class=\"term\">Speak with Plants</span></td></tr><tr><td>4</td><td><span class=\"term\">Divination</span>, <span class=\"term\">Locate Creature</span></td></tr><tr><td>5</td><td><span class=\"term\">Commune with Nature</span></td></tr></tbody></table></div>",
+      "bonus": [
+        {
+          "kind": "prepared",
+          "name": "locate object",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "prepared",
+          "name": "hunter's mark",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["faerie fire", "longstrider"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["locate animals or plants", "mind spike"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["clairvoyance", "speak with plants"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["divination", "locate creature"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["commune with nature"] }
+      ]
+    },
+    {
+      "id": "markofhandling-efa",
+      "name": "Mark of Handling",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Wild Intuition</h4><div class=\"l0\">When you make an Intelligence (<span class=\"term\">Nature</span>) or Wisdom (<span class=\"term\">Animal Handling</span>) check, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Primal Connection</h4><div class=\"l0\">You always have the <span class=\"term\">Animal Friendship</span> and <span class=\"term\">Speak with Animals</span> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast these spells using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</div><h4 class=\"l0-h\">Monstrous Connections</h4><div class=\"l0\">When you reach character level 3, you can target a Monstrosity when you cast <span class=\"term\">Animal Friendship</span> or <span class=\"term\">Speak with Animals</span> if the creature's Intelligence score is 3 or lower.</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Handling Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Handling Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Command</span>, <span class=\"term\">Find Familiar</span></td></tr><tr><td>2</td><td><span class=\"term\">Beast Sense</span>, <span class=\"term\">Calm Emotions</span></td></tr><tr><td>3</td><td><span class=\"term\">Beacon of Hope</span>, <span class=\"term\">Conjure Animals</span></td></tr><tr><td>4</td><td><span class=\"term\">Aura of Life</span>, <span class=\"term\">Dominate Beast</span></td></tr><tr><td>5</td><td><span class=\"term\">Awaken</span></td></tr></tbody></table></div>",
+      "bonus": [
+        {
+          "kind": "prepared",
+          "name": "animal friendship",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "prepared",
+          "name": "speak with animals",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["command", "find familiar"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["beast sense", "calm emotions"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["beacon of hope", "conjure animals"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["aura of life", "dominate beast"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["awaken"] }
+      ]
+    },
+    {
+      "id": "markofhealing-efa",
+      "name": "Mark of Healing",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Medical Intuition</h4><div class=\"l0\">When you make a Wisdom (<span class=\"term\">Medicine</span>) check or an ability check using a <span class=\"term\">Herbalism Kit</span>, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Healing Touch</h4><div class=\"l0\">You always have the <span class=\"term\">Cure Wounds</span> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast it using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).When you reach character level 3, you also always have the <span class=\"term\">Lesser Restoration</span> spell prepared and can cast it the same way.</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Healing Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Healing Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">False Life</span>, <span class=\"term\">Healing Word</span></td></tr><tr><td>2</td><td><span class=\"term\">Arcane Vigor</span>, <span class=\"term\">Prayer of Healing</span></td></tr><tr><td>3</td><td><span class=\"term\">Aura of Vitality</span>, <span class=\"term\">Mass Healing Word</span></td></tr><tr><td>4</td><td><span class=\"term\">Aura of Life</span>, <span class=\"term\">Aura of Purity</span></td></tr><tr><td>5</td><td><span class=\"term\">Greater Restoration</span></td></tr></tbody></table></div>",
+      "bonus": [
+        {
+          "kind": "prepared",
+          "name": "lesser restoration",
+          "ability": "int/wis/cha"
+        },
+        { "kind": "prepared", "name": "cure wounds", "ability": "int/wis/cha" },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["false life", "healing word"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["arcane vigor", "prayer of healing"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["aura of vitality", "mass healing word"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["aura of life", "aura of purity"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["greater restoration"] }
+      ]
+    },
+    {
+      "id": "markofhospitality-efa",
+      "name": "Mark of Hospitality",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Ever Hospitable</h4><div class=\"l0\">When you make a Charisma (<span class=\"term\">Persuasion</span>) check or an ability check using <span class=\"term\">Brewer's Supplies</span> or <span class=\"term\">Cook's Utensils</span>, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Innkeeper's Magic</h4><div class=\"l0\">You always have the <span class=\"term\">Purify Food and Drink</span> and <span class=\"term\">Unseen Servant</span> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast these spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).When you reach character level 3, you also always have the <span class=\"term\">Calm Emotions</span> spell prepared and can cast it the same way.</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Hospitality Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Hospitality Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Goodberry</span>, <span class=\"term\">Sleep</span></td></tr><tr><td>2</td><td><span class=\"term\">Aid</span>, <span class=\"term\">Enhance Ability</span></td></tr><tr><td>3</td><td><span class=\"term\">Create Food and Water</span>, <span class=\"term\">Leomund's Tiny Hut</span></td></tr><tr><td>4</td><td><span class=\"term\">Aura of Purity</span>, <span class=\"term\">Mordenkainen's Private Sanctum</span></td></tr><tr><td>5</td><td><span class=\"term\">Hallow</span></td></tr></tbody></table></div>",
+      "bonus": [
+        {
+          "kind": "prepared",
+          "name": "calm emotions",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "prepared",
+          "name": "purify food and drink",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "prepared",
+          "name": "unseen servant",
+          "ability": "int/wis/cha"
+        },
+        { "kind": "expanded", "level": "s1", "names": ["goodberry", "sleep"] },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["aid", "enhance ability"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["create food and water", "leomund's tiny hut"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["aura of purity", "mordenkainen's private sanctum"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["hallow"] }
+      ]
+    },
+    {
+      "id": "markofmaking-efa",
+      "name": "Mark of Making",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Artisan's Intuition</h4><div class=\"l0\">When you make an Intelligence (<span class=\"term\">Arcana</span>) check or an ability check using <span class=\"term\">Artisan's Tools</span>, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Spellsmith</h4><div class=\"l0\">You know the <span class=\"term\">Mending</span> cantrip. You also always have the <span class=\"term\">Magic Weapon</span> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Making Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Making Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Identify</span>, <span class=\"term\">Tenser's Floating Disk</span></td></tr><tr><td>2</td><td><span class=\"term\">Continual Flame</span>, <span class=\"term\">Spiritual Weapon</span></td></tr><tr><td>3</td><td><span class=\"term\">Conjure Barrage</span>, <span class=\"term\">Elemental Weapon</span></td></tr><tr><td>4</td><td><span class=\"term\">Fabricate</span>, <span class=\"term\">Stone Shape</span></td></tr><tr><td>5</td><td><span class=\"term\">Creation</span></td></tr></tbody></table></div>",
+      "bonus": [
+        { "kind": "known", "name": "mending", "ability": "int/wis/cha" },
+        {
+          "kind": "prepared",
+          "name": "magic weapon",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["identify", "tenser's floating disk"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["continual flame", "spiritual weapon"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["conjure barrage", "elemental weapon"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["fabricate", "stone shape"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["creation"] }
+      ]
+    },
+    {
+      "id": "markofpassage-efa",
+      "name": "Mark of Passage",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Courier's Speed</h4><div class=\"l0\">Your <span class=\"term\">Speed</span> increases by 5 feet.</div><h4 class=\"l0-h\">Intuitive Motion</h4><div class=\"l0\">When you make a Strength (<span class=\"term\">Athletics</span>) or Dexterity (<span class=\"term\">Acrobatics</span>) check, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Magical Passage</h4><div class=\"l0\">You always have the <span class=\"term\">Misty Step</span> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Passage Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Passage Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Expeditious Retreat</span>, <span class=\"term\">Jump</span></td></tr><tr><td>2</td><td><span class=\"term\">Find Steed</span>, <span class=\"term\">Pass without Trace</span></td></tr><tr><td>3</td><td><span class=\"term\">Blink</span>, <span class=\"term\">Phantom Steed</span></td></tr><tr><td>4</td><td><span class=\"term\">Dimension Door</span>, <span class=\"term\">Freedom of Movement</span></td></tr><tr><td>5</td><td><span class=\"term\">Teleportation Circle</span></td></tr></tbody></table></div>",
+      "bonus": [
+        { "kind": "prepared", "name": "misty step", "ability": "int/wis/cha" },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["expeditious retreat", "jump"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["find steed", "pass without trace"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["blink", "phantom steed"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["dimension door", "freedom of movement"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["teleportation circle"] }
+      ]
+    },
+    {
+      "id": "markofscribing-efa",
+      "name": "Mark of Scribing",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Gifted Scribe</h4><div class=\"l0\">When you make an Intelligence (<span class=\"term\">History</span>) check or an ability check using <span class=\"term\">Calligrapher's Supplies</span>, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Scribe's Insight</h4><div class=\"l0\">You know the <span class=\"term\">Message</span> cantrip. You also always have the <span class=\"term\">Comprehend Languages</span> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast it using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).When you reach character level 3, you also always have the <span class=\"term\">Magic Mouth</span> spell prepared and can cast it the same way.</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Scribing Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Scribing Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Command</span>, <span class=\"term\">Illusory Script</span></td></tr><tr><td>2</td><td><span class=\"term\">Animal Messenger</span>, <span class=\"term\">Silence</span></td></tr><tr><td>3</td><td><span class=\"term\">Sending</span>, <span class=\"term\">Tongues</span></td></tr><tr><td>4</td><td><span class=\"term\">Arcane Eye</span>, <span class=\"term\">Confusion</span></td></tr><tr><td>5</td><td><span class=\"term\">Dream</span></td></tr></tbody></table></div>",
+      "bonus": [
+        { "kind": "known", "name": "message", "ability": "int/wis/cha" },
+        { "kind": "prepared", "name": "magic mouth", "ability": "int/wis/cha" },
+        {
+          "kind": "prepared",
+          "name": "comprehend languages",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["command", "illusory script"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["animal messenger", "silence"]
+        },
+        { "kind": "expanded", "level": "s3", "names": ["sending", "tongues"] },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["arcane eye", "confusion"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["dream"] }
+      ]
+    },
+    {
+      "id": "markofsentinel-efa",
+      "name": "Mark of Sentinel",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Sentinel's Intuition</h4><div class=\"l0\">When you make a Wisdom (<span class=\"term\">Insight</span> or <span class=\"term\">Perception</span>) check, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Guardian's Shield</h4><div class=\"l0\">You always have the <span class=\"term\">Shield</span> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast it using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability for this spell (choose when you select this feat).</div><h4 class=\"l0-h\">Vigilant Guardian</h4><div class=\"l0\">When a creature you can see within 5 feet of you is hit by an attack roll, you can take a <span class=\"term\">Reaction</span> to swap places with that creature, and you are hit by the attack instead. You can use this feature a number of times equal to your <span class=\"term\">Proficiency Bonus</span> and regain all expended uses when you finish a <span class=\"term\">Long Rest</span>.</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Sentinel Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Sentinel Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Compelled Duel</span>, <span class=\"term\">Shield of Faith</span></td></tr><tr><td>2</td><td><span class=\"term\">Warding Bond</span>, <span class=\"term\">Zone of Truth</span></td></tr><tr><td>3</td><td><span class=\"term\">Counterspell</span>, <span class=\"term\">Protection from Energy</span></td></tr><tr><td>4</td><td><span class=\"term\">Death Ward</span>, <span class=\"term\">Guardian of Faith</span></td></tr><tr><td>5</td><td><span class=\"term\">Bigby's Hand</span></td></tr></tbody></table></div>",
+      "bonus": [
+        { "kind": "prepared", "name": "shield", "ability": "int/wis/cha" },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["compelled duel", "shield of faith"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["warding bond", "zone of truth"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["counterspell", "protection from energy"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["death ward", "guardian of faith"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["bigby's hand"] }
+      ]
+    },
+    {
+      "id": "markofshadow-efa",
+      "name": "Mark of Shadow",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Cunning Intuition</h4><div class=\"l0\">When you make a Dexterity (<span class=\"term\">Stealth</span>) or Charisma (<span class=\"term\">Performance</span>) check, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Shape Shadows</h4><div class=\"l0\">You know the <span class=\"term\">Minor Illusion</span> cantrip. You also always have the <span class=\"term\">Invisibility</span> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast it using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Shadow Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Shadow Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Disguise Self</span>, <span class=\"term\">Silent Image</span></td></tr><tr><td>2</td><td><span class=\"term\">Darkness</span>, <span class=\"term\">Pass without Trace</span></td></tr><tr><td>3</td><td><span class=\"term\">Clairvoyance</span>, <span class=\"term\">Major Image</span></td></tr><tr><td>4</td><td><span class=\"term\">Greater Invisibility</span>, <span class=\"term\">Hallucinatory Terrain</span></td></tr><tr><td>5</td><td><span class=\"term\">Mislead</span></td></tr></tbody></table></div>",
+      "bonus": [
+        { "kind": "known", "name": "minor illusion", "ability": "int/wis/cha" },
+        {
+          "kind": "prepared",
+          "name": "invisibility",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["disguise self", "silent image"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["darkness", "pass without trace"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["clairvoyance", "major image"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["greater invisibility", "hallucinatory terrain"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["mislead"] }
+      ]
+    },
+    {
+      "id": "markofstorm-efa",
+      "name": "Mark of Storm",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Windwright's Intuition</h4><div class=\"l0\">When you make a Dexterity (<span class=\"term\">Acrobatics</span>) check or an ability check using <span class=\"term\">Navigator's Tools</span>, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Storm's Boon</h4><div class=\"l0\">You have <span class=\"term\">Resistance</span> to Lightning damage.</div><h4 class=\"l0-h\">Storm Magic</h4><div class=\"l0\">You know the <span class=\"term\">Thunderclap</span> cantrip. When you reach character level 3, you also always have the <span class=\"term\">Gust of Wind</span> spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast it using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Storm Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Storm Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Feather Fall</span>, <span class=\"term\">Fog Cloud</span></td></tr><tr><td>2</td><td><span class=\"term\">Levitate</span>, <span class=\"term\">Shatter</span></td></tr><tr><td>3</td><td><span class=\"term\">Sleet Storm</span>, <span class=\"term\">Wind Wall</span></td></tr><tr><td>4</td><td><span class=\"term\">Conjure Minor Elementals</span>, <span class=\"term\">Control Water</span></td></tr><tr><td>5</td><td><span class=\"term\">Conjure Elemental</span></td></tr></tbody></table></div>",
+      "bonus": [
+        { "kind": "known", "name": "thunderclap", "ability": "int/wis/cha" },
+        {
+          "kind": "prepared",
+          "name": "gust of wind",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["feather fall", "fog cloud"]
+        },
+        { "kind": "expanded", "level": "s2", "names": ["levitate", "shatter"] },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["sleet storm", "wind wall"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["conjure minor elementals", "control water"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["conjure elemental"] }
+      ]
+    },
+    {
+      "id": "markofwarding-efa",
+      "name": "Mark of Warding",
+      "source": "EFA",
+      "category": "D",
+      "repeatable": false,
+      "prerequisite": "campaign, exclusiveFeatCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Warder's Intuition</h4><div class=\"l0\">When you make an Intelligence (<span class=\"term\">Investigation</span>) check or an ability check using <span class=\"term\">Thieves' Tools</span>, you can roll <span class=\"dice\">1d4</span> and add the number rolled to the ability check.</div><h4 class=\"l0-h\">Wards and Seals</h4><div class=\"l0\">You always have the <span class=\"term\">Alarm</span> and <span class=\"term\">Mage Armor</span> spells prepared. You can cast each spell once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>.You can also cast these spells using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose when you select this feat).When you reach character level 3, you also always have the <span class=\"term\">Arcane Lock</span> spell prepared and can cast it the same way.</div><h4 class=\"l0-h\">Spells of the Mark</h4><div class=\"l0\">If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Warding Spells table are added to that feature's spell list.<div class=\"table-cap\">Mark of Warding Spells</div><table class=\"entry-table\"><thead><tr><th>Spell Level</th><th>Spells</th></tr></thead><tbody><tr><td>1</td><td><span class=\"term\">Armor of Agathys</span>, <span class=\"term\">Sanctuary</span></td></tr><tr><td>2</td><td><span class=\"term\">Knock</span>, <span class=\"term\">Nystul's Magic Aura</span></td></tr><tr><td>3</td><td><span class=\"term\">Glyph of Warding</span>, <span class=\"term\">Magic Circle</span></td></tr><tr><td>4</td><td><span class=\"term\">Leomund's Secret Chest</span>, <span class=\"term\">Mordenkainen's Faithful Hound</span></td></tr><tr><td>5</td><td><span class=\"term\">Antilife Shell</span></td></tr></tbody></table></div>",
+      "bonus": [
+        { "kind": "prepared", "name": "arcane lock", "ability": "int/wis/cha" },
+        { "kind": "prepared", "name": "alarm", "ability": "int/wis/cha" },
+        { "kind": "prepared", "name": "mage armor", "ability": "int/wis/cha" },
+        {
+          "kind": "expanded",
+          "level": "s1",
+          "names": ["armor of agathys", "sanctuary"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s2",
+          "names": ["knock", "nystul's magic aura"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s3",
+          "names": ["glyph of warding", "magic circle"]
+        },
+        {
+          "kind": "expanded",
+          "level": "s4",
+          "names": ["leomund's secret chest", "mordenkainen's faithful hound"]
+        },
+        { "kind": "expanded", "level": "s5", "names": ["antilife shell"] }
+      ]
+    },
+    {
+      "id": "martialweapontraining-xphb",
+      "name": "Martial Weapon Training",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Weapon Proficiency</h4><div class=\"l0\">You gain proficiency with Martial weapons.</div>",
+      "bonus": []
+    },
+    {
+      "id": "mediumarmormaster-xphb",
+      "name": "Medium Armor Master",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, proficiency",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Dexterous Wearer</h4><div class=\"l0\">While you're wearing Medium armor, you can add 3, rather than 2 to your AC if you have a Dexterity score of 16 or higher.</div>",
+      "bonus": []
+    },
+    {
+      "id": "moderatelyarmored-xphb",
+      "name": "Moderately Armored",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, proficiency",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Armor Training</h4><div class=\"l0\">You gain training with Medium armor.</div>",
+      "bonus": []
+    },
+    {
+      "id": "mountedcombatant-xphb",
+      "name": "Mounted Combatant",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Mounted Strike</h4><div class=\"l0\">While <span class=\"term\">1</span>, you have <span class=\"term\">Advantage</span> on attack rolls against any unmounted creature within 5 feet of your mount that is at least one size smaller than the mount.</div><h4 class=\"l0-h\">Leap Aside</h4><div class=\"l0\">If your mount is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw and only half damage if it fails. For your mount to gain this benefit, you must be riding it, and neither of you can have the <span class=\"term\">Incapacitated</span> condition.</div><h4 class=\"l0-h\">Veer</h4><div class=\"l0\">While <span class=\"term\">1</span>, you can force an attack that hits your mount to hit you instead if you don't have the <span class=\"term\">Incapacitated</span> condition.</div>",
+      "bonus": []
+    },
+    {
+      "id": "musician-xphb",
+      "name": "Musician",
+      "source": "XPHB",
+      "category": "O",
+      "repeatable": false,
+      "prerequisite": "",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Instrument Training</h4><div class=\"l0\">You gain proficiency with three Musical Instruments of your choice.</div><h4 class=\"l0-h\">Encouraging Song</h4><div class=\"l0\">As you finish a <span class=\"term\">Short</span> or <span class=\"term\">Long Rest</span>, you can play a song on a <span class=\"term\">Musical Instrument</span> with which you have proficiency and give <span class=\"term\">Heroic Inspiration</span> to allies who hear the song. The number of allies you can affect in this way equals your <span class=\"term\">Proficiency Bonus</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "observant-xphb",
+      "name": "Observant",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability; level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Keen Observer</h4><div class=\"l0\">Choose one of the following skills: <span class=\"term\">Insight</span>, <span class=\"term\">Investigation</span>, or <span class=\"term\">Perception</span>. If you lack proficiency with the chosen skill, you gain proficiency in it, and if you already have proficiency in it, you gain <span class=\"term\">Expertise</span> in it.</div><h4 class=\"l0-h\">Quick Search</h4><div class=\"l0\">You can take the <span class=\"term\">Search</span> action as a <span class=\"term\">Bonus Action</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "piercer-xphb",
+      "name": "Piercer",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Puncture</h4><div class=\"l0\">Once per turn, when you hit a creature with an attack that deals Piercing damage, you can reroll one of the attack's damage dice, and you must use the new roll.</div><h4 class=\"l0-h\">Enhanced Critical</h4><div class=\"l0\">When you score a <span class=\"term\">Critical Hit</span> that deals Piercing damage to a creature, you can roll one additional damage die when determining the extra Piercing damage the target takes.</div>",
+      "bonus": []
+    },
+    {
+      "id": "poisoner-xphb",
+      "name": "Poisoner",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Potent Poison</h4><div class=\"l0\">When you make a damage roll that deals Poison damage, it ignores <span class=\"term\">Resistance</span> to Poison damage.</div><h4 class=\"l0-h\">Brew Poison</h4><div class=\"l0\">You gain proficiency with the <span class=\"term\">Poisoner's Kit</span>. With 1 hour of work using such a kit and expending 50 GP worth of materials, you can create a number of poison doses equal to your <span class=\"term\">Proficiency Bonus</span>. As a <span class=\"term\">Bonus Action</span>, you can apply a poison dose to a weapon or piece of ammunition. Once applied, the poison retains its potency for 1 minute or until you deal damage with the poisoned item, whichever is shorter. When a creature takes damage from the poisoned item, that creature must succeed on a Constitution saving throw (DC 8 plus the modifier of the ability increased by this feat and your <span class=\"term\">Proficiency Bonus</span>) or take <span class=\"dice\">2d8</span> Poison damage and have the <span class=\"term\">Poisoned</span> condition until the end of your next turn.</div>",
+      "bonus": []
+    },
+    {
+      "id": "polearmmaster-xphb",
+      "name": "Polearm Master",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability; level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Pole Strike</h4><div class=\"l0\">Immediately after you take the <span class=\"term\">Attack</span> action and attack with a <span class=\"term\">Quarterstaff</span>, a <span class=\"term\">Spear</span>, or a weapon that has the Heavy and Reach properties, you can use a <span class=\"term\">Bonus Action</span> to make a melee attack with the opposite end of the weapon. The weapon deals Bludgeoning damage, and the weapon's damage die for this attack is a <span class=\"dice\">d4</span>.</div><h4 class=\"l0-h\">Reactive Strike</h4><div class=\"l0\">While you're holding a <span class=\"term\">Quarterstaff</span>, a <span class=\"term\">Spear</span>, or a weapon that has the Heavy and Reach properties, you can take a <span class=\"term\">Reaction</span> to make one melee attack against a creature that enters the reach you have with that weapon.</div>",
+      "bonus": []
+    },
+    {
+      "id": "potentdragonmark-efa",
+      "name": "Potent Dragonmark",
+      "source": "EFA",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, featCategory",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Dragonmark Preparation</h4><div class=\"l0\">You always have the spells on your Spells of the Mark list (if any) prepared.</div><h4 class=\"l0-h\">Dragonmark Spellcasting</h4><div class=\"l0\">You have one extra spell slot to cast the spells granted by your Dragonmark feat. The spell slot's level is half your level (round up), to a maximum of level 5. You regain the expended slot when you finish a <span class=\"term\">Short</span> or <span class=\"term\">Long Rest</span>. You can use this spell slot to cast only a spell you have prepared because of your Dragonmark feat or the Dragonmark Preparation benefit of this feat.</div>",
+      "bonus": []
+    },
+    {
+      "id": "protection-xphb",
+      "name": "Protection",
+      "source": "XPHB",
+      "category": "FS",
+      "repeatable": false,
+      "prerequisite": "feature",
+      "text": "When a creature you can see attacks a target other than you that is within 5 feet of you, you can take a <span class=\"term\">Reaction</span> to interpose your <span class=\"term\">Shield</span> if you're holding one. You impose <span class=\"term\">Disadvantage</span> on the triggering attack roll and all other attack rolls against the target until the start of your next turn if you remain within 5 feet of the target.",
+      "bonus": []
+    },
+    {
+      "id": "resilient-xphb",
+      "name": "Resilient",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Saving Throw Proficiency</h4><div class=\"l0\">You gain saving throw proficiency with the chosen ability.</div>",
+      "bonus": []
+    },
+    {
+      "id": "ritualcaster-xphb",
+      "name": "Ritual Caster",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability; level, ability; level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Ritual Spells</h4><div class=\"l0\">Choose a number of level 1 spells equal to your <span class=\"term\">Proficiency Bonus</span> that have the Ritual tag. You always have those spells prepared, and you can cast them with any spell slots you have. The spells' spellcasting ability is the ability increased by this feat. Whenever your <span class=\"term\">Proficiency Bonus</span> increases thereafter, you can add an additional level 1 spell with the <span class=\"term\">Ritual</span> tag to the spells always prepared with this feature.</div><h4 class=\"l0-h\">Quick Ritual</h4><div class=\"l0\">With this benefit, you can cast a <span class=\"term\">Ritual</span> spell that you have prepared using its regular casting time rather than the extended time for a <span class=\"term\">Ritual</span>. Doing so doesn't require a spell slot. Once you cast the spell in this way, you can't use this benefit again until you finish a <span class=\"term\">Long Rest</span>.</div>",
+      "bonus": [
+        {
+          "kind": "prepared",
+          "choose": "level=1|components & miscellaneous=ritual",
+          "count": 2
+        },
+        {
+          "kind": "prepared",
+          "choose": "level=1|components & miscellaneous=ritual",
+          "count": 1
+        },
+        {
+          "kind": "prepared",
+          "choose": "level=1|components & miscellaneous=ritual",
+          "count": 1
+        },
+        {
+          "kind": "prepared",
+          "choose": "level=1|components & miscellaneous=ritual",
+          "count": 1
+        },
+        {
+          "kind": "prepared",
+          "choose": "level=1|components & miscellaneous=ritual",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "savageattacker-xphb",
+      "name": "Savage Attacker",
+      "source": "XPHB",
+      "category": "O",
+      "repeatable": false,
+      "prerequisite": "",
+      "text": "You've trained to deal particularly damaging strikes. Once per turn when you hit a target with a weapon, you can roll the weapon's damage dice twice and use either roll against the target.",
+      "bonus": []
+    },
+    {
+      "id": "sentinel-xphb",
+      "name": "Sentinel",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability; level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Guardian</h4><div class=\"l0\">Immediately after a creature within 5 feet of you takes the <span class=\"term\">Disengage</span> action or hits a target other than you with an attack, you can make an <span class=\"term\">Opportunity Attack</span> against that creature.</div><h4 class=\"l0-h\">Halt</h4><div class=\"l0\">When you hit a creature with an <span class=\"term\">Opportunity Attack</span>, the creature's <span class=\"term\">Speed</span> becomes 0 for the rest of the current turn.</div>",
+      "bonus": []
+    },
+    {
+      "id": "shadowtouched-xphb",
+      "name": "Shadow-Touched",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "Your exposure to the Shadowfell's magic grants you the following benefits.<h4 class=\"l0-h\">Shadow Magic</h4><div class=\"l0\">Choose one level 1 spell from the Illusion or Necromancy school of magic. You always have that spell and the <span class=\"term\">Invisibility</span> spell prepared. You can cast each of these spells without expending a spell slot. Once you cast either spell in this way, you can't cast that spell in this way again until you finish a <span class=\"term\">Long Rest</span>. You can also cast these spells using spell slots you have of the appropriate level. The spells' spellcasting ability is the ability increased by this feat.</div>",
+      "bonus": [
+        { "kind": "innate", "name": "invisibility", "ability": "inherit" },
+        { "kind": "innate", "choose": "level=1|school=I;N", "count": 1 }
+      ]
+    },
+    {
+      "id": "sharpshooter-xphb",
+      "name": "Sharpshooter",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Bypass Cover</h4><div class=\"l0\">Your ranged attacks with weapons ignore <span class=\"term\">Half Cover</span> and <span class=\"term\">Three-Quarters Cover</span>.</div><h4 class=\"l0-h\">Firing in Melee</h4><div class=\"l0\">Being within 5 feet of an enemy doesn't impose <span class=\"term\">Disadvantage</span> on your attack rolls with Ranged weapons.</div><h4 class=\"l0-h\">Long Shots</h4><div class=\"l0\">Attacking at long range doesn't impose <span class=\"term\">Disadvantage</span> on your attack rolls with Ranged weapons.</div>",
+      "bonus": []
+    },
+    {
+      "id": "shieldmaster-xphb",
+      "name": "Shield Master",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, proficiency",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Shield Bash</h4><div class=\"l0\">If you attack a creature within 5 feet of you as part of the <span class=\"term\">Attack</span> action and hit with a Melee weapon, you can immediately bash the target with your <span class=\"term\">Shield</span> if it's equipped, forcing the target to make a Strength saving throw (DC 8 plus your Strength modifier and <span class=\"term\">Proficiency Bonus</span>). On a failed save, you either push the target 5 feet from you or cause it to have the <span class=\"term\">Prone</span> condition (your choice). You can use this benefit only once on each of your turns.</div><h4 class=\"l0-h\">Interpose Shield</h4><div class=\"l0\">If you're subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you can take a <span class=\"term\">Reaction</span> to take no damage if you succeed on the saving throw and are holding a <span class=\"term\">Shield</span>.</div>",
+      "bonus": []
+    },
+    {
+      "id": "skillexpert-xphb",
+      "name": "Skill Expert",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Skill Proficiency</h4><div class=\"l0\">You gain proficiency in one skill of your choice.</div><h4 class=\"l0-h\">Expertise</h4><div class=\"l0\">Choose one skill in which you have proficiency but lack <span class=\"term\">Expertise</span>. You gain <span class=\"term\">Expertise</span> with that skill.</div>",
+      "bonus": []
+    },
+    {
+      "id": "skilled-xphb",
+      "name": "Skilled",
+      "source": "XPHB",
+      "category": "O",
+      "repeatable": true,
+      "prerequisite": "",
+      "text": "You gain proficiency in any combination of three {table Skill List; Skills} or tools of your choice.<h4 class=\"l0-h\">Repeatable</h4><div class=\"l0\">You can take this feat more than once.</div>",
+      "bonus": []
+    },
+    {
+      "id": "skulker-xphb",
+      "name": "Skulker",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Blindsight</h4><div class=\"l0\">You have <span class=\"term\">Blindsight</span> with a range of 10 feet.</div><h4 class=\"l0-h\">Fog of War</h4><div class=\"l0\">You exploit the distractions of battle, gaining <span class=\"term\">Advantage</span> on any Dexterity (<span class=\"term\">Stealth</span>) check you make as part of the <span class=\"term\">Hide</span> action during combat.</div><h4 class=\"l0-h\">Sniper</h4><div class=\"l0\">If you make an attack roll while hidden and the roll misses, making the attack roll doesn't reveal your location.</div>",
+      "bonus": []
+    },
+    {
+      "id": "slasher-xphb",
+      "name": "Slasher",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Hamstring</h4><div class=\"l0\">Once per turn when you hit a creature with an attack that deals Slashing damage, you can reduce the <span class=\"term\">Speed</span> of that creature by 10 feet until the start of your next turn.</div><h4 class=\"l0-h\">Enhanced Critical</h4><div class=\"l0\">When you score a <span class=\"term\">Critical Hit</span> that deals Slashing damage to a creature, it has <span class=\"term\">Disadvantage</span> on attack rolls until the start of your next turn.</div>",
+      "bonus": []
+    },
+    {
+      "id": "speedy-xphb",
+      "name": "Speedy",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, ability; level, ability",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Speed Increase</h4><div class=\"l0\">Your <span class=\"term\">Speed</span> increases by 10 feet.</div><h4 class=\"l0-h\">Dash over Difficult Terrain</h4><div class=\"l0\">When you take the <span class=\"term\">Dash</span> action on your turn, <span class=\"term\">Difficult Terrain</span> doesn't cost you extra movement for the rest of that turn.</div><h4 class=\"l0-h\">Agile Movement</h4><div class=\"l0\"><span class=\"term\">Opportunity Attacks</span> have <span class=\"term\">Disadvantage</span> against you.</div>",
+      "bonus": []
+    },
+    {
+      "id": "spellsniper-xphb",
+      "name": "Spell Sniper",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, spellcasting2020",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Bypass Cover</h4><div class=\"l0\">Your attack rolls for spells ignore <span class=\"term\">Half Cover</span> and <span class=\"term\">Three-Quarters Cover</span>.</div><h4 class=\"l0-h\">Casting in Melee</h4><div class=\"l0\">Being within 5 feet of an enemy doesn't impose <span class=\"term\">Disadvantage</span> on your attack rolls with spells.</div><h4 class=\"l0-h\">Increased Range</h4><div class=\"l0\">When you cast a spell that has a range of at least 10 feet and requires you to make an attack roll, you can increase the spell's range by 60 feet.</div>",
+      "bonus": []
+    },
+    {
+      "id": "tavernbrawler-xphb",
+      "name": "Tavern Brawler",
+      "source": "XPHB",
+      "category": "O",
+      "repeatable": false,
+      "prerequisite": "",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Enhanced Unarmed Strike</h4><div class=\"l0\">When you hit with your <span class=\"term\">Unarmed Strike</span> and deal damage, you can deal Bludgeoning damage equal to <span class=\"dice\">1d4</span> plus your Strength modifier instead of the normal damage of an <span class=\"term\">Unarmed Strike</span>.</div><h4 class=\"l0-h\">Damage Rerolls</h4><div class=\"l0\">Whenever you roll a damage die for your <span class=\"term\">Unarmed Strike</span>, you can reroll the die if it rolls a 1, and you must use the new roll.</div><h4 class=\"l0-h\">Improvised Weaponry</h4><div class=\"l0\">You have proficiency with improvised weapons.</div><h4 class=\"l0-h\">Push</h4><div class=\"l0\">When you hit a creature with an <span class=\"term\">Unarmed Strike</span> as part of the <span class=\"term\">Attack</span> action on your turn, you can deal damage to the target and also push it 5 feet away from you. You can use this benefit only once per turn.</div>",
+      "bonus": []
+    },
+    {
+      "id": "telekinetic-xphb",
+      "name": "Telekinetic",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Minor Telekinesis</h4><div class=\"l0\">You learn the <span class=\"term\">Mage Hand</span> spell. You can cast it without Verbal or Somatic components, you can make the spectral hand <span class=\"term\">Invisible</span>, and its range and the distance it can be away from you both increase by 30 feet when you cast it. The spell's spellcasting ability is the ability increased by this feat.</div><h4 class=\"l0-h\">Telekinetic Shove</h4><div class=\"l0\">As a <span class=\"term\">Bonus Action</span>, you can telekinetically shove one creature you can see within 30 feet of yourself. When you do so, the target must succeed on a Strength saving throw (DC 8 plus the ability modifier of the score increased by this feat and your <span class=\"term\">Proficiency Bonus</span>) or be moved 5 feet toward or away from you.</div>",
+      "bonus": [{ "kind": "known", "name": "mage hand", "ability": "inherit" }]
+    },
+    {
+      "id": "telepathic-xphb",
+      "name": "Telepathic",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Telepathic Utterance</h4><div class=\"l0\">You can speak telepathically to any creature you can see within 60 feet of yourself. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn't give the creature the ability to respond to you telepathically.</div><h4 class=\"l0-h\">Detect Thoughts</h4><div class=\"l0\">You always have the <span class=\"term\">Detect Thoughts</span> spell prepared. You can cast it without a spell slot or spell components, and you must finish a <span class=\"term\">Long Rest</span> before you can cast it in this way again. You can also cast it using spell slots you have of the appropriate level. Your spellcasting ability for the spell is the ability increased by this feat.</div>",
+      "bonus": [
+        { "kind": "innate", "name": "detect thoughts", "ability": "inherit" }
+      ]
+    },
+    {
+      "id": "thrownweaponfighting-xphb",
+      "name": "Thrown Weapon Fighting",
+      "source": "XPHB",
+      "category": "FS",
+      "repeatable": false,
+      "prerequisite": "feature",
+      "text": "When you hit with a ranged attack roll using a weapon that has the {itemProperty T} property, you gain a +2 bonus to the damage roll.",
+      "bonus": []
+    },
+    {
+      "id": "tough-xphb",
+      "name": "Tough",
+      "source": "XPHB",
+      "category": "O",
+      "repeatable": false,
+      "prerequisite": "",
+      "text": "Your <span class=\"term\">Hit Point</span> maximum increases by an amount equal to twice your character level when you gain this feat. Whenever you gain a character level thereafter, your <span class=\"term\">Hit Point</span> maximum increases by an additional 2 <span class=\"term\">Hit Points</span>.",
+      "bonus": []
+    },
+    {
+      "id": "twoweaponfighting-xphb",
+      "name": "Two-Weapon Fighting",
+      "source": "XPHB",
+      "category": "FS",
+      "repeatable": false,
+      "prerequisite": "feature",
+      "text": "When you make an extra attack as a result of using a weapon that has the {itemProperty L} property, you can add your ability modifier to the damage of that attack if you aren't already adding it to the damage.",
+      "bonus": []
+    },
+    {
+      "id": "unarmedfighting-xphb",
+      "name": "Unarmed Fighting",
+      "source": "XPHB",
+      "category": "FS",
+      "repeatable": false,
+      "prerequisite": "feature",
+      "text": "When you hit with your <span class=\"term\">Unarmed Strike</span> and deal damage, you can deal Bludgeoning damage equal to <span class=\"dice\">1d6</span> plus your Strength modifier instead of the normal damage of an <span class=\"term\">Unarmed Strike</span>. If you aren't holding any weapons or a <span class=\"term\">Shield</span> when you make the attack roll, the <span class=\"dice\">d6</span> becomes a <span class=\"dice\">d8</span>.At the start of each of your turns, you can deal <span class=\"dice\">1d4</span> Bludgeoning damage to one creature <span class=\"term\">Grappled</span> by you.",
+      "bonus": []
+    },
+    {
+      "id": "warcaster-xphb",
+      "name": "War Caster",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level, spellcasting2020",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Concentration</h4><div class=\"l0\">You have <span class=\"term\">Advantage</span> on Constitution saving throws that you make to maintain <span class=\"term\">Concentration</span>.</div><h4 class=\"l0-h\">Reactive Spell</h4><div class=\"l0\">When a creature provokes an <span class=\"term\">Opportunity Attack</span> from you by leaving your reach, you can take a <span class=\"term\">Reaction</span> to cast a spell at the creature rather than making an <span class=\"term\">Opportunity Attack</span>. The spell must have a casting time of one action and must target only that creature.</div><h4 class=\"l0-h\">Somatic Components</h4><div class=\"l0\">You can perform the Somatic components of spells even when you have weapons or a <span class=\"term\">Shield</span> in one or both hands.</div>",
+      "bonus": []
+    },
+    {
+      "id": "weaponmaster-xphb",
+      "name": "Weapon Master",
+      "source": "XPHB",
+      "category": "G",
+      "repeatable": false,
+      "prerequisite": "level",
+      "text": "You gain the following benefits.<h4 class=\"l0-h\">Mastery Property</h4><div class=\"l0\">Your training with weapons allows you to use the mastery property of one kind of Simple or Martial weapon of your choice, provided you have proficiency with it. Whenever you finish a <span class=\"term\">Long Rest</span>, you can change the kind of weapon to another eligible kind.</div>",
+      "bonus": []
+    }
+  ]

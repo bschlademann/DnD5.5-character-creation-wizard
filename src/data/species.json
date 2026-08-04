@@ -1,0 +1,692 @@
+[
+    {
+      "id": "aasimar",
+      "name": "Aasimar",
+      "source": "XPHB",
+      "size": "S or M",
+      "speed": 30,
+      "darkvision": 60,
+      "resist": "necrotic, radiant",
+      "features": [
+        "Celestial Resistance",
+        "Darkvision",
+        "Healing Hands",
+        "Light Bearer",
+        "Celestial Revelation",
+        "Heavenly Wings",
+        "Inner Radiance",
+        "Necrotic Shroud"
+      ],
+      "featuresHtml": "<h4 class=\"l0-h\">Celestial Resistance</h4><div class=\"l0\">You have <span class=\"term\">Resistance</span> to Necrotic damage and Radiant damage.</div><h4 class=\"l0-h\">Darkvision</h4><div class=\"l0\">You have <span class=\"term\">Darkvision</span> with a range of 60 feet.</div><h4 class=\"l0-h\">Healing Hands</h4><div class=\"l0\">As a <span class=\"term\">Magic</span> action, you touch a creature and roll a number of d4s equal to your <span class=\"term\">Proficiency Bonus</span>. The creature regains a number of <span class=\"term\">Hit Points</span> equal to the total rolled. Once you use this trait, you can't use it again until you finish a <span class=\"term\">Long Rest</span>.</div><h4 class=\"l0-h\">Light Bearer</h4><div class=\"l0\">You know the <span class=\"term\">Light</span> cantrip. Charisma is your spellcasting ability for it.</div><h4 class=\"l0-h\">Celestial Revelation</h4><div class=\"l0\">When you reach character level 3, you can transform as a <span class=\"term\">Bonus Action</span> using one of the options below (choose the option each time you transform). The transformation lasts for 1 minute or until you end it (no action required). Once you transform, you can't do so again until you finish a <span class=\"term\">Long Rest</span>.Once on each of your turns before the transformation ends, you can deal extra damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your <span class=\"term\">Proficiency Bonus</span>, and the extra damage's type is either Necrotic for Necrotic Shroud or Radiant for Heavenly Wings and Inner Radiance.Here are the transformation options:<ul class=\"l1\"><li><p class=\"l2\"><span class=\"item-name\"><strong>Heavenly Wings</strong> </span>Two spectral wings sprout from your back temporarily. Until the transformation ends, you have a <span class=\"term\">Fly Speed</span> equal to your <span class=\"term\">Speed</span>.</p></li><li><p class=\"l2\"><span class=\"item-name\"><strong>Inner Radiance</strong> </span>Searing light temporarily radiates from your eyes and mouth. For the duration, you shed <span class=\"term\">Bright Light</span> in a 10-foot radius and <span class=\"term\">Dim Light</span> for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes Radiant damage equal to your <span class=\"term\">Proficiency Bonus</span>.</p></li><li><p class=\"l2\"><span class=\"item-name\"><strong>Necrotic Shroud</strong> </span>Your eyes briefly become pools of darkness, and flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you must succeed on a Charisma saving throw (DC 8 plus your Charisma modifier and <span class=\"term\">Proficiency Bonus</span>) or have the <span class=\"term\">Frightened</span> condition until the end of your next turn.</p></li></ul></div>",
+      "skillChoice": null,
+      "bonusFeats": 0,
+      "lineages": [],
+      "spells": [
+        { "kind": "cantrip", "charLevel": 1, "name": "light", "ability": "cha" }
+      ]
+    },
+    {
+      "id": "dragonborn",
+      "name": "Dragonborn",
+      "source": "XPHB",
+      "size": "M",
+      "speed": 30,
+      "darkvision": 60,
+      "resist": "[object Object]",
+      "features": [
+        "Draconic Ancestry",
+        "Breath Weapon",
+        "Damage Resistance",
+        "Darkvision",
+        "Draconic Flight"
+      ],
+      "featuresHtml": "<h4 class=\"l0-h\">Draconic Ancestry</h4><div class=\"l0\">Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and <span class=\"term\">Damage</span> <span class=\"term\">Resistance</span> traits as well as your appearance.<div class=\"table-cap\">Draconic Ancestors</div><table class=\"entry-table\"><thead><tr><th>Dragon</th><th>Damage Type</th></tr></thead><tbody><tr><td>Black</td><td>Acid</td></tr><tr><td>Blue</td><td>Lightning</td></tr><tr><td>Brass</td><td>Fire</td></tr><tr><td>Bronze</td><td>Lightning</td></tr><tr><td>Copper</td><td>Acid</td></tr><tr><td>Gold</td><td>Fire</td></tr><tr><td>Green</td><td>Poison</td></tr><tr><td>Red</td><td>Fire</td></tr><tr><td>Silver</td><td>Cold</td></tr><tr><td>White</td><td>Cold</td></tr></tbody></table></div><h4 class=\"l0-h\">Breath Weapon</h4><div class=\"l0\">When you take the <span class=\"term\">Attack</span> action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot <span class=\"term\">Cone</span> or a 30-foot <span class=\"term\">Line</span> that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and <span class=\"term\">Proficiency Bonus</span>). On a failed save, a creature takes <span class=\"dice\">1d10</span> damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by <span class=\"dice\">1d10</span> when you reach character levels 5 (<span class=\"dice\">2d10</span>), 11 (<span class=\"dice\">3d10</span>), and 17 (<span class=\"dice\">4d10</span>).You can use this Breath Weapon a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>.</div><h4 class=\"l0-h\">Damage Resistance</h4><div class=\"l0\">You have <span class=\"term\">Resistance</span> to the damage type determined by your Draconic Ancestry trait.</div><h4 class=\"l0-h\">Darkvision</h4><div class=\"l0\">You have <span class=\"term\">Darkvision</span> with a range of 60 feet.</div><h4 class=\"l0-h\">Draconic Flight</h4><div class=\"l0\">When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a <span class=\"term\">Bonus Action</span>, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the <span class=\"term\">Incapacitated</span> condition. During that time, you have a <span class=\"term\">Fly Speed</span> equal to your <span class=\"term\">Speed</span>. Your wings appear to be made of the same energy as your Breath Weapon. Once you use this trait, you can't use it again until you finish a <span class=\"term\">Long Rest</span>.</div>",
+      "skillChoice": null,
+      "bonusFeats": 0,
+      "lineages": [
+        {
+          "id": "blackdragonborn",
+          "name": "Black Dragonborn",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "acid",
+          "featuresHtml": "",
+          "spells": []
+        },
+        {
+          "id": "bluedragonborn",
+          "name": "Blue Dragonborn",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "lightning",
+          "featuresHtml": "",
+          "spells": []
+        },
+        {
+          "id": "brassdragonborn",
+          "name": "Brass Dragonborn",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "fire",
+          "featuresHtml": "",
+          "spells": []
+        },
+        {
+          "id": "bronzedragonborn",
+          "name": "Bronze Dragonborn",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "lightning",
+          "featuresHtml": "",
+          "spells": []
+        },
+        {
+          "id": "copperdragonborn",
+          "name": "Copper Dragonborn",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "acid",
+          "featuresHtml": "",
+          "spells": []
+        },
+        {
+          "id": "golddragonborn",
+          "name": "Gold Dragonborn",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "fire",
+          "featuresHtml": "",
+          "spells": []
+        },
+        {
+          "id": "greendragonborn",
+          "name": "Green Dragonborn",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "poison",
+          "featuresHtml": "",
+          "spells": []
+        },
+        {
+          "id": "reddragonborn",
+          "name": "Red Dragonborn",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "fire",
+          "featuresHtml": "",
+          "spells": []
+        },
+        {
+          "id": "silverdragonborn",
+          "name": "Silver Dragonborn",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "cold",
+          "featuresHtml": "",
+          "spells": []
+        },
+        {
+          "id": "whitedragonborn",
+          "name": "White Dragonborn",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "cold",
+          "featuresHtml": "",
+          "spells": []
+        }
+      ]
+    },
+    {
+      "id": "dwarf",
+      "name": "Dwarf",
+      "source": "XPHB",
+      "size": "M",
+      "speed": 30,
+      "darkvision": 120,
+      "resist": "poison",
+      "features": [
+        "Darkvision",
+        "Dwarven Resilience",
+        "Dwarven Toughness",
+        "Stonecunning"
+      ],
+      "featuresHtml": "<h4 class=\"l0-h\">Darkvision</h4><div class=\"l0\">You have <span class=\"term\">Darkvision</span> with a range of 120 feet.</div><h4 class=\"l0-h\">Dwarven Resilience</h4><div class=\"l0\">You have <span class=\"term\">Resistance</span> to Poison damage. You also have <span class=\"term\">Advantage</span> on saving throws you make to avoid or end the <span class=\"term\">Poisoned</span> condition.</div><h4 class=\"l0-h\">Dwarven Toughness</h4><div class=\"l0\">Your <span class=\"term\">Hit Point</span> maximum increases by 1, and it increases by 1 again whenever you gain a level.</div><h4 class=\"l0-h\">Stonecunning</h4><div class=\"l0\">As a <span class=\"term\">Bonus Action</span>, you gain <span class=\"term\">Tremorsense</span> with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this <span class=\"term\">Tremorsense</span>. The stone can be natural or worked.You can use this <span class=\"term\">Bonus Action</span> a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>.</div>",
+      "skillChoice": null,
+      "bonusFeats": 0,
+      "lineages": []
+    },
+    {
+      "id": "elf",
+      "name": "Elf",
+      "source": "XPHB",
+      "size": "M",
+      "speed": 30,
+      "darkvision": 60,
+      "resist": "",
+      "features": [
+        "Darkvision",
+        "Elven Lineage",
+        "Fey Ancestry",
+        "Keen Senses",
+        "Trance"
+      ],
+      "featuresHtml": "<h4 class=\"l0-h\">Darkvision</h4><div class=\"l0\">You have <span class=\"term\">Darkvision</span> with a range of 60 feet.</div><h4 class=\"l0-h\">Elven Lineage</h4><div class=\"l0\">You are part of a lineage that grants you supernatural abilities. Choose a lineage from the Elven Lineages table. You gain the level 1 benefit of that lineage.When you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast the spell using any spell slots you have of the appropriate level.Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage).<div class=\"table-cap\">Elven Lineages</div><table class=\"entry-table\"><thead><tr><th>Lineage</th><th>Level 1</th><th>Level 3</th><th>Level 5</th></tr></thead><tbody><tr><td>Drow</td><td>The range of your <span class=\"term\">Darkvision</span> increases to 120 feet. You also know the <span class=\"term\">Dancing Lights</span> cantrip.</td><td><span class=\"term\">Faerie Fire</span></td><td><span class=\"term\">Darkness</span></td></tr><tr><td>High Elf</td><td>You know the <span class=\"term\">Prestidigitation</span> cantrip. Whenever you finish a <span class=\"term\">Long Rest</span>, you can replace that cantrip with a different cantrip from the Wizard spell list.</td><td><span class=\"term\">Detect Magic</span></td><td><span class=\"term\">Misty Step</span></td></tr><tr><td>Wood Elf</td><td>Your <span class=\"term\">Speed</span> increases to 35 feet. You also know the <span class=\"term\">Druidcraft</span> cantrip.</td><td><span class=\"term\">Longstrider</span></td><td><span class=\"term\">Pass without Trace</span></td></tr></tbody></table></div><h4 class=\"l0-h\">Fey Ancestry</h4><div class=\"l0\">You have <span class=\"term\">Advantage</span> on saving throws you make to avoid or end the <span class=\"term\">Charmed</span> condition.</div><h4 class=\"l0-h\">Keen Senses</h4><div class=\"l0\">You have proficiency in the <span class=\"term\">Insight</span>, <span class=\"term\">Perception</span>, or <span class=\"term\">Survival</span> skill.</div><h4 class=\"l0-h\">Trance</h4><div class=\"l0\">You don't need to sleep, and magic can't put you to sleep. You can finish a <span class=\"term\">Long Rest</span> in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.</div>",
+      "skillChoice": {
+        "count": 1,
+        "from": ["insight", "perception", "survival"]
+      },
+      "bonusFeats": 0,
+      "lineages": [
+        {
+          "id": "drowlineage",
+          "name": "Drow Lineage",
+          "darkvision": 120,
+          "speed": 30,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Elven Lineage (Drow)</h4><div class=\"l0\">You are part of a lineage that grants you supernatural abilities. The range of your <span class=\"term\">Darkvision</span> increases to 120 feet. You also know the <span class=\"term\">Dancing Lights</span> cantrip.When you reach character level 3, you learn the <span class=\"term\">Faerie Fire</span> spell. When you reach character level 5, you also learn the <span class=\"term\">Darkness</span> spell. You always have these spells prepared, and you can cast each spell once without a spell slot. Once you cast either of these spells with this trait, you can't cast that spell with it again until you finish a <span class=\"term\">Long Rest</span>. You can also cast the spell using any spell slots you have of the appropriate level.Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage).</div><h4 class=\"l0-h\">Darkvision</h4><div class=\"l0\">You have <span class=\"term\">Darkvision</span> with a range of 120 feet.</div>",
+          "spells": [
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "dancing lights",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 3,
+              "name": "faerie fire",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 5,
+              "name": "darkness",
+              "ability": "int/wis/cha"
+            }
+          ]
+        },
+        {
+          "id": "highelflineage",
+          "name": "High Elf Lineage",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Elven Lineage (High Elf)</h4><div class=\"l0\">You are part of a lineage that grants you supernatural abilities. You know the <span class=\"term\">Prestidigitation</span> cantrip. Whenever you finish a <span class=\"term\">Long Rest</span>, you can replace that cantrip with a different cantrip from the Wizard spell list.When you reach character level 3, you learn the <span class=\"term\">Detect Magic</span> spell. When you reach character level 5, you also learn the <span class=\"term\">Misty Step</span> spell. You always have these spells prepared, and you can cast each spell once without a spell slot. Once you cast either of these spells with this trait, you can't cast that spell with it again until you finish a <span class=\"term\">Long Rest</span>. You can also cast the spell using any spell slots you have of the appropriate level.Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage).</div>",
+          "spells": [
+            {
+              "kind": "spell",
+              "charLevel": 3,
+              "name": "detect magic",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 5,
+              "name": "misty step",
+              "ability": "int/wis/cha"
+            }
+          ]
+        },
+        {
+          "id": "woodelflineage",
+          "name": "Wood Elf Lineage",
+          "darkvision": 60,
+          "speed": 35,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Elven Lineage (Wood Elf)</h4><div class=\"l0\">You are part of a lineage that grants you supernatural abilities. Your <span class=\"term\">Speed</span> increases to 35 feet. You also know the <span class=\"term\">Druidcraft</span> cantrip.When you reach character level 3, you learn the <span class=\"term\">Longstrider</span> spell. When you reach character level 5, you also learn the <span class=\"term\">Pass without Trace</span> spell. You always have these spells prepared, and you can cast each spell once without a spell slot. Once you cast either of these spells with this trait, you can't cast that spell with it again until you finish a <span class=\"term\">Long Rest</span>. You can also cast the spell using any spell slots you have of the appropriate level.Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage).</div>",
+          "spells": [
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "druidcraft",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 3,
+              "name": "longstrider",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 5,
+              "name": "pass without trace",
+              "ability": "int/wis/cha"
+            }
+          ]
+        }
+      ],
+      "spells": [
+        {
+          "kind": "cantrip",
+          "charLevel": 1,
+          "name": "dancing lights",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 3,
+          "name": "faerie fire",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 5,
+          "name": "darkness",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 3,
+          "name": "detect magic",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 5,
+          "name": "misty step",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "cantrip",
+          "charLevel": 1,
+          "name": "druidcraft",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 3,
+          "name": "longstrider",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 5,
+          "name": "pass without trace",
+          "ability": "int/wis/cha"
+        }
+      ]
+    },
+    {
+      "id": "gnome",
+      "name": "Gnome",
+      "source": "XPHB",
+      "size": "S",
+      "speed": 30,
+      "darkvision": 60,
+      "resist": "",
+      "features": [
+        "Darkvision",
+        "Gnomish Cunning",
+        "Gnomish Lineage",
+        "Forest Gnome",
+        "Rock Gnome"
+      ],
+      "featuresHtml": "<h4 class=\"l0-h\">Darkvision</h4><div class=\"l0\">You have <span class=\"term\">Darkvision</span> with a range of 60 feet.</div><h4 class=\"l0-h\">Gnomish Cunning</h4><div class=\"l0\">You have <span class=\"term\">Advantage</span> on Intelligence, Wisdom, and Charisma saving throws.</div><h4 class=\"l0-h\">Gnomish Lineage</h4><div class=\"l0\">You are part of a lineage that grants you supernatural abilities. Choose one of the following options; whichever one you choose, Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage):<ul class=\"l1\"><li><p class=\"l2\"><span class=\"item-name\"><strong>Forest Gnome</strong> </span>You know the <span class=\"term\">Minor Illusion</span> cantrip. You also always have the <span class=\"term\">Speak with Animals</span> spell prepared. You can cast it without a spell slot a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>. You can also use any spell slots you have to cast the spell.</p></li><li><p class=\"l2\"><span class=\"item-name\"><strong>Rock Gnome</strong> </span>You know the <span class=\"term\">Mending</span> and <span class=\"term\">Prestidigitation</span> cantrips. In addition, you can spend 10 minutes casting <span class=\"term\">Prestidigitation</span> to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from <span class=\"term\">Prestidigitation</span>; the device produces that effect whenever you or another creature takes a <span class=\"term\">Bonus Action</span> to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell's ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn't do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a <span class=\"term\">Utilize</span> action.</p></li></ul></div>",
+      "skillChoice": null,
+      "bonusFeats": 0,
+      "lineages": [
+        {
+          "id": "forestgnomelineage",
+          "name": "Forest Gnome Lineage",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Gnomish Lineage (Forest Gnome)</h4><div class=\"l0\">You know the <span class=\"term\">Minor Illusion</span> cantrip. You also always have the <span class=\"term\">Speak with Animals</span> spell prepared. You can cast it without a spell slot a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>. You can also use any spell slots you have to cast the spell.</div>",
+          "spells": [
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "minor illusion",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 3,
+              "name": "speak with animals",
+              "ability": "int/wis/cha"
+            }
+          ]
+        },
+        {
+          "id": "rockgnomelineage",
+          "name": "Rock Gnome Lineage",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Gnomish Lineage (Rock Gnome)</h4><div class=\"l0\">You know the <span class=\"term\">Mending</span> and <span class=\"term\">Prestidigitation</span> cantrips. In addition, you can spend 10 minutes casting <span class=\"term\">Prestidigitation</span> to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from <span class=\"term\">Prestidigitation</span>; the device produces that effect whenever you or another creature takes a <span class=\"term\">Bonus Action</span> to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell's ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn't do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a <span class=\"term\">Utilize</span> action.</div>",
+          "spells": [
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "mending",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "prestidigitation",
+              "ability": "int/wis/cha"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "goliath",
+      "name": "Goliath",
+      "source": "XPHB",
+      "size": "M",
+      "speed": 35,
+      "darkvision": 0,
+      "resist": "",
+      "features": [
+        "Giant Ancestry",
+        "Cloud's Jaunt (Cloud Giant)",
+        "Fire's Burn (Fire Giant)",
+        "Frost's Chill (Frost Giant)",
+        "Hill's Tumble (Hill Giant)",
+        "Stone's Endurance (Stone Giant)",
+        "Storm's Thunder (Storm Giant)",
+        "Large Form",
+        "Powerful Build"
+      ],
+      "featuresHtml": "<h4 class=\"l0-h\">Giant Ancestry</h4><div class=\"l0\">You are descended from Giants. Choose one of the following benefits—a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>:<ul class=\"l1\"><li><p class=\"l2\"><span class=\"item-name\"><strong>Cloud's Jaunt (Cloud Giant)</strong> </span>As a <span class=\"term\">Bonus Action</span>, you magically teleport up to 30 feet to an unoccupied space you can see.</p></li><li><p class=\"l2\"><span class=\"item-name\"><strong>Fire's Burn (Fire Giant)</strong> </span>When you hit a target with an attack roll and deal damage to it, you can also deal <span class=\"dice\">1d10</span> Fire damage to that target.</p></li><li><p class=\"l2\"><span class=\"item-name\"><strong>Frost's Chill (Frost Giant)</strong> </span>When you hit a target with an attack roll and deal damage to it, you can also deal <span class=\"dice\">1d6</span> Cold damage to that target and reduce its <span class=\"term\">Speed</span> by 10 feet until the start of your next turn.</p></li><li><p class=\"l2\"><span class=\"item-name\"><strong>Hill's Tumble (Hill Giant)</strong> </span>When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the <span class=\"term\">Prone</span> condition.</p></li><li><p class=\"l2\"><span class=\"item-name\"><strong>Stone's Endurance (Stone Giant)</strong> </span>When you take damage, you can take a <span class=\"term\">Reaction</span> to roll <span class=\"dice\">1d12</span>. Add your Constitution modifier to the number rolled and reduce the damage by that total.</p></li><li><p class=\"l2\"><span class=\"item-name\"><strong>Storm's Thunder (Storm Giant)</strong> </span>When you take damage from a creature within 60 feet of you, you can take a <span class=\"term\">Reaction</span> to deal <span class=\"dice\">1d8</span> Thunder damage to that creature.</p></li></ul></div><h4 class=\"l0-h\">Large Form</h4><div class=\"l0\">Starting at character level 5, you can change your size to Large as a <span class=\"term\">Bonus Action</span> if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have <span class=\"term\">Advantage</span> on Strength checks, and your <span class=\"term\">Speed</span> increases by 10 feet. Once you use this trait, you can't use it again until you finish a <span class=\"term\">Long Rest</span>.</div><h4 class=\"l0-h\">Powerful Build</h4><div class=\"l0\">You have <span class=\"term\">Advantage</span> on any ability check you make to end the <span class=\"term\">Grappled</span> condition. You also count as one size larger when determining your carrying capacity.</div>",
+      "skillChoice": null,
+      "bonusFeats": 0,
+      "lineages": [
+        {
+          "id": "cloudgiantancestry",
+          "name": "Cloud Giant Ancestry",
+          "darkvision": 0,
+          "speed": 35,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Giant Ancestry (Cloud)</h4><div class=\"l0\">You are descended from Giants, granting you a supernatural boon; you can use this boon a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>:<ul class=\"l1\"><li><p class=\"l2\"><span class=\"item-name\"><strong>Cloud's Jaunt</strong> </span>As a <span class=\"term\">Bonus Action</span>, you magically teleport up to 30 feet to an unoccupied space you can see.</p></li></ul></div>",
+          "spells": []
+        },
+        {
+          "id": "firegiantancestry",
+          "name": "Fire Giant Ancestry",
+          "darkvision": 0,
+          "speed": 35,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Giant Ancestry (Fire)</h4><div class=\"l0\">You are descended from Giants, granting you a supernatural boon; you can use this boon a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>:<ul class=\"l1\"><li><p class=\"l2\"><span class=\"item-name\"><strong>Fire's Burn</strong> </span>When you hit a target with an attack roll and deal damage to it, you can also deal <span class=\"dice\">1d10</span> Fire damage to that target.</p></li></ul></div>",
+          "spells": []
+        },
+        {
+          "id": "frostgiantancestry",
+          "name": "Frost Giant Ancestry",
+          "darkvision": 0,
+          "speed": 35,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Giant Ancestry (Frost)</h4><div class=\"l0\">You are descended from Giants, granting you a supernatural boon; you can use this boon a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>:<ul class=\"l1\"><li><p class=\"l2\"><span class=\"item-name\"><strong>Frost's Chill</strong> </span>When you hit a target with an attack roll and deal damage to it, you can also deal <span class=\"dice\">1d6</span> Cold damage to that target and reduce its <span class=\"term\">Speed</span> by 10 feet until the start of your next turn.</p></li></ul></div>",
+          "spells": []
+        },
+        {
+          "id": "hillgiantancestry",
+          "name": "Hill Giant Ancestry",
+          "darkvision": 0,
+          "speed": 35,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Giant Ancestry (Hill)</h4><div class=\"l0\">You are descended from Giants, granting you a supernatural boon; you can use this boon a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>:<ul class=\"l1\"><li><p class=\"l2\"><span class=\"item-name\"><strong>Hill's Tumble</strong> </span>When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the <span class=\"term\">Prone</span> condition.</p></li></ul></div>",
+          "spells": []
+        },
+        {
+          "id": "stonegiantancestry",
+          "name": "Stone Giant Ancestry",
+          "darkvision": 0,
+          "speed": 35,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Giant Ancestry (Stone)</h4><div class=\"l0\">You are descended from Giants, granting you a supernatural boon; you can use this boon a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>:<ul class=\"l1\"><li><p class=\"l2\"><span class=\"item-name\"><strong>Stone's Endurance</strong> </span>When you take damage, you can take a <span class=\"term\">Reaction</span> to roll <span class=\"dice\">1d12</span>. Add your Constitution modifier to the number rolled and reduce the damage by that total.</p></li></ul></div>",
+          "spells": []
+        },
+        {
+          "id": "stormgiantancestry",
+          "name": "Storm Giant Ancestry",
+          "darkvision": 0,
+          "speed": 35,
+          "resist": "",
+          "featuresHtml": "<h4 class=\"l0-h\">Giant Ancestry (Storm)</h4><div class=\"l0\">You are descended from Giants, granting you a supernatural boon; you can use this boon a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Long Rest</span>:<ul class=\"l1\"><li><p class=\"l2\"><span class=\"item-name\"><strong>Storm's Thunder</strong> </span>When you take damage from a creature within 60 feet of you, you can take a <span class=\"term\">Reaction</span> to deal <span class=\"dice\">1d8</span> Thunder damage to that creature.</p></li></ul></div>",
+          "spells": []
+        }
+      ]
+    },
+    {
+      "id": "halfling",
+      "name": "Halfling",
+      "source": "XPHB",
+      "size": "S",
+      "speed": 30,
+      "darkvision": 0,
+      "resist": "",
+      "features": [
+        "Brave",
+        "Halfling Nimbleness",
+        "Luck",
+        "Naturally Stealthy"
+      ],
+      "featuresHtml": "<h4 class=\"l0-h\">Brave</h4><div class=\"l0\">You have <span class=\"term\">Advantage</span> on saving throws you make to avoid or end the <span class=\"term\">Frightened</span> condition.</div><h4 class=\"l0-h\">Halfling Nimbleness</h4><div class=\"l0\">You can move through the space of any creature that is a size larger than you, but you can't stop in the same space.</div><h4 class=\"l0-h\">Luck</h4><div class=\"l0\">When you roll a 1 on the <span class=\"dice\">d20</span> of a <span class=\"term\">D20 Test</span>, you can reroll the die, and you must use the new roll.</div><h4 class=\"l0-h\">Naturally Stealthy</h4><div class=\"l0\">You can take the <span class=\"term\">Hide</span> action even when you are obscured only by a creature that is at least one size larger than you.</div>",
+      "skillChoice": null,
+      "bonusFeats": 0,
+      "lineages": []
+    },
+    {
+      "id": "human",
+      "name": "Human",
+      "source": "XPHB",
+      "size": "S or M",
+      "speed": 30,
+      "darkvision": 0,
+      "resist": "",
+      "features": ["Resourceful", "Skillful", "Versatile"],
+      "featuresHtml": "<h4 class=\"l0-h\">Resourceful</h4><div class=\"l0\">You gain <span class=\"term\">Heroic Inspiration</span> whenever you finish a <span class=\"term\">Long Rest</span>.</div><h4 class=\"l0-h\">Skillful</h4><div class=\"l0\">You gain proficiency in one skill of your choice.</div><h4 class=\"l0-h\">Versatile</h4><div class=\"l0\">You gain an Origin feat of your choice.</div>",
+      "skillChoice": { "count": 1, "any": true },
+      "bonusFeats": 1,
+      "lineages": []
+    },
+    {
+      "id": "orc",
+      "name": "Orc",
+      "source": "XPHB",
+      "size": "M",
+      "speed": 30,
+      "darkvision": 120,
+      "resist": "",
+      "features": ["Adrenaline Rush", "Darkvision", "Relentless Endurance"],
+      "featuresHtml": "<h4 class=\"l0-h\">Adrenaline Rush</h4><div class=\"l0\">You can take the <span class=\"term\">Dash</span> action as a <span class=\"term\">Bonus Action</span>. When you do so, you gain a number of <span class=\"term\">Temporary Hit Points</span> equal to your <span class=\"term\">Proficiency Bonus</span>.You can use this trait a number of times equal to your <span class=\"term\">Proficiency Bonus</span>, and you regain all expended uses when you finish a <span class=\"term\">Short</span> or <span class=\"term\">Long Rest</span>.</div><h4 class=\"l0-h\">Darkvision</h4><div class=\"l0\">You have <span class=\"term\">Darkvision</span> with a range of 120 feet.</div><h4 class=\"l0-h\">Relentless Endurance</h4><div class=\"l0\">When you are reduced to 0 <span class=\"term\">Hit Points</span> but not killed outright, you can drop to 1 <span class=\"term\">Hit Point</span> instead. Once you use this trait, you can't do so again until you finish a <span class=\"term\">Long Rest</span>.</div>",
+      "skillChoice": null,
+      "bonusFeats": 0,
+      "lineages": []
+    },
+    {
+      "id": "tiefling",
+      "name": "Tiefling",
+      "source": "XPHB",
+      "size": "S or M",
+      "speed": 30,
+      "darkvision": 60,
+      "resist": "[object Object]",
+      "features": ["Darkvision", "Fiendish Legacy", "Otherworldly Presence"],
+      "featuresHtml": "<h4 class=\"l0-h\">Darkvision</h4><div class=\"l0\">You have <span class=\"term\">Darkvision</span> with a range of 60 feet.</div><h4 class=\"l0-h\">Fiendish Legacy</h4><div class=\"l0\">You are the recipient of a legacy that grants you supernatural abilities. Choose a legacy from the Fiendish Legacies table. You gain the level 1 benefit of the chosen legacy.When you reach character levels 3 and 5, you learn a higher-level spell, as shown on the table. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a <span class=\"term\">Long Rest</span>. You can also cast the spell using any spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).<div class=\"table-cap\">Fiendish Legacies</div><table class=\"entry-table\"><thead><tr><th>Legacy</th><th>Level 1</th><th>Level 3</th><th>Level 5</th></tr></thead><tbody><tr><td>Abyssal</td><td>You have <span class=\"term\">Resistance</span> to Poison damage. You also know the <span class=\"term\">Poison Spray</span> cantrip.</td><td><span class=\"term\">Ray of Sickness</span></td><td><span class=\"term\">Hold Person</span></td></tr><tr><td>Chthonic</td><td>You have <span class=\"term\">Resistance</span> to Necrotic damage. You also know the <span class=\"term\">Chill Touch</span> cantrip.</td><td><span class=\"term\">False Life</span></td><td><span class=\"term\">Ray of Enfeeblement</span></td></tr><tr><td>Infernal</td><td>You have <span class=\"term\">Resistance</span> to Fire damage. You also know the <span class=\"term\">Fire Bolt</span> cantrip.</td><td><span class=\"term\">Hellish Rebuke</span></td><td><span class=\"term\">Darkness</span></td></tr></tbody></table></div><h4 class=\"l0-h\">Otherworldly Presence</h4><div class=\"l0\">You know the <span class=\"term\">Thaumaturgy</span> cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy Trait.</div>",
+      "skillChoice": null,
+      "bonusFeats": 0,
+      "lineages": [
+        {
+          "id": "abyssallegacy",
+          "name": "Abyssal Legacy",
+          "darkvision": 120,
+          "speed": 30,
+          "resist": "poison",
+          "featuresHtml": "<h4 class=\"l0-h\">Fiendish Legacy (Abyssal)</h4><div class=\"l0\">You are the recipient of a legacy that grants you supernatural abilities. You have <span class=\"term\">Resistance</span> to Poison damage. You also know the <span class=\"term\">Poison Spray</span> cantrip.When you reach character level 3, you learn the <span class=\"term\">Ray of Sickness</span> spell. When you reach character level 5, you also learn the <span class=\"term\">Hold Person</span> spell. You always have these spells prepared, and you can cast each spell once without a spell slot. Once you cast either of these spells with this trait, you can't cast that spell with it again until you finish a <span class=\"term\">Long Rest</span>. You can also cast the spell using any spell slots you have of the appropriate level.Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).</div>",
+          "spells": [
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "thaumaturgy",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "poison spray",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 3,
+              "name": "ray of sickness",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 5,
+              "name": "hold person",
+              "ability": "int/wis/cha"
+            }
+          ]
+        },
+        {
+          "id": "chthoniclegacy",
+          "name": "Chthonic Legacy",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "necrotic",
+          "featuresHtml": "<h4 class=\"l0-h\">Fiendish Legacy (Chthonic)</h4><div class=\"l0\">You are the recipient of a legacy that grants you supernatural abilities. You have <span class=\"term\">Resistance</span> to Necrotic damage. You also know the <span class=\"term\">Chill Touch</span> cantrip.When you reach character level 3, you learn the <span class=\"term\">False Life</span> spell. When you reach character level 5, you also learn the <span class=\"term\">Ray of Enfeeblement</span> spell. You always have these spells prepared, and you can cast each spell once without a spell slot. Once you cast either of these spells with this trait, you can't cast that spell with it again until you finish a <span class=\"term\">Long Rest</span>. You can also cast the spell using any spell slots you have of the appropriate level.Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).</div>",
+          "spells": [
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "thaumaturgy",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "chill touch",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 3,
+              "name": "false life",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 5,
+              "name": "ray of enfeeblement",
+              "ability": "int/wis/cha"
+            }
+          ]
+        },
+        {
+          "id": "infernallegacy",
+          "name": "Infernal Legacy",
+          "darkvision": 60,
+          "speed": 30,
+          "resist": "fire",
+          "featuresHtml": "<h4 class=\"l0-h\">Fiendish Legacy (Infernal)</h4><div class=\"l0\">You are the recipient of a legacy that grants you supernatural abilities. You have <span class=\"term\">Resistance</span> to Fire damage. You also know the <span class=\"term\">Fire Bolt</span> cantrip.When you reach character level 3, you learn the <span class=\"term\">Hellish Rebuke</span> spell. When you reach character level 5, you also learn the <span class=\"term\">Darkness</span> spell. You always have these spells prepared, and you can cast each spell once without a spell slot. Once you cast either of these spells with this trait, you can't cast that spell with it again until you finish a <span class=\"term\">Long Rest</span>. You can also cast the spell using any spell slots you have of the appropriate level.Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).</div>",
+          "spells": [
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "thaumaturgy",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "cantrip",
+              "charLevel": 1,
+              "name": "fire bolt",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 3,
+              "name": "hellish rebuke",
+              "ability": "int/wis/cha"
+            },
+            {
+              "kind": "spell",
+              "charLevel": 5,
+              "name": "darkness",
+              "ability": "int/wis/cha"
+            }
+          ]
+        }
+      ],
+      "spells": [
+        {
+          "kind": "cantrip",
+          "charLevel": 1,
+          "name": "thaumaturgy",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "cantrip",
+          "charLevel": 1,
+          "name": "poison spray",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 3,
+          "name": "ray of sickness",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 5,
+          "name": "hold person",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "cantrip",
+          "charLevel": 1,
+          "name": "thaumaturgy",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "cantrip",
+          "charLevel": 1,
+          "name": "chill touch",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 3,
+          "name": "false life",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 5,
+          "name": "ray of enfeeblement",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "cantrip",
+          "charLevel": 1,
+          "name": "thaumaturgy",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "cantrip",
+          "charLevel": 1,
+          "name": "fire bolt",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 3,
+          "name": "hellish rebuke",
+          "ability": "int/wis/cha"
+        },
+        {
+          "kind": "spell",
+          "charLevel": 5,
+          "name": "darkness",
+          "ability": "int/wis/cha"
+        }
+      ]
+    }
+  ]

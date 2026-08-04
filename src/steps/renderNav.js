@@ -2,7 +2,7 @@ import { globals } from '../modules/state.js';
 import { STEPS, ABILITIES } from '../modules/constants.js';
 import { $ } from '../modules/helpers.js';
 import { findRace, findClass, findBackground } from '../modules/data.js';
-import { charClass, chosenFeats, cantripCount, preparedCount } from '../modules/compute.js';
+import { charClass, chosenFeats, cantripCount, preparedCount, featChoicesComplete } from '../modules/compute.js';
 import { validateStep } from '../modules/validation.js';
 import { renderAbilities } from './renderAbilities.js';
 import { renderSpecies } from './renderSpecies.js';
@@ -12,6 +12,7 @@ import { renderEquipment } from './renderEquipment.js';
 import { renderSpells } from './renderSpells.js';
 import { renderDetails } from './renderDetails.js';
 import { renderSummary } from './renderSummary.js';
+import { renderFinalize } from '../modules/finalize.js';
 import { SAVE } from '../modules/state.js';
 
 export function stepDone(i) {
@@ -23,6 +24,7 @@ export function stepDone(i) {
     if (r.lineages && r.lineages.length && !globals.state.lineage) return false;
     if (r.skillChoice) return globals.state.raceSkill.length >= r.skillChoice.count;
     if (chosenFeats().some(f => f && f.id === 'skilled-xphb') && globals.state.skilledPicks.length !== 3) return false;
+    if (!featChoicesComplete()) return false;
     return true;
   }
   if (key === 'class') {
@@ -40,6 +42,7 @@ export function stepDone(i) {
     if (bg.ability.length >= 2) return !!(globals.state.bgPlus2 && globals.state.bgPlus1);
     if ((bg.tools || []).some(t => /any/.test(t)) && !globals.state.bgTool) return false;
     if (chosenFeats().some(f => f && f.id === 'skilled-xphb') && globals.state.skilledPicks.length !== 3) return false;
+    if (!featChoicesComplete()) return false;
     return true;
   }
   if (key === 'equipment') return !!globals.state.equipment.class;
@@ -74,6 +77,7 @@ export function renderFooter() {
   back.style.visibility = globals.currentStep === 0 ? 'hidden' : 'visible';
   back.onclick = () => goTo(globals.currentStep - 1);
   const key = STEPS[globals.currentStep].key;
+  actions.innerHTML = '';
   if (key === 'summary') {
     actions.innerHTML = `
       <button class="btn" onclick="API.saveJson()">Save as JSON</button>
@@ -82,11 +86,17 @@ export function renderFooter() {
       <button class="btn primary" onclick="API.print()">Print / Save PDF</button>`;
     next.style.visibility = 'hidden';
   } else {
-    actions.innerHTML = '';
     next.style.visibility = 'visible';
     next.textContent = key === 'details' ? 'Show Character Sheet' : 'Continue';
+    next.disabled = !stepDone(globals.currentStep);
     next.onclick = () => {
-      if (!validateStep(globals.currentStep)) return;
+      const res = validateStep(globals.currentStep);
+      const banner = $('validation-banner');
+      if (!res.ok) {
+        if (banner) banner.textContent = res.message;
+        return;
+      }
+      if (banner) banner.textContent = '';
       goTo(globals.currentStep + 1);
     };
   }
@@ -102,10 +112,17 @@ export function goTo(i) {
 export function render() {
   renderNav();
   renderFooter();
+  const picker = $('level-display');
+  if (picker) picker.textContent = 'Level ' + globals.state.level;
+  const down = $('btn-level-down');
+  if (down) down.disabled = globals.state.level <= 1;
+  const up = $('btn-level-up');
+  if (up) up.disabled = globals.state.level >= 20;
   const main = $('main');
   const key = STEPS[globals.currentStep].key;
   const fn = { abilities: renderAbilities, species: renderSpecies, class: renderClass, background: renderBackground, equipment: renderEquipment, spells: renderSpells, details: renderDetails, summary: renderSummary }[key];
-  main.innerHTML = `<h2 class="step-title">Step ${globals.currentStep + 1}: ${STEPS[globals.currentStep].title}</h2>` + (fn ? fn() : '');
+  const extra = key === 'summary' ? renderFinalize() : '';
+  main.innerHTML = `<h2 class="step-title">Step ${globals.currentStep + 1}: ${STEPS[globals.currentStep].title}</h2>` + extra + (fn ? fn() : '');
   const pv = $('preview');
   const pvc = $('preview-content');
   if (key === 'summary') {

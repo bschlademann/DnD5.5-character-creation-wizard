@@ -14,6 +14,12 @@ export const ABIL_NAME = { str: 'Strength', dex: 'Dexterity', con: 'Constitution
 export const STANDARD_ARRAY = [15, 14, 13, 12, 10, 8];
 export const AVG_HD = { 6: 4, 8: 5, 10: 6, 12: 7 };
 
+export const ASI_LEVELS = {
+  default: [4, 8, 12, 16, 19],
+  fighter: [4, 6, 8, 12, 14, 16, 19],
+  rogue: [4, 8, 10, 12, 16, 19]
+};
+
 export const TOOL_GROUPS = {
   anyArtisansTool: [
     "Alchemist's Supplies", "Brewer's Supplies", "Calligrapher's Supplies", "Carpenter's Tools",
@@ -31,4 +37,25 @@ export const SKILL_ABILITY_MAP = {
   investigation: 'int', medicine: 'wis', nature: 'int', perception: 'wis',
   performance: 'cha', persuasion: 'cha', religion: 'int',
   'sleight of hand': 'dex', stealth: 'dex', survival: 'wis'
+};
+
+export const SKILL_DESC = {
+  acrobatics: 'Dodge, tumble, and balance on precarious surfaces.',
+  'animal handling': 'Calm, tame, or read the behavior of animals.',
+  arcana: 'Recall lore about spells, magic items, and the planes.',
+  athletics: 'Climb, jump, swim, and perform feats of raw strength.',
+  deception: 'Lie convincingly and conceal the truth through speech.',
+  history: 'Recall lore about history, kingdoms, and past events.',
+  insight: 'Read a creature\'s intent, mood, and truthfulness.',
+  intimidation: 'Coerce or frighten others through threats and force.',
+  investigation: 'Find clues, deduce conclusions, and search for details.',
+  medicine: 'Stabilize the dying and diagnose injuries and illnesses.',
+  nature: 'Recall lore about terrain, plants, animals, and weather.',
+  perception: 'Spot hidden creatures, objects, and signs of danger.',
+  performance: 'Entertain an audience with music, dance, or oratory.',
+  persuasion: 'Influence others through tact, courtesy, and logic.',
+  religion: 'Recall lore about deities, rites, and religious practice.',
+  'sleight of hand': 'Pick pockets, conceal objects, and perform legerdemain.',
+  stealth: 'Move quietly and hide from sight.',
+  survival: 'Track prey, navigate, forage, and endure in the wild.'
 };

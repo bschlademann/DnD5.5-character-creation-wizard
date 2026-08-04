@@ -1,68 +1,64 @@
 import { globals } from '../modules/state.js';
-import { esc, skillName } from '../modules/helpers.js';
-import { charRace, charLineage, takenChip, chosenFeats } from '../modules/compute.js';
-import { featPicker, renderSkilledPicker } from '../modules/sharedComponents.js';
+import { esc, skillName, skillTooltip } from '../modules/helpers.js';
+import { charRace, charLineage, takenChip } from '../modules/compute.js';
+import { featPicker, renderSkilledPicker, renderFeatSpellChoices, splitLayout } from '../modules/sharedComponents.js';
 
 export function renderSpecies() {
   const race = charRace();
   const lineage = charLineage();
-  let html = `<p class="step-sub">Choose your species. Some species have lineages with additional features.</p>
-  <div class="grid grid-3">`;
+  let list = `<div class="pick-list-head">Species</div>`;
   for (const r of globals.DATA.species) {
     const sel = r.id === globals.state.race;
-    const lineages = r.lineages.length ? `${r.lineages.length} lineage${r.lineages.length > 1 ? 's' : ''}` : 'No lineages';
-    html += `<div class="card opt ${sel ? 'selected' : ''}" onclick="API.pickRace('${r.id}')">
+    list += `<div class="opt-row ${sel ? 'selected' : ''}" onclick="API.pickRace('${r.id}')">
       <h4>${esc(r.name)}</h4>
-      <div class="sub">${r.size} &middot; Speed ${r.speed} ft${r.darkvision ? ' &middot; Darkvision ' + r.darkvision + ' ft' : ''}</div>
-      <div class="sub">${lineages}${r.skillChoice ? ' &middot; skill proficiency' : ''}</div>
-      <div class="desc">${esc(r.features.join(', '))}</div>
+      <div class="sub">${esc(r.size)} &middot; ${r.speed} ft${r.darkvision ? ' &middot; DV ' + r.darkvision : ''}${r.skillChoice ? ' &middot; skill' : ''}</div>
     </div>`;
   }
-  html += '</div>';
 
+  let detail = '';
   if (race) {
-    html += `<h3>${esc(race.name)} Features</h3>`;
+    detail += `<h3>${esc(race.name)}</h3>`;
+    detail += `<div class="card"><div class="entry">${race.featuresHtml}</div></div>`;
+    if (race.spells && race.spells.length) {
+      detail += `<div class="info"><b>Species spells:</b> ${race.spells.map(s => `${s.name}${s.kind === 'cantrip' ? ' (cantrip)' : ''} at level ${s.charLevel}`).join('; ')}</div>`;
+    }
     if (race.lineages && race.lineages.length) {
-      html += `<p class="step-sub">Choose a lineage:</p><div class="grid grid-4">`;
+      detail += `<h3>Lineage (choose one)</h3><div class="choice-list">`;
       for (const l of race.lineages) {
         const sel = l.id === globals.state.lineage;
-        html += `<div class="card opt ${sel ? 'selected' : ''}" onclick="API.pickLineage('${l.id}')">
-          <h4>${esc(l.name)}</h4>
-          <div class="sub">${l.speed} ft${l.darkvision ? ' &middot; DV ' + l.darkvision : ''}${l.resist ? ' &middot; ' + esc(l.resist) : ''}</div>
-        </div>`;
+        detail += `<span class="chip ${sel ? 'on' : ''}" onclick="API.pickLineage('${l.id}')" title="${esc(l.speed + ' ft' + (l.darkvision ? ' · Darkvision ' + l.darkvision + ' ft' : '') + (l.resist ? ' · ' + l.resist : ''))}">${esc(l.name)}</span>`;
       }
-      html += '</div>';
+      detail += `</div>`;
       if (lineage) {
-        html += `<div class="card"><div class="entry">${lineage.featuresHtml}</div></div>`;
+        detail += `<div class="card"><div class="entry">${lineage.featuresHtml}</div></div>`;
         const sps = lineage.spells;
         if (sps && sps.length) {
-          html += `<div class="info"><b>Lineage spells:</b> ${sps.map(s => `${s.name}${s.kind === 'cantrip' ? ' (cantrip)' : ''} at level ${s.charLevel}`).join('; ')}</div>`;
+          detail += `<div class="info"><b>Lineage spells:</b> ${sps.map(s => `${s.name}${s.kind === 'cantrip' ? ' (cantrip)' : ''} at level ${s.charLevel}`).join('; ')}</div>`;
         }
       }
     }
-    html += `<div class="card"><div class="entry">${race.featuresHtml}</div></div>`;
-    if (race.spells && race.spells.length) {
-      html += `<div class="info"><b>Species spells:</b> ${race.spells.map(s => `${s.name}${s.kind === 'cantrip' ? ' (cantrip)' : ''} at level ${s.charLevel}`).join('; ')}</div>`;
-    }
     if (race.skillChoice) {
       const sc = race.skillChoice;
-      html += `<h3>Skill Proficiency (choose ${sc.count})</h3><div class="choice-list">`;
+      detail += `<h3>Skill Proficiency (choose ${sc.count})</h3><div class="choice-list">`;
       const opts = sc.any ? globals.DATA.skills.map(s => s.id) : sc.from;
       for (const s of opts) {
         const on = globals.state.raceSkill.includes(s);
         const tk = takenChip(s, 'race');
         const cls = ['chip', on ? 'on' : '', tk.taken ? 'taken' : ''].join(' ');
         const click = tk.taken ? '' : ` onclick="API.toggleRaceSkill('${s}')"`;
-        const tip = tk.taken ? ` title="${esc(tk.tip)}"` : '';
-        html += `<span class="${cls}"${click}${tip}>${skillName(s)}</span>`;
+        const tip = tk.taken ? ` data-tip="${esc(tk.tip)}"` : ` data-tip="${esc(skillTooltip(s))}"`;
+        detail += `<span class="${cls}"${click}${tip}>${skillName(s)}</span>`;
       }
-      html += `</div><div class="counter">Selected ${globals.state.raceSkill.length} of ${sc.count}</div>`;
+      detail += `</div><div class="counter">Selected ${globals.state.raceSkill.length} of ${sc.count}</div>`;
     }
     if (race.bonusFeats > 0) {
-      html += `<h3>Bonus Origin Feat (Human)</h3>`;
-      html += featPicker('humanFeat', globals.state.humanFeat, race.bonusFeats, 'Choose a bonus origin feat (Humans gain one).');
-      html += renderSkilledPicker();
+      detail += `<h3>Bonus Origin Feat (Human)</h3>`;
+      detail += featPicker('humanFeat', globals.state.humanFeat, race.bonusFeats, 'Choose a bonus origin feat (Humans gain one).', '', true);
+      detail += renderFeatSpellChoices(globals.state.humanFeat);
+      detail += renderSkilledPicker();
     }
+  } else {
+    detail = `<div class="card"><div class="sub" style="font-style:italic;color:var(--muted)">Select a species to see its features and make your choices here.</div></div>`;
   }
-  return html;
+  return `<p class="step-sub">Choose your species. Some species have lineages with additional features.</p>` + splitLayout(list, detail);
 }

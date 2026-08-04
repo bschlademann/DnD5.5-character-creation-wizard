@@ -642,12 +642,6 @@
         {
           "kind": "cantrip",
           "charLevel": 1,
-          "name": "thaumaturgy",
-          "ability": "int/wis/cha"
-        },
-        {
-          "kind": "cantrip",
-          "charLevel": 1,
           "name": "chill touch",
           "ability": "int/wis/cha"
         },
@@ -661,12 +655,6 @@
           "kind": "spell",
           "charLevel": 5,
           "name": "ray of enfeeblement",
-          "ability": "int/wis/cha"
-        },
-        {
-          "kind": "cantrip",
-          "charLevel": 1,
-          "name": "thaumaturgy",
           "ability": "int/wis/cha"
         },
         {

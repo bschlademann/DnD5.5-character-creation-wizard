@@ -17,6 +17,7 @@ export function originFeatPool() {
     }
   }
   for (const v of magicInitiateVariants()) pool.push({ id: v.id, label: v.label, desc: 'Origin feat', variant: v });
+  pool.sort((a, b) => a.label.localeCompare(b.label));
   return pool;
 }
 

@@ -1,25 +1,23 @@
 import { globals } from '../modules/state.js';
-import { esc, abilName, skillName } from '../modules/helpers.js';
+import { esc, abilName, skillName, skillTooltip } from '../modules/helpers.js';
 import { charClass, takenChip, spellDC, spellAtk } from '../modules/compute.js';
+import { splitLayout } from '../modules/sharedComponents.js';
 
 export function renderClass() {
   const cls = charClass();
-  let html = `<p class="step-sub">Choose your class and pick your class skill proficiencies.</p>
-  <div class="grid grid-3">`;
+  let list = `<div class="pick-list-head">Classes</div>`;
   for (const c of globals.DATA.classes) {
     const sel = c.id === globals.state.cls;
-    html += `<div class="card opt ${sel ? 'selected' : ''}" onclick="API.pickClass('${c.id}')">
-      <h4>${esc(c.name)} <span class="badge">${c.source}</span></h4>
-      <div class="sub">Hit Die d${c.hd.slice(1)} &middot; ${esc(c.primaryAbility)}</div>
-      <div class="sub">Saves: ${c.savingThrows.map(abilName).join(' / ')}</div>
-      <div class="desc">${esc(c.features.filter(f => f.level === 1).map(f => f.name).join(', '))}</div>
+    list += `<div class="opt-row ${sel ? 'selected' : ''}" onclick="API.pickClass('${c.id}')">
+      <h4>${esc(c.name)}</h4>
+      <div class="sub">d${c.hd.slice(1)} &middot; ${esc(c.primaryAbility)}</div>
     </div>`;
   }
-  html += '</div>';
 
+  let detail = '';
   if (cls) {
-    html += `<h3>${esc(cls.name)} Overview</h3>`;
-    html += `<div class="card">
+    detail += `<h3>${esc(cls.name)}</h3>`;
+    detail += `<div class="card">
       <div><b>Hit Points:</b> d${cls.hd.slice(1)} &nbsp; <b>Primary Ability:</b> ${esc(cls.primaryAbility)} &nbsp; <b>Saving Throws:</b> ${cls.savingThrows.map(abilName).join(', ')}</div>
       <div><b>Armor:</b> ${esc(cls.armor || '—')} &nbsp; <b>Weapons:</b> ${esc(cls.weapons || '—')}</div>
       ${cls.tools ? `<div><b>Tools:</b> ${esc(cls.tools)}</div>` : ''}
@@ -30,41 +28,52 @@ export function renderClass() {
       </div>
     </div>`;
 
-    html += `<h3>Skill Proficiencies (choose from class)</h3>`;
+    detail += `<h3>Skill Proficiencies (choose from class)</h3>`;
     for (const sc of cls.skillChoices) {
       const opts = sc.any ? globals.DATA.skills.map(s => s.id) : sc.from;
-      html += `<div class="choice-list">`;
+      detail += `<div class="choice-list">`;
       for (const s of opts) {
         const on = globals.state.classSkills.includes(s);
         const tk = takenChip(s, 'class');
         const chipCls = ['chip', on ? 'on' : '', tk.taken ? 'taken' : ''].join(' ');
         const click = tk.taken ? '' : ` onclick="API.toggleClassSkill('${s}')"`;
-        const tip = tk.taken ? ` title="${esc(tk.tip)}"` : '';
-        html += `<span class="${chipCls}"${click}${tip}>${skillName(s)}</span>`;
+        const tipText = tk.taken ? `${skillTooltip(s)} — ${tk.tip}` : skillTooltip(s);
+        const tip = ` data-tip="${esc(tipText)}"`;
+        detail += `<span class="${chipCls}"${click}${tip}>${skillName(s)}</span>`;
       }
-      html += `</div>`;
+      detail += `</div>`;
     }
     const need = cls.skillChoices.reduce((n, c) => n + c.count, 0);
-    html += `<div class="counter">Selected ${globals.state.classSkills.length} of ${need}</div>`;
+    detail += `<div class="counter">Selected ${globals.state.classSkills.length} of ${need}</div>`;
 
     if (cls.subclasses.length) {
-      html += `<h3>${cls.subclassTitle || 'Subclass'} (gained at level 3)</h3><div class="grid grid-3">`;
+      detail += `<h3>${cls.subclassTitle || 'Subclass'} (gained at level 3)</h3>`;
       for (const s of cls.subclasses) {
         const sel = s.id === globals.state.subclass;
-        html += `<div class="card opt ${sel ? 'selected' : ''}" onclick="API.pickSubclass('${s.id}')">
+        detail += `<div class="opt-row ${sel ? 'selected' : ''}" onclick="API.pickSubclass('${s.id}')">
           <h4>${esc(s.name)}</h4>
-          ${s.features ? `<div class="desc">${s.features.filter(f => f.level <= 3).map(f => f.name).join(', ')}</div>` : ''}
+          ${s.features ? `<div class="sub">${esc(s.features.filter(f => f.level <= 3).map(f => f.name).join(', '))}</div>` : ''}
         </div>`;
       }
-      html += '</div>';
     }
 
-    html += `<h3>Class Features</h3><div class="card">`;
-    for (const f of cls.features) {
-      if (f.level > globals.state.level) break;
-      html += `<details ${f.level <= 3 ? 'open' : ''}><summary>${esc(f.name)} <span class="sub">(level ${f.level})</span></summary><div class="entry">${f.text}</div></details>`;
+    detail += `<h3>Class Features</h3><div class="card">`;
+    const subclass = cls.subclasses.find(s => s.id === globals.state.subclass);
+    const clsFeats = (cls.features || []).filter(f => f.level <= globals.state.level);
+    for (const f of clsFeats) {
+      detail += `<details open><summary>${esc(f.name)} <span class="sub">(level ${f.level})</span></summary><div class="entry">${f.text}</div></details>`;
     }
-    html += '</div>';
+    if (subclass && subclass.features) {
+      for (const f of subclass.features) {
+        if (f.level > globals.state.level) break;
+        detail += `<details open><summary>${esc(f.name)} <span class="sub">(level ${f.level})</span></summary><div class="entry">${f.text}</div></details>`;
+      }
+    } else if (globals.state.level >= 3) {
+      detail += `<div class="info">Choose a subclass above to see its features.</div>`;
+    }
+    detail += '</div>';
+  } else {
+    detail = `<div class="card"><div class="sub" style="font-style:italic;color:var(--muted)">Select a class to see its details and make your choices here.</div></div>`;
   }
-  return html;
+  return `<p class="step-sub">Choose your class and pick your class skill proficiencies.</p>` + splitLayout(list, detail);
 }

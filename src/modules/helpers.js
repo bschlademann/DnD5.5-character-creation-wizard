@@ -1,4 +1,4 @@
-import { ABIL_NAME, SKILL_ABILITY_MAP } from './constants.js';
+import { ABIL_NAME, SKILL_ABILITY_MAP, SKILL_DESC } from './constants.js';
 import { globals } from './state.js';
 
 export const $ = id => document.getElementById(id);
@@ -13,6 +13,17 @@ export const abilityMod = score => Math.floor((score - 10) / 2);
 export const modStr = m => (m >= 0 ? '+' + m : '' + m);
 
 export const skillAbility = skillId => SKILL_ABILITY_MAP[skillId] || 'wis';
+
+export const skillTooltip = skillId => {
+  const ability = SKILL_ABILITY_MAP[skillId] || 'wis';
+  const abilityLabel = ABIL_NAME[ability] || ability;
+  const desc = SKILL_DESC[skillId] || '';
+  return `${skillId.charAt(0).toUpperCase() + skillId.slice(1)} — uses ${abilityLabel}.${desc ? ' ' + desc : ''}`;
+};
+
+export const ritualTip = 'Ritual: You can cast this spell using a ritual instead of a spell slot. The casting time increases by 10 minutes.';
+export const alwaysPreparedTip = 'This spell is fixed — it is always known / always prepared because of the listed source. It cannot be changed.';
+export const sourceBadge = (srcType, label) => `<span class="src-badge ${srcType}">${esc(label)}</span>`;
 
 export function toggleIn(arr, val, max) {
   const i = arr.indexOf(val);

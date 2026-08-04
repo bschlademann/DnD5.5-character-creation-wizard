@@ -7,7 +7,7 @@ import { findBackground } from '../modules/data.js';
 export function renderAbilities() {
   const scores = finalScores();
   const bgb = bgBonus();
-  let html = `<p class="step-sub">Use the standard array (15, 14, 13, 12, 10, 8). The background +2/+1 bonus is applied automatically later.</p>
+  let html = `<p class="step-sub">Assign each value from the standard array (${STANDARD_ARRAY.join(', ')}) once. The background +2/+1 bonus is applied automatically later.</p>
   <div class="ab-grid">`;
   for (const a of ABILITIES) {
     const v = globals.state.assign[a];

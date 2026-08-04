@@ -4,7 +4,7 @@ import { render } from './steps/renderNav.js';
 import './api.js';
 
 const DATA_FILES = [
-  'abilities', 'backgrounds', 'classes', 'classSpellLists',
+  'abilities', 'backgrounds', 'classes', 'classFeatures', 'classSpellLists', 'subclassFeatures',
   'feats', 'meta', 'originFeatCategories', 'skills', 'species', 'spells'
 ];
 
@@ -15,6 +15,13 @@ async function init() {
   );
   for (let i = 0; i < DATA_FILES.length; i++) {
     globals.DATA[DATA_FILES[i]] = results[i];
+  }
+
+  for (const cls of globals.DATA.classes) {
+    if (globals.DATA.classFeatures[cls.id]) cls.features = globals.DATA.classFeatures[cls.id];
+    for (const sub of cls.subclasses || []) {
+      if (globals.DATA.subclassFeatures[sub.id]) sub.features = globals.DATA.subclassFeatures[sub.id];
+    }
   }
 
   globals.DATA.toolsList = [
@@ -28,13 +35,21 @@ async function init() {
   ];
 
   const saved = LOAD();
-  if (saved) globals.state = saved;
+  if (saved) {
+    const base = freshState();
+    globals.state = {
+      ...base, ...saved,
+      assign: { ...base.assign, ...(saved.assign || {}) },
+      custom: { ...base.custom, ...(saved.custom || {}) },
+      spells: { ...base.spells, ...(saved.spells || {}) },
+      equipment: { ...base.equipment, ...(saved.equipment || {}) },
+      details: { ...base.details, ...(saved.details || {}) }
+    };
+  }
   if (!globals.state) globals.state = freshState();
 
-  const lvlSel = $('char-level');
-  lvlSel.innerHTML = Array.from({ length: 20 }, (_, i) => `<option value="${i + 1}">Level ${i + 1}</option>`).join('');
-  lvlSel.value = globals.state.level;
-  lvlSel.onchange = () => { globals.state.level = parseInt(lvlSel.value); if (globals.state.level < 3) globals.state.subclass = null; render(); };
+  $('btn-level-down').onclick = () => API.levelDown();
+  $('btn-level-up').onclick = () => API.openLevelUp();
   render();
 }
 

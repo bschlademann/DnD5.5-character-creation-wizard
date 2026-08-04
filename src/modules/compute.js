@@ -1,5 +1,5 @@
 import { globals } from './state.js';
-import { ABILITIES, AVG_HD } from './constants.js';
+import { ABILITIES, AVG_HD, ASI_LEVELS } from './constants.js';
 import { cap, profBonus, abilityMod } from './helpers.js';
 import { findRace, findClass, findBackground } from './data.js';
 import { resolveFeatRef } from './feats.js';
@@ -29,6 +29,13 @@ export function finalScores() {
   const s = baseScores();
   const b = bgBonus();
   for (const a of ABILITIES) s[a] += b[a] || 0;
+  for (const lvl of Object.keys(globals.state.asiSelections)) {
+    const sel = globals.state.asiSelections[lvl];
+    if (sel && sel.type === 'asi' && sel.values) {
+      for (const a of ABILITIES) s[a] += sel.values[a] || 0;
+    }
+  }
+  for (const a of ABILITIES) s[a] = Math.min(s[a], 20);
   return s;
 }
 
@@ -56,6 +63,7 @@ export function grantedSkills() {
     if (typeof p === 'string') set.add(p);
     else if (p && p.kind === 'skill') set.add(p.id);
   }
+  for (const s of (globals.state.extraSkills || [])) set.add(s);
   return set;
 }
 
@@ -150,16 +158,38 @@ export function chosenFeats() {
     const f = resolveFeatRef(globals.state.humanFeat);
     if (f) out.push(f);
   }
+  for (const lvl of Object.keys(globals.state.asiSelections)) {
+    const sel = globals.state.asiSelections[lvl];
+    if (sel && sel.type === 'feat' && sel.id) {
+      const f = resolveFeatRef(sel.id);
+      if (f) out.push(f);
+    }
+  }
   return out;
+}
+
+export function hdSize() {
+  const cls = charClass();
+  if (!cls) return 0;
+  return parseInt(cls.hd.slice(1));
 }
 
 export function hp() {
   const cls = charClass();
   if (!cls) return null;
   const con = abilityMod(finalScores().con);
-  const faces = parseInt(cls.hd.slice(1));
-  let hp = faces + con;
-  hp += (globals.state.level - 1) * (AVG_HD[faces] + con);
+  const faces = hdSize();
+  const hpArr = globals.state.hpPerLevel;
+  let hp = 0;
+  for (let lv = 0; lv < globals.state.level; lv++) {
+    if (lv === 0) {
+      hp += faces + con;
+    } else {
+      const choice = hpArr[lv - 1];
+      const gained = (choice === 'average' || choice == null) ? AVG_HD[faces] : choice;
+      hp += gained + con;
+    }
+  }
   for (const f of chosenFeats()) if (f.id === 'tough-xphb') hp += 2 * globals.state.level;
   if (globals.state.race === 'dwarf') hp += globals.state.level;
   return hp;
@@ -241,19 +271,46 @@ export function maxSpellLevel() {
   return max;
 }
 
-export function slotSummaryTxt() {
+export function arcanumLevels() {
   const cls = charClass();
-  const slots = spellSlotsAt();
-  if (!slots || !slots.some(n => n > 0)) return '';
-  const ord = i => ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th'][i];
-  if (cls && cls.spellcasting.type === 'pact') return `Pact magic: ${slots[0]} × ${ord(slots[1])}-level slot${slots[0] > 1 ? 's' : ''}`;
-  return slots.map((n, i) => n > 0 ? `${ord(i)}: ${n}` : null).filter(Boolean).join(', ') || '';
+  const sk = cls && cls.spellcasting.spellsKnown;
+  if (!sk) return [];
+  return Object.keys(sk).map(Number).sort((a, b) => a - b);
+}
+
+export function arcanumSpellLv(level) {
+  const cls = charClass();
+  const slot = cls && cls.spellcasting.spellsKnown && cls.spellcasting.spellsKnown[level];
+  if (!slot) return 0;
+  return Math.max(0, ...Object.keys(slot).map(Number));
+}
+
+export function arcanumReached() {
+  return arcanumLevels().filter(l => globals.state.level >= l);
+}
+
+export function arcanumPicks() {
+  return (globals.state.spells && globals.state.spells.arcanum) || {};
 }
 
 export function cantripCount() {
   const cls = charClass();
   if (!cls || !cls.spellcasting.cantrips) return 0;
   return cls.spellcasting.cantrips[globals.state.level - 1] || 0;
+}
+
+export function isPreparedCaster() {
+  const cls = charClass();
+  if (!cls) return false;
+  return cls.spellcasting.type === 'full' || cls.spellcasting.type === 'artificer';
+}
+
+export function spellSystemLabel() {
+  const cls = charClass();
+  if (!cls) return '';
+  if (cls.spellcasting.type === 'pact') return 'Spells Known (Pact Magic)';
+  if (cls.spellcasting.type === 'full' || cls.spellcasting.type === 'artificer') return 'Spells to Prepare';
+  return 'Spells Known';
 }
 
 export function preparedCount() {
@@ -274,44 +331,149 @@ export function spellAtk() {
   return profBonus(globals.state.level) + abilityMod(finalScores()[cls.spellcasting.ability]);
 }
 
+function mergeSourceEntry(list, entry) {
+  const existing = list.find(item => item.name === entry.name);
+  if (!existing) {
+    list.push(entry);
+    return;
+  }
+  const sources = new Set([existing.source, entry.source].filter(Boolean));
+  existing.source = [...sources].join(', ');
+  existing.always = existing.always || entry.always;
+  if (entry.level != null) existing.level = entry.level;
+  if (entry.expanded) existing.expanded = true;
+  if (entry.innate) existing.innate = true;
+  const types = new Set([existing.srcType, entry.srcType].filter(Boolean));
+  existing.srcType = types.size > 1 ? 'mixed' : entry.srcType || existing.srcType || 'class';
+}
+
+export function resolveFeatBonusList(f) {
+  if (f.bonus) return f.bonus;
+  if (f.base) {
+    const b = globals.DATA.feats.find(x => x.id === f.base);
+    if (b && b.bonus) {
+      if (f.list) return b.bonus.filter(e => !e.choose || new RegExp('class=' + f.list, 'i').test(e.choose));
+      return b.bonus;
+    }
+  }
+  return [];
+}
+
+export function parseChoose(str) {
+  const out = { levels: [], class: null, school: null, ritual: false };
+  for (const part of String(str || '').split('|')) {
+    const eq = part.indexOf('=');
+    if (eq < 0) continue;
+    const k = part.slice(0, eq).trim();
+    const v = part.slice(eq + 1).trim();
+    if (k === 'level') out.levels = v.split(';').map(Number);
+    else if (k === 'class') out.class = v.toLowerCase();
+    else if (k === 'school') out.school = v.split(';').map(s => s.toUpperCase());
+    else if (/components/i.test(k) && /ritual/i.test(v)) out.ritual = true;
+  }
+  return out;
+}
+
+export function featSpellPool(chooseStr) {
+  const q = parseChoose(chooseStr);
+  if (q.class) {
+    const list = globals.DATA.classSpellLists[q.class];
+    const set = new Set();
+    for (const lv of q.levels) for (const n of (list && list[lv]) || []) set.add(n);
+    return [...set];
+  }
+  const pool = [];
+  for (const sp of globals.DATA.spells || []) {
+    if (!q.levels.includes(sp.level)) continue;
+    if (q.school && !q.school.includes(sp.schoolCode)) continue;
+    if (q.ritual && !sp.ritual) continue;
+    pool.push(sp.name);
+  }
+  return pool;
+}
+
+export function featPicks(fid) {
+  return (globals.state.miPicks && globals.state.miPicks[fid]) || {};
+}
+
+export function featSpellChoicesComplete(f) {
+  const bonuses = resolveFeatBonusList(f);
+  const picks = featPicks(f.id);
+  return bonuses.every((b, idx) => {
+    if (!b.choose) return true;
+    return (picks[idx] || []).length >= (b.count || 1);
+  });
+}
+
+export function featChoicesComplete() {
+  return chosenFeats().every(f => featSpellChoicesComplete(f));
+}
+
 export function classSpellsKnownFromSources() {
   const out = { spells: [], cantrips: [] };
   const cls = charClass();
   if (cls) {
     for (const b of cls.bonusSpells) {
-      if (b.kind === 'innate' && b.name.endsWith('#c')) out.cantrips.push({ name: b.name.replace('#c', ''), source: cls.name + ' class', always: true });
-      else out.spells.push({ name: b.name, level: Math.max(1, b.atLevel), source: cls.name + ' class', always: true });
+      const entry = b.kind === 'innate' && b.name.endsWith('#c')
+        ? { name: b.name.replace('#c', ''), source: cls.name + ' class', always: true, srcType: 'class' }
+        : { name: b.name, level: Math.max(1, b.atLevel), source: cls.name + ' class', always: true, srcType: 'class' };
+      if (entry.name.endsWith('#c')) {
+        mergeSourceEntry(out.cantrips, entry);
+      } else {
+        mergeSourceEntry(out.spells, entry);
+      }
     }
   }
   const race = charRace();
   if (race) {
     const lin = charLineage();
-    const collect = list => {
+    const collect = (list, src, srcType) => {
       for (const sp of list || []) {
         if (sp.charLevel > globals.state.level) continue;
-        if (sp.kind === 'cantrip') out.cantrips.push({ name: sp.name, source: race.name + (lin ? ' (' + lin.name + ')' : ''), always: true });
-        else if (sp.kind === 'expanded') {
-          for (const n of sp.names) out.spells.push({ name: n, level: 0, source: race.name + ' (expanded list)', expanded: true });
-        } else out.spells.push({ name: sp.name, level: 0, source: race.name, always: true, innate: sp.kind === 'innate' });
+        if (sp.kind === 'cantrip') {
+          mergeSourceEntry(out.cantrips, { name: sp.name, source: src, always: true, srcType });
+        } else if (sp.kind === 'expanded') {
+          for (const n of sp.names) mergeSourceEntry(out.spells, { name: n, level: 0, source: src + ' (expanded list)', expanded: true, srcType });
+        } else {
+          mergeSourceEntry(out.spells, { name: sp.name, level: 0, source: src, always: true, innate: sp.kind === 'innate', srcType });
+        }
       }
     };
-    collect(race.spells);
-    if (lin) collect(lin.spells);
+    if (lin && race.lineages && race.lineages.length) {
+      collect(lin.spells, race.name + ' (' + lin.name + ')', 'species');
+    } else if (race.spells && race.spells.length) {
+      const unique = {};
+      for (const sp of race.spells) unique[sp.name + '|' + sp.kind] = sp;
+      collect(Object.values(unique), race.name, 'species');
+    }
   }
   for (const f of chosenFeats()) {
-    for (const b of f.bonus || []) {
-      if (b.choose) continue;
-      if (b.kind === 'known' || b.kind === 'prepared' || b.kind === 'innate') {
-        out.spells.push({ name: b.name, level: 0, source: (f.name || f.label), always: true });
-      } else if (b.kind === 'expanded') {
-        for (const n of b.names) out.spells.push({ name: n, level: 0, source: (f.name || f.label) + ' (expanded)', expanded: true });
+    const bonuses = resolveFeatBonusList(f);
+    const picks = featPicks(f.id);
+    bonuses.forEach((b, idx) => {
+      if (b.choose) {
+        const q = parseChoose(b.choose);
+        for (const name of picks[idx] || []) {
+          const isCantrip = q.levels.includes(0);
+          const entry = { name, level: q.levels.find(l => l !== 0) || 1, source: (f.name || f.label), always: true, srcType: 'feat' };
+          if (isCantrip) mergeSourceEntry(out.cantrips, entry);
+          else mergeSourceEntry(out.spells, entry);
+        }
+        return;
       }
-    }
+      if (b.kind === 'known' || b.kind === 'prepared' || b.kind === 'innate') {
+        mergeSourceEntry(out.spells, { name: b.name, level: 0, source: (f.name || f.label), always: true, srcType: 'feat' });
+      } else if (b.kind === 'expanded') {
+        for (const n of b.names) mergeSourceEntry(out.spells, { name: n, level: 0, source: (f.name || f.label) + ' (expanded)', expanded: true, srcType: 'feat' });
+      }
+    });
   }
   return out;
 }
 
-export function featSpells(f) {
-  const picks = globals.state.miPicks[f.id] || {};
-  return { cantrips: picks.cantrips || [], spell: picks.spell || null };
+export function isAsiLevel(level) {
+  const cls = charClass();
+  if (!cls) return false;
+  const key = cls.id === 'fighter' ? 'fighter' : cls.id === 'rogue' ? 'rogue' : 'default';
+  return ASI_LEVELS[key].includes(level);
 }

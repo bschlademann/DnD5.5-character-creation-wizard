@@ -1,7 +1,7 @@
 import { globals } from '../modules/state.js';
 import { esc, abilName, skillName, skillTooltip } from '../modules/helpers.js';
-import { charClass, takenChip, spellDC, spellAtk } from '../modules/compute.js';
-import { splitLayout } from '../modules/sharedComponents.js';
+import { charClass, takenChip, spellDC, spellAtk, fightingStyleGranted, weaponMasteryGranted, weaponMasteryCount } from '../modules/compute.js';
+import { splitLayout, renderFightingStylePicker, renderWeaponMasteryPicker } from '../modules/sharedComponents.js';
 
 export function renderClass() {
   const cls = charClass();
@@ -28,7 +28,10 @@ export function renderClass() {
       </div>
     </div>`;
 
-    detail += `<h3>Skill Proficiencies (choose from class)</h3>`;
+    const need = cls.skillChoices.reduce((n, c) => n + c.count, 0);
+    const skillsOk = globals.state.classSkills.length >= need;
+    detail += `<div ${skillsOk ? '' : 'data-need="1"'}>
+      <h3>Skill Proficiencies (choose from class)</h3>`;
     for (const sc of cls.skillChoices) {
       const opts = sc.any ? globals.DATA.skills.map(s => s.id) : sc.from;
       detail += `<div class="choice-list">`;
@@ -43,11 +46,13 @@ export function renderClass() {
       }
       detail += `</div>`;
     }
-    const need = cls.skillChoices.reduce((n, c) => n + c.count, 0);
     detail += `<div class="counter">Selected ${globals.state.classSkills.length} of ${need}</div>`;
+    detail += `</div>`;
 
+    const needSubclass = globals.state.level >= 3 && cls.subclasses.length && !globals.state.subclass;
+    detail += `<div ${needSubclass ? 'data-need="1"' : ''}>
+      <h3>${cls.subclassTitle || 'Subclass'} (gained at level 3)</h3>`;
     if (cls.subclasses.length) {
-      detail += `<h3>${cls.subclassTitle || 'Subclass'} (gained at level 3)</h3>`;
       for (const s of cls.subclasses) {
         const sel = s.id === globals.state.subclass;
         detail += `<div class="opt-row ${sel ? 'selected' : ''}" onclick="API.pickSubclass('${s.id}')">
@@ -55,6 +60,16 @@ export function renderClass() {
           ${s.features ? `<div class="sub">${esc(s.features.filter(f => f.level <= 3).map(f => f.name).join(', '))}</div>` : ''}
         </div>`;
       }
+    }
+    detail += `</div>`;
+
+    if (fightingStyleGranted(cls, globals.state.level)) {
+      detail += `<div ${globals.state.fightingStyle ? '' : 'data-need="1"'}>${renderFightingStylePicker({ cls, selected: globals.state.fightingStyle, toggleFn: 'API.pickClassFighting' })}</div>`;
+    }
+
+    const masteryCount = weaponMasteryCount(cls, globals.state.level);
+    if (weaponMasteryGranted(cls, globals.state.level) && masteryCount > 0) {
+      detail += `<div ${globals.state.weaponMasteries.length === masteryCount ? '' : 'data-need="1"'}>${renderWeaponMasteryPicker({ cls, selected: globals.state.weaponMasteries, count: masteryCount, toggleFn: 'API.toggleClassMastery' })}</div>`;
     }
 
     detail += `<h3>Class Features</h3><div class="card">`;
@@ -75,5 +90,5 @@ export function renderClass() {
   } else {
     detail = `<div class="card"><div class="sub" style="font-style:italic;color:var(--muted)">Select a class to see its details and make your choices here.</div></div>`;
   }
-  return `<p class="step-sub">Choose your class and pick your class skill proficiencies.</p>` + splitLayout(list, detail);
+  return `<p class="step-sub">Choose your class and pick your class skill proficiencies.</p>` + splitLayout(list, detail, !cls);
 }

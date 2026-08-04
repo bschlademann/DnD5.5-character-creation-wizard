@@ -2,7 +2,7 @@ import { globals } from './state.js';
 import { TOOL_GROUPS } from './constants.js';
 import { esc, jsStr, abilName, skillTooltip, cap } from './helpers.js';
 import { findBackground, findSpell } from './data.js';
-import { chosenFeats, otherSkillSources, otherToolSources, resolveFeatBonusList, parseChoose, featSpellPool, featPicks } from './compute.js';
+import { chosenFeats, otherSkillSources, otherToolSources, resolveFeatBonusList, parseChoose, featSpellPool, featPicks, fightingStylePool, weaponMasteryPool } from './compute.js';
 import { magicInitiateVariants, resolveFeatRef, originFeatPool, featText, featName, featSource } from './feats.js';
 
 export function renderFeatSpellChoices(featRef, opts = {}) {
@@ -79,12 +79,15 @@ export function renderAbilityBonusPicker(bg) {
   const p1 = globals.state.bgMode === 'custom' ? globals.state.custom.p1 : globals.state.bgPlus1;
   let html = `<div class="grid grid-2"><div class="card"><h4>+2 Bonus</h4><div class="choice-list">`;
   for (const a of pools[0]) {
-    html += `<span class="chip ${p2 === a ? 'on' : ''}" onclick="API.pickBonus('p2', '${a}')">${abilName(a)}</span>`;
+    const taken = p1 === a;
+    const click = taken ? '' : ` onclick="API.pickBonus('p2', '${a}')"`;
+    html += `<span class="chip ${p2 === a ? 'on' : ''} ${taken ? 'taken' : ''}"${click}${taken ? ' title="Already used for the +1 bonus"' : ''}>${abilName(a)}</span>`;
   }
   html += `</div></div><div class="card"><h4>+1 Bonus</h4><div class="choice-list">`;
   for (const a of pools[1]) {
     const taken = p2 === a;
-    html += `<span class="chip ${p1 === a ? 'on' : ''} ${taken ? 'taken' : ''}" ${taken ? 'title="Already used for the +2 bonus"' : ''} onclick="API.pickBonus('p1', '${a}')">${abilName(a)}</span>`;
+    const click = taken ? '' : ` onclick="API.pickBonus('p1', '${a}')"`;
+    html += `<span class="chip ${p1 === a ? 'on' : ''} ${taken ? 'taken' : ''}"${click}${taken ? ' title="Already used for the +2 bonus"' : ''}>${abilName(a)}</span>`;
   }
   html += `</div></div></div>`;
   if (p2 && p2 === p1) html += `<div class="info" style="border-color:var(--warn)">The +2 and +1 bonuses must go to different ability scores.</div>`;
@@ -132,8 +135,37 @@ export function featPicker(kind, current, count, hint, mode, compact) {
   return html;
 }
 
-export function splitLayout(listHTML, detailHTML) {
-  return `<div class="picker-split"><div class="pick-list-col">${listHTML}</div><div class="pick-detail-col">${detailHTML}</div></div>`;
+export function splitLayout(listHTML, detailHTML, listNeed = false) {
+  return `<div class="picker-split"><div class="pick-list-col"${listNeed ? ' data-need="1"' : ''}>${listHTML}</div><div class="pick-detail-col">${detailHTML}</div></div>`;
+}
+
+export function renderFightingStylePicker(opts) {
+  const pool = fightingStylePool(opts.cls);
+  if (!pool.length) return '';
+  const sel = opts.selected;
+  return `<h3>Fighting Style <span class="sub">choose one Fighting Style feat</span></h3>
+    <div class="feat-grid">${pool.map(f => `<div class="feat-opt ${sel === f.id ? 'selected' : ''}" onclick="${opts.toggleFn}('${f.id}')"><b>${esc(f.name)}</b></div>`).join('')}</div>
+    <div class="feat-desc-box">${sel ? `<h4>${esc(featName(sel))}</h4><div class="entry">${featText(sel)}</div>` : '<div class="entry" style="color:var(--muted);font-style:italic">Select a Fighting Style to preview it.</div>'}</div>`;
+}
+
+export function renderWeaponMasteryPicker(opts) {
+  const pool = weaponMasteryPool(opts.cls);
+  if (!pool.length) return '';
+  const picks = opts.selected || [];
+  const count = opts.count;
+  const label = opts.cls && opts.cls.id === 'barbarian' ? 'Simple or Martial melee weapons' : 'Simple or Martial weapons';
+  let html = `<h3>Weapon Mastery <span class="sub">choose ${count} ${label}</span></h3>
+    <div class="counter">Selected ${picks.length} of ${count}</div>
+    <div class="choice-list">`;
+  for (const w of pool) {
+    const on = picks.some(p => p && p.toLowerCase() === w.name.toLowerCase());
+    const maxed = !on && picks.length >= count;
+    const chipCls = ['chip', on ? 'on' : '', maxed ? 'maxed' : ''].join(' ');
+    const click = maxed ? '' : ` onclick="${opts.toggleFn}('${jsStr(w.name)}')"`;
+    html += `<span class="${chipCls}"${click}>${esc(w.name)}</span>`;
+  }
+  html += '</div>';
+  return html;
 }
 
 export function renderSkilledPicker() {

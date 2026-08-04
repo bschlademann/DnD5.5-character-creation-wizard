@@ -1,10 +1,10 @@
 import { globals } from './state.js';
 import { ABILITIES, AVG_HD } from './constants.js';
-import { $, esc, jsStr, abilName } from './helpers.js';
+import { $, esc, jsStr, abilName, toggleIn } from './helpers.js';
 import { findSpell } from './data.js';
-import { charClass, hdSize, isAsiLevel, arcanumSpellLv, resolveFeatBonusList } from './compute.js';
+import { charClass, hdSize, isAsiLevel, arcanumSpellLv, resolveFeatBonusList, fightingStyleGranted, weaponMasteryGranted, weaponMasteryCount } from './compute.js';
 import { featName, featText, resolveFeatRef } from './feats.js';
-import { renderFeatSpellChoices } from './sharedComponents.js';
+import { renderFeatSpellChoices, renderFightingStylePicker, renderWeaponMasteryPicker } from './sharedComponents.js';
 import { render } from './../steps/renderNav.js';
 
 const LUP = {
@@ -16,7 +16,9 @@ const LUP = {
   cantrips: [],
   prepared: [],
   arcanum: {},
-  asiPicks: {}
+  asiPicks: {},
+  fightingStyle: null,
+  masteries: []
 };
 
 const ord = n => n === 1 ? 'st' : n === 2 ? 'nd' : n === 3 ? 'rd' : 'th';
@@ -56,6 +58,9 @@ function arcanumNeeded() {
 function sectionsOk() {
   if (LUP.hpChoice == null) return false;
   if (LUP.target === 3 && !LUP.subclass) return false;
+  const cls = charClass();
+  if (fightingStyleGranted(cls, LUP.target) && !LUP.fightingStyle) return false;
+  if (weaponMasteryGranted(cls, LUP.target) && LUP.masteries.length !== weaponMasteryCount(cls, LUP.target)) return false;
   if (asiNeeded()) {
     if (!LUP.asi) return false;
     if (LUP.asi.type === 'asi') {
@@ -120,6 +125,22 @@ function featuresSection(cls, lvl) {
   return `<section class="levelup-sec" data-sec="features">
     <h3>2. Class Features</h3>
     ${feats.map(f => `<details open><summary>${esc(f.name)}</summary><div class="entry">${f.text}</div></details>`).join('')}
+  </section>`;
+}
+
+function fightingSection(cls, lvl) {
+  if (!fightingStyleGranted(cls, lvl)) return '';
+  return `<section class="levelup-sec" data-sec="fighting">
+    ${renderFightingStylePicker({ cls, selected: LUP.fightingStyle, toggleFn: 'API.pickModalFighting' })}
+  </section>`;
+}
+
+function masterySection(cls, lvl) {
+  if (!weaponMasteryGranted(cls, lvl)) return '';
+  const count = weaponMasteryCount(cls, lvl);
+  if (!count) return '';
+  return `<section class="levelup-sec" data-sec="mastery">
+    ${renderWeaponMasteryPicker({ cls, selected: LUP.masteries, count, toggleFn: 'API.toggleModalMastery' })}
   </section>`;
 }
 
@@ -272,6 +293,8 @@ function renderModal() {
       <div class="levelup-body">
         ${hpSection(faces)}
         ${featuresSection(cls, lvl)}
+        ${fightingSection(cls, lvl)}
+        ${masterySection(cls, lvl)}
         ${subclassSection(cls, lvl)}
         ${subclassFeaturesSection(cls, lvl)}
         ${asiSection(cls, lvl)}
@@ -333,6 +356,8 @@ export function openLevelUp() {
   LUP.cantrips = [...globals.state.spells.cantrips];
   LUP.prepared = [...globals.state.spells.prepared];
   LUP.arcanum = { ...(globals.state.spells.arcanum || {}) };
+  LUP.fightingStyle = globals.state.fightingStyle;
+  LUP.masteries = [...(globals.state.weaponMasteries || [])];
   renderModal();
 }
 
@@ -361,6 +386,13 @@ export function acceptHp(choice) {
 }
 
 export function pickModalSubclass(id) { LUP.subclass = id; renderModal(); }
+
+export function pickModalFighting(id) { LUP.fightingStyle = id; renderModal(); }
+
+export function toggleModalMastery(name) {
+  toggleIn(LUP.masteries, name, weaponMasteryCount(charClass(), LUP.target));
+  renderModal();
+}
 
 export function pickAsiMode(mode) {
   LUP.asi = mode === 'asi' ? { type: 'asi', values: {} } : { type: 'feat', id: null };
@@ -431,6 +463,8 @@ export function confirmLevelUp() {
   globals.state.spells.cantrips = LUP.cantrips;
   globals.state.spells.prepared = LUP.prepared;
   globals.state.miPicks = LUP.asiPicks;
+  globals.state.fightingStyle = LUP.fightingStyle;
+  globals.state.weaponMasteries = [...LUP.masteries];
   if (arcanumNeeded()) globals.state.spells.arcanum = LUP.arcanum;
   closeLevelUp();
   render();
@@ -444,6 +478,14 @@ export function levelDown() {
   delete globals.state.asiSelections[lvl];
   if (globals.state.level < 3) globals.state.subclass = null;
   const cls = charClass();
+  if (cls) {
+    if (!fightingStyleGranted(cls, globals.state.level)) globals.state.fightingStyle = null;
+    if (weaponMasteryGranted(cls, globals.state.level)) {
+      globals.state.weaponMasteries = globals.state.weaponMasteries.slice(0, weaponMasteryCount(cls, globals.state.level));
+    } else {
+      globals.state.weaponMasteries = [];
+    }
+  }
   if (cls && cls.spellcasting.ability) {
     globals.state.spells.cantrips = globals.state.spells.cantrips.slice(0, countAt(cls.spellcasting.cantrips, globals.state.level));
     globals.state.spells.prepared = globals.state.spells.prepared.slice(0, countAt(cls.spellcasting.prepared, globals.state.level));

@@ -2,7 +2,7 @@ import { globals } from '../modules/state.js';
 import { STEPS, ABILITIES } from '../modules/constants.js';
 import { $ } from '../modules/helpers.js';
 import { findRace, findClass, findBackground } from '../modules/data.js';
-import { charClass, chosenFeats, cantripCount, preparedCount, featChoicesComplete } from '../modules/compute.js';
+import { charClass, chosenFeats, cantripCount, preparedCount, featChoicesComplete, fightingStyleGranted, weaponMasteryGranted, weaponMasteryCount } from '../modules/compute.js';
 import { validateStep } from '../modules/validation.js';
 import { renderAbilities } from './renderAbilities.js';
 import { renderSpecies } from './renderSpecies.js';
@@ -23,6 +23,7 @@ export function stepDone(i) {
     const r = findRace(globals.state.race);
     if (r.lineages && r.lineages.length && !globals.state.lineage) return false;
     if (r.skillChoice) return globals.state.raceSkill.length >= r.skillChoice.count;
+    if (r.bonusFeats > 0 && !globals.state.humanFeat) return false;
     if (chosenFeats().some(f => f && f.id === 'skilled-xphb') && globals.state.skilledPicks.length !== 3) return false;
     if (!featChoicesComplete()) return false;
     return true;
@@ -31,7 +32,10 @@ export function stepDone(i) {
     if (!globals.state.cls) return false;
     const cls = findClass(globals.state.cls);
     const need = cls.skillChoices.reduce((n, c) => n + c.count, 0);
-    return globals.state.classSkills.length >= need;
+    if (globals.state.classSkills.length < need) return false;
+    if (fightingStyleGranted(cls, globals.state.level) && !globals.state.fightingStyle) return false;
+    if (weaponMasteryGranted(cls, globals.state.level) && globals.state.weaponMasteries.length !== weaponMasteryCount(cls, globals.state.level)) return false;
+    return true;
   }
   if (key === 'background') {
     if (globals.state.bgMode === 'custom') {
@@ -88,9 +92,19 @@ export function renderFooter() {
   } else {
     next.style.visibility = 'visible';
     next.textContent = key === 'details' ? 'Show Character Sheet' : 'Continue';
-    next.disabled = !stepDone(globals.currentStep);
+    const res = validateStep(globals.currentStep);
+    const banner = $('validation-banner');
+    next.disabled = !res.ok;
+    if (res.ok) {
+      next.classList.remove('blocked');
+      next.removeAttribute('title');
+      if (banner) banner.textContent = '';
+    } else {
+      next.classList.add('blocked');
+      next.title = res.message;
+      if (banner) banner.textContent = res.message;
+    }
     next.onclick = () => {
-      const res = validateStep(globals.currentStep);
       const banner = $('validation-banner');
       if (!res.ok) {
         if (banner) banner.textContent = res.message;

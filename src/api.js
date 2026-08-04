@@ -1,10 +1,10 @@
 import { globals } from './modules/state.js';
 import { $, esc, jsStr, toggleIn, download } from './modules/helpers.js';
 import { findRace, findClass, findBackground, findSpell } from './modules/data.js';
-import { charClass, grantedSkills, otherSkillSources, otherToolSources, hdSize, isAsiLevel, cantripCount, preparedCount, resolveFeatBonusList } from './modules/compute.js';
+import { charClass, grantedSkills, otherSkillSources, otherToolSources, hdSize, isAsiLevel, cantripCount, preparedCount, resolveFeatBonusList, weaponMasteryCount } from './modules/compute.js';
 import { AVG_HD } from './modules/constants.js';
 import { resolveFeatRef, featName, featText } from './modules/feats.js';
-import { openLevelUp, rollHpDie, acceptHp, pickModalSubclass, pickAsiMode, asiAdjust, pickAsiFeat, toggleModalFeatSpell, toggleModalCantrip, toggleModalPrepared, toggleModalArcanum, confirmLevelUp, levelDown } from './modules/levelUp.js';
+import { openLevelUp, rollHpDie, acceptHp, pickModalSubclass, pickModalFighting, toggleModalMastery, pickAsiMode, asiAdjust, pickAsiFeat, toggleModalFeatSpell, toggleModalCantrip, toggleModalPrepared, toggleModalArcanum, confirmLevelUp, levelDown } from './modules/levelUp.js';
 import { render, goTo } from './steps/renderNav.js';
 
 window.API = {
@@ -18,7 +18,9 @@ window.API = {
     toggleIn(globals.state.raceSkill, s, max);
     render();
   },
-  pickClass(id) { globals.state.cls = id; globals.state.classSkills = []; globals.state.subclass = null; globals.state.spells = { cantrips: [], prepared: [], arcanum: {} }; render(); },
+  pickClass(id) { globals.state.cls = id; globals.state.classSkills = []; globals.state.subclass = null; globals.state.fightingStyle = null; globals.state.weaponMasteries = []; globals.state.spells = { cantrips: [], prepared: [], arcanum: {} }; render(); },
+  pickClassFighting(id) { globals.state.fightingStyle = id; render(); },
+  toggleClassMastery(name) { toggleIn(globals.state.weaponMasteries, name, weaponMasteryCount(charClass(), globals.state.level)); render(); },
   toggleClassSkill(s) {
     if (otherSkillSources(s, 'class').length) return;
     const cls = charClass();
@@ -209,7 +211,7 @@ window.API = {
     const overlay = document.querySelector('.modal-overlay');
     if (overlay) overlay.remove();
   },
-  openLevelUp, rollHpDie, acceptHp, pickModalSubclass, pickAsiMode, asiAdjust, pickAsiFeat, toggleModalFeatSpell, toggleModalCantrip, toggleModalPrepared, toggleModalArcanum, confirmLevelUp, levelDown,
+  openLevelUp, rollHpDie, acceptHp, pickModalSubclass, pickModalFighting, toggleModalMastery, pickAsiMode, asiAdjust, pickAsiFeat, toggleModalFeatSpell, toggleModalCantrip, toggleModalPrepared, toggleModalArcanum, confirmLevelUp, levelDown,
   gotoStep(i) { goTo(i); },
   finalize() {
     globals.state.finalized = true;

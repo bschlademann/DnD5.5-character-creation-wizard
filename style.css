@@ -291,6 +291,9 @@ table.sheet td.num, table.sheet th.num { text-align: center; }
   flex: 1; text-align: center; color: var(--warn);
   font-size: 14px; min-height: 20px;
 }
+#btn-next.blocked { border-color: var(--warn); background: var(--panel); color: var(--warn); box-shadow: 0 0 0 2px rgba(198,40,40,.18); }
+.needs-choice { outline: 2px solid var(--warn); outline-offset: 3px; border-radius: 8px; }
+[data-need] { outline: 2px dashed var(--warn); outline-offset: 4px; border-radius: 8px; }
 
 /* info box */
 .info { background: var(--chip); border-left: 4px solid var(--gold); padding: 8px 12px; border-radius: 4px; font-size: 14px; margin: 8px 0; }
@@ -304,6 +307,11 @@ table.sheet td.num, table.sheet th.num { text-align: center; }
 .sheet-cols h4 { margin: 12px 0 4px; border-bottom: 1px solid var(--line); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
 .sheet-cols .item { font-size: 13px; padding: 1px 0; }
 .sheet-cols .item b { color: var(--accent-dark); }
+.sheet-wrap > h4 { margin: 14px 0 4px; border-bottom: 1px solid var(--line); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-dark); padding-bottom: 3px; }
+.sheet-wrap .item { font-size: 13px; padding: 1px 0; }
+.sheet-wrap .item b { color: var(--accent-dark); }
+#preview .sheet-wrap .item { font-size: 11px; }
+#preview .sheet-wrap > h4 { margin: 8px 0 2px; font-size: 11px; }
 .sheet-cols .exp { color: var(--gold); font-size: 11px; }
 .chk { display: inline-block; width: 12px; height: 12px; border: 1px solid var(--line); border-radius: 3px; margin-right: 6px; vertical-align: -1px; cursor: pointer; }
 .chk.on { background: var(--accent); border-color: var(--accent); }

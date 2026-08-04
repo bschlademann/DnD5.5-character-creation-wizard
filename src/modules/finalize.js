@@ -1,7 +1,7 @@
 import { globals } from './state.js';
 import { ABILITIES, STEPS } from './constants.js';
 import { findRace, findClass, findBackground, findFeat } from './data.js';
-import { charClass, chosenFeats, cantripCount, preparedCount, isAsiLevel, arcanumReached, arcanumPicks } from './compute.js';
+import { charClass, chosenFeats, cantripCount, preparedCount, isAsiLevel, arcanumReached, arcanumPicks, fightingStyleGranted, weaponMasteryGranted, weaponMasteryCount } from './compute.js';
 import { esc } from './helpers.js';
 
 export function finalizeReport() {
@@ -30,6 +30,11 @@ export function finalizeReport() {
     const need = cls.skillChoices.reduce((n, c) => n + c.count, 0);
     if (s.classSkills.length !== need) issues.push({ step: 2, msg: `Choose exactly ${need} class skill proficienc${need === 1 ? 'y' : 'ies'}.` });
     if (s.level >= 3 && !s.subclass) issues.push({ step: 2, msg: 'Choose a subclass (your class gains it at level 3).' });
+    if (fightingStyleGranted(cls, s.level) && !s.fightingStyle) issues.push({ step: 2, msg: 'Choose a Fighting Style.' });
+    if (weaponMasteryGranted(cls, s.level)) {
+      const count = weaponMasteryCount(cls, s.level);
+      if (s.weaponMasteries.length !== count) issues.push({ step: 2, msg: `Choose ${count} weapon master${count === 1 ? 'y' : 'ies'}.` });
+    }
     for (let lv = 2; lv <= s.level; lv++) {
       if (s.hpPerLevel[lv - 1] == null) issues.push({ step: 2, msg: `No hit points recorded for level ${lv} (level down and up to record them).` });
       if (isAsiLevel(lv) && !s.asiSelections[lv]) issues.push({ step: 2, msg: `No Ability Score Improvement or feat recorded for level ${lv}.` });

@@ -1,5 +1,5 @@
 import { globals } from './state.js';
-import { ABILITIES, AVG_HD, ASI_LEVELS } from './constants.js';
+import { ABILITIES, AVG_HD, ASI_LEVELS, WEAPONS } from './constants.js';
 import { cap, profBonus, abilityMod } from './helpers.js';
 import { findRace, findClass, findBackground } from './data.js';
 import { resolveFeatRef } from './feats.js';
@@ -476,4 +476,44 @@ export function isAsiLevel(level) {
   if (!cls) return false;
   const key = cls.id === 'fighter' ? 'fighter' : cls.id === 'rogue' ? 'rogue' : 'default';
   return ASI_LEVELS[key].includes(level);
+}
+
+export function classGrantsFeature(cls, name, level) {
+  if (!cls) return false;
+  return (cls.features || []).some(f => f.name === name && f.level <= level);
+}
+
+export function fightingStyleGranted(cls, level) {
+  return classGrantsFeature(cls, 'Fighting Style', level);
+}
+
+export function fightingStylePool(cls) {
+  const cats = ['FS'];
+  if (cls && cls.id === 'paladin') cats.push('FS:P');
+  if (cls && cls.id === 'ranger') cats.push('FS:R');
+  return globals.DATA.feats.filter(f => cats.includes(f.category) && f.source === 'XPHB').sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export function weaponMasteryGranted(cls, level) {
+  return classGrantsFeature(cls, 'Weapon Mastery', level);
+}
+
+const MASTERY_COUNT = {
+  barbarian: [[1, 2], [9, 3], [13, 4], [17, 5]],
+  fighter: [[1, 3], [4, 5], [9, 6], [13, 7], [17, 8], [20, 9]],
+  paladin: [[1, 2]],
+  ranger: [[1, 2]],
+  rogue: [[1, 2]]
+};
+
+export function weaponMasteryCount(cls, level) {
+  const list = MASTERY_COUNT[cls && cls.id] || [];
+  let count = 0;
+  for (const [lv, n] of list) if (level >= lv) count = n;
+  return count;
+}
+
+export function weaponMasteryPool(cls) {
+  const meleeOnly = !!(cls && cls.id === 'barbarian');
+  return WEAPONS.filter(w => meleeOnly ? w.type === 'melee' : true);
 }

@@ -1,7 +1,7 @@
 import { globals } from './state.js';
 import { ABILITIES, STEPS } from './constants.js';
 import { findRace, findClass, findBackground } from './data.js';
-import { charClass, chosenFeats, cantripCount, preparedCount, arcanumReached, arcanumSpellLv, arcanumPicks, featChoicesComplete } from './compute.js';
+import { charClass, chosenFeats, cantripCount, preparedCount, arcanumReached, arcanumSpellLv, arcanumPicks, featChoicesComplete, fightingStyleGranted, weaponMasteryGranted, weaponMasteryCount } from './compute.js';
 
 export function validateStep(i) {
   const key = STEPS[i].key;
@@ -15,14 +15,20 @@ export function validateStep(i) {
     const r = findRace(globals.state.race);
     if (r.lineages && r.lineages.length && !globals.state.lineage) return { ok: false, message: 'Choose a lineage for this species.' };
     if (r.skillChoice && globals.state.raceSkill.length < r.skillChoice.count) return { ok: false, message: 'Choose your species skill proficiency.' };
+    if (r.bonusFeats > 0 && !globals.state.humanFeat) return { ok: false, message: 'Choose your bonus origin feat.' };
     if (!featChoicesComplete()) return { ok: false, message: 'Finish the spell choices granted by your origin feats.' };
   }
   if (key === 'class') {
     if (!globals.state.cls) return { ok: false, message: 'Choose a class.' };
     const cls = findClass(globals.state.cls);
     const need = cls.skillChoices.reduce((n, c) => n + c.count, 0);
-    if (globals.state.classSkills.length !== need) return { ok: false, message: `Choose exactly ${need} skill proficiency${need === 1 ? '' : 'ies'} from your class.` };
+    if (globals.state.classSkills.length !== need) return { ok: false, message: `Choose exactly ${need} skill proficienc${need === 1 ? 'y' : 'ies'} from your class.` };
     if (globals.state.level >= 3 && !globals.state.subclass) return { ok: false, message: 'Choose a subclass (your class gains it at level 3).' };
+    if (fightingStyleGranted(cls, globals.state.level) && !globals.state.fightingStyle) return { ok: false, message: 'Choose a Fighting Style.' };
+    if (weaponMasteryGranted(cls, globals.state.level)) {
+      const count = weaponMasteryCount(cls, globals.state.level);
+      if (globals.state.weaponMasteries.length !== count) return { ok: false, message: `Choose ${count} weapon master${count === 1 ? 'y' : 'ies'}.` };
+    }
   }
   if (key === 'background') {
     if (globals.state.bgMode === 'bg' && !globals.state.bg) return { ok: false, message: 'Choose a background (or switch to custom).' };

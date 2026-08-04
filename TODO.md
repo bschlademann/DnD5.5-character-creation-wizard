@@ -18,5 +18,5 @@ custom background:
 - visual bug: selecting an ability for the +1 blocks the ability from getting the +2 but does not gray it out in the +2 field
 
 general UI:
-if condinue button on the lower reght corner is blocked there should be a tooltip what is still missing and a red border arond the area where the user needs to make a choice before they can continue
+if continue button on the lower right corner is blocked there should be a tooltip what is still missing and a red border arond the area where the user needs to make a choice before they can continue
 

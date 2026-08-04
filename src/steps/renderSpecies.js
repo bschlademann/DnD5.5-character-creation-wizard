@@ -23,12 +23,13 @@ export function renderSpecies() {
       detail += `<div class="info"><b>Species spells:</b> ${race.spells.map(s => `${s.name}${s.kind === 'cantrip' ? ' (cantrip)' : ''} at level ${s.charLevel}`).join('; ')}</div>`;
     }
     if (race.lineages && race.lineages.length) {
-      detail += `<h3>Lineage (choose one)</h3><div class="choice-list">`;
+      const lineagesOk = globals.state.lineage != null;
+      detail += `<div ${lineagesOk ? '' : 'data-need="1"'}><h3>Lineage (choose one)</h3><div class="choice-list">`;
       for (const l of race.lineages) {
         const sel = l.id === globals.state.lineage;
         detail += `<span class="chip ${sel ? 'on' : ''}" onclick="API.pickLineage('${l.id}')" title="${esc(l.speed + ' ft' + (l.darkvision ? ' · Darkvision ' + l.darkvision + ' ft' : '') + (l.resist ? ' · ' + l.resist : ''))}">${esc(l.name)}</span>`;
       }
-      detail += `</div>`;
+      detail += `</div></div>`;
       if (lineage) {
         detail += `<div class="card"><div class="entry">${lineage.featuresHtml}</div></div>`;
         const sps = lineage.spells;
@@ -39,7 +40,8 @@ export function renderSpecies() {
     }
     if (race.skillChoice) {
       const sc = race.skillChoice;
-      detail += `<h3>Skill Proficiency (choose ${sc.count})</h3><div class="choice-list">`;
+      const skillsOk = globals.state.raceSkill.length >= sc.count;
+      detail += `<div ${skillsOk ? '' : 'data-need="1"'}><h3>Skill Proficiency (choose ${sc.count})</h3><div class="choice-list">`;
       const opts = sc.any ? globals.DATA.skills.map(s => s.id) : sc.from;
       for (const s of opts) {
         const on = globals.state.raceSkill.includes(s);
@@ -49,16 +51,18 @@ export function renderSpecies() {
         const tip = tk.taken ? ` data-tip="${esc(tk.tip)}"` : ` data-tip="${esc(skillTooltip(s))}"`;
         detail += `<span class="${cls}"${click}${tip}>${skillName(s)}</span>`;
       }
-      detail += `</div><div class="counter">Selected ${globals.state.raceSkill.length} of ${sc.count}</div>`;
+      detail += `</div><div class="counter">Selected ${globals.state.raceSkill.length} of ${sc.count}</div></div>`;
     }
     if (race.bonusFeats > 0) {
-      detail += `<h3>Bonus Origin Feat (Human)</h3>`;
+      const featOk = !!globals.state.humanFeat;
+      detail += `<div ${featOk ? '' : 'data-need="1"'}><h3>Bonus Origin Feat (Human)</h3>`;
       detail += featPicker('humanFeat', globals.state.humanFeat, race.bonusFeats, 'Choose a bonus origin feat (Humans gain one).', '', true);
       detail += renderFeatSpellChoices(globals.state.humanFeat);
       detail += renderSkilledPicker();
+      detail += `</div>`;
     }
   } else {
     detail = `<div class="card"><div class="sub" style="font-style:italic;color:var(--muted)">Select a species to see its features and make your choices here.</div></div>`;
   }
-  return `<p class="step-sub">Choose your species. Some species have lineages with additional features.</p>` + splitLayout(list, detail);
+  return `<p class="step-sub">Choose your species. Some species have lineages with additional features.</p>` + splitLayout(list, detail, !race);
 }

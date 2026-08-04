@@ -2,6 +2,7 @@ import { globals } from '../modules/state.js';
 import { ABILITIES } from '../modules/constants.js';
 import { esc, abilName, skillName, skillAbility, skillTooltip, abilityMod, modStr, profBonus, sourceBadge } from '../modules/helpers.js';
 import { findClass, findBackground } from '../modules/data.js';
+import { featName } from '../modules/feats.js';
 import { charClass, charRace, charLineage, finalScores, grantedSkills, chosenFeats, hp, ac, money, equipmentItems, grantedTools, classSpellsKnownFromSources, spellDC, spellAtk, arcanumReached, arcanumSpellLv, arcanumPicks } from '../modules/compute.js';
 
 export function renderSummary() {
@@ -54,6 +55,8 @@ export function renderSummary() {
         <div class="item"><b>Armor:</b> ${esc(cls ? cls.armor : '—')}</div>
         <div class="item"><b>Weapons:</b> ${esc(cls ? cls.weapons : '—')}</div>
         <div class="item"><b>Tools:</b> ${grantedTools().map(esc).join(', ') || '—'}</div>
+        ${globals.state.fightingStyle ? `<div class="item"><b>Fighting Style:</b> ${esc(featName(globals.state.fightingStyle))}</div>` : ''}
+        ${globals.state.weaponMasteries && globals.state.weaponMasteries.length ? `<div class="item"><b>Weapon Mastery:</b> ${globals.state.weaponMasteries.map(esc).join(', ')}</div>` : ''}
       </div>
     </div>
 
